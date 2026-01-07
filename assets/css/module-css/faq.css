@@ -1,0 +1,179 @@
+
+/** faq-section **/
+
+
+.faq-section{
+  position: relative;
+}
+
+.faq-section .bg-layer{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: calc(50% - 100px);
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.faq-section .sec-title p{
+  margin-top: 14px;
+}
+
+.accordion{
+  position: relative;
+  background: #FFF9F7;
+  margin-bottom: 20px;
+}
+
+.accordion:last-child{
+  margin-bottom: 0px;
+}
+
+.accordion .acc-btn{
+  position: relative;
+  padding: 18px 60px 16px 70px;
+  cursor: pointer;
+}
+
+.accordion .acc-btn .logo-icon{
+  position: absolute;
+  left: 30px;
+  top: 17px;
+}
+
+.accordion .acc-btn h6{
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.accordion .acc-content{
+  padding: 0px 34px 13px 70px;
+}
+
+.accordion .acc-btn .icon-box{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 16px;
+  font-family: var(--title-font) !important;
+}
+
+.accordion .acc-btn .icon-box:before{
+  position: absolute;
+  content: '+';
+}
+
+.accordion .acc-btn.active .icon-box{
+  color: var(--title-color);
+}
+
+.accordion .acc-btn.active .icon-box:before{
+  content: '-';
+  font-size: 24px;
+  font-family: var(--text-font);
+}
+
+
+/** faq-style-two **/
+
+.faq-style-two{
+  position: relative;
+}
+
+.faq-style-two .image-box{
+  position: relative;
+  display: block;
+}
+
+.faq-style-two .image-box img{
+  width: 100%;
+}
+
+
+/** rtl-css **/
+
+
+
+/** responsive-css **/
+
+@media only screen and (max-width: 1200px){
+  .faq-section .bg-layer{
+    display: none;
+  }
+
+  .faq-section{
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .faq-style-two .image-box{
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .faq-style-two{
+    padding: 70px 0px;
+  }
+
+  .faq-style-two.pricing-page{
+    padding-top: 0px;
+  }
+
+  .faq-style-two .inner-container{
+    padding-bottom: 70px;
+  }
+}
+
+@media only screen and (max-width: 599px){
+
+}
+
+@media only screen and (max-width: 499px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
