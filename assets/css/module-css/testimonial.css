@@ -124,7 +124,7 @@
 .testimonial-style-two .image-box .image:before{
   position: absolute;
   content: '';
-  background: #00C8C8;
+  background: #508456;
   width: 50px;
   height: 50px;
   left: -20px;
@@ -151,7 +151,7 @@
   line-height: 46px;
   font-family: var(--title-font);
   font-weight: 700;
-  background: linear-gradient(0deg, rgba(0, 168, 168, 1), rgba(255, 255, 255, 1));
+  background: linear-gradient(0deg, #508456, rgba(255, 255, 255, 1));
   writing-mode: vertical-lr;
   -webkit-background-clip: text !important;
   transform: rotate(180deg);

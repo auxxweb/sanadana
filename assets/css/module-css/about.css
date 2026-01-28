@@ -103,7 +103,7 @@
   line-height: 330px;
   font-family: var(--title-font);
   font-weight: 700;
-  background: linear-gradient(0deg, rgba(0, 168, 168, 1), rgba(255, 255, 255, 1));
+  background: linear-gradient(0deg, #508456, rgba(255, 255, 255, 1));
   writing-mode: vertical-lr;
   text-transform: uppercase;
   -webkit-background-clip: text !important;
@@ -158,7 +158,7 @@
   line-height: 26px;
   font-family: var(--title-font);
   color: var(--title-color);
-  background: #00C8C8;
+  background: #508456;
   padding: 7px 21px;
   border-radius: 50px;
   text-align: center;
@@ -257,7 +257,7 @@
   font-family: var(--title-font);
   color: var(--title-color);
   padding: 6px 21px;
-  background: #00C8C8;
+  background: #508456;
   border-radius: 50px;
 }
 

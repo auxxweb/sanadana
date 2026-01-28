@@ -46,36 +46,69 @@
 
 
         <!-- preloader -->
-        <div class="loader-wrap">
-            <div class="preloader">
-                <div class="preloader-close">close</div>
-                <div id="handle-preloader" class="handle-preloader">
-                    <div class="animation-preloader">
-                        <div class="spinner"></div>
-                        <div class="txt-loading">
-                            <span data-text-preloader="a" class="letters-loading">
-                                a
-                            </span>
-                            <span data-text-preloader="b" class="letters-loading">
-                                b
-                            </span>
-                            <span data-text-preloader="h" class="letters-loading">
-                                h
-                            </span>
-                            <span data-text-preloader="a" class="letters-loading">
-                                a
-                            </span>
-                            <span data-text-preloader="t" class="letters-loading">
-                                t
-                            </span>
-                            <span data-text-preloader="i" class="letters-loading">
-                                i
-                            </span>
-                        </div>
-                    </div>   
-                </div>
-            </div>
-        </div>
+
+        <script>
+document.body.classList.add("loading");
+
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader-wrap");
+
+    if (loader) {
+        loader.style.transition = "opacity 0.25s ease";
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+            document.body.classList.remove("loading");
+        }, 250);
+    }
+});
+</script>
+
+<style>.loader-wrap {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    /* light grey background (NO cyan tone) */
+    background: #f2f2f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* disable interaction */
+    pointer-events: all;
+}
+
+.preloader {
+    background: transparent;
+}
+
+/* SMALL loader */
+.loader-gif {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+/* Disable scroll while loader is active */
+body.loading {
+    overflow: hidden;
+}
+</style>
+      <div class="loader-wrap">
+    <div class="preloader">
+        <img 
+            src="./assets/images/Loading 2.gif" 
+            alt="Loading"
+            class="loader-gif"
+        />
+    </div>
+</div>
+
+
         <!-- preloader end -->
 
 

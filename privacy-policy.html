@@ -37,26 +37,69 @@
     <div class="boxed_wrapper ltr">
 
         <!-- preloader -->
-        <div class="loader-wrap">
-            <div class="preloader">
-                <div class="preloader-close">close</div>
-                <div id="handle-preloader" class="handle-preloader">
-                    <div class="animation-preloader">
-                        <div class="spinner"></div>
-                        <div class="txt-loading">
-                            <span data-text-preloader="S" class="letters-loading">S</span>
-                            <span data-text-preloader="A" class="letters-loading">A</span>
-                            <span data-text-preloader="N" class="letters-loading">N</span>
-                            <span data-text-preloader="A" class="letters-loading">A</span>
-                            <span data-text-preloader="D" class="letters-loading">D</span>
-                            <span data-text-preloader="A" class="letters-loading">A</span>
-                            <span data-text-preloader="N" class="letters-loading">N</span>
-                            <span data-text-preloader="A" class="letters-loading">A</span>
-                        </div>
-                    </div>   
-                </div>
-            </div>
-        </div>
+
+        <script>
+document.body.classList.add("loading");
+
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader-wrap");
+
+    if (loader) {
+        loader.style.transition = "opacity 0.25s ease";
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+            document.body.classList.remove("loading");
+        }, 250);
+    }
+});
+</script>
+
+<style>.loader-wrap {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    /* light grey background (NO cyan tone) */
+    background: #f2f2f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* disable interaction */
+    pointer-events: all;
+}
+
+.preloader {
+    background: transparent;
+}
+
+/* SMALL loader */
+.loader-gif {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+/* Disable scroll while loader is active */
+body.loading {
+    overflow: hidden;
+}
+</style>
+      <div class="loader-wrap">
+    <div class="preloader">
+        <img 
+            src="./assets/images/Loading 3.gif" 
+            alt="Loading"
+            class="loader-gif"
+        />
+    </div>
+</div>
+
+
         <!-- preloader end -->
 
         <!-- main header -->
@@ -65,7 +108,7 @@
                 <div class="outer-box">
                     <div class="left-column">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src="https://sanadanaherbals.com/cdn/shop/t/20/assets/logo.png?v=27324225814327083751753438786" alt=""></a></figure>
+                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area">
                             <div class="mobile-nav-toggler">
@@ -188,7 +231,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="https://sanadanaherbals.com/cdn/shop/t/20/assets/logo.png?v=27324225814327083751753438786" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
                                 <p>Sanadana Herbals is dedicated to delivering authentic Ayurvedic and herbal solutions for natural wellness and holistic living.</p>
                                 <ul class="social-links">
                                     <li><a href="https://www.facebook.com/people/Sanadana-herbals/61578721616783/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -260,7 +303,7 @@
             height: 60px;
             bottom: 90px;
             right: 20px;
-            background-color: #00abab;
+            background-color: #35c007;
             color: #FFF;
             border-radius: 50px;
             text-align: center;

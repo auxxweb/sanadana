@@ -42,42 +42,69 @@
 
 
         <!-- preloader -->
-        <div class="loader-wrap">
-            <div class="preloader">
-                <div class="preloader-close">close</div>
-                <div id="handle-preloader" class="handle-preloader">
-                    <div class="animation-preloader">
-                        <div class="spinner"></div>
-                        <div class="txt-loading">
-                            <span data-text-preloader="S" class="letters-loading">
-                                S
-                            </span>
-                            <span data-text-preloader="A" class="letters-loading">
-                                A
-                            </span>
-                            <span data-text-preloader="N" class="letters-loading">
-                                N
-                            </span>
-                            <span data-text-preloader="A" class="letters-loading">
-                                A
-                            </span>
-                            <span data-text-preloader="D" class="letters-loading">
-                                D
-                            </span>
-                            <span data-text-preloader="A" class="letters-loading">
-                                A
-                            </span>
-                            <span data-text-preloader="N" class="letters-loading">
-                                N
-                            </span>
-                            <span data-text-preloader="A" class="letters-loading">
-                                A
-                            </span>
-                        </div>
-                    </div>   
-                </div>
-            </div>
-        </div>
+
+        <script>
+document.body.classList.add("loading");
+
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader-wrap");
+
+    if (loader) {
+        loader.style.transition = "opacity 0.25s ease";
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+            document.body.classList.remove("loading");
+        }, 250);
+    }
+});
+</script>
+
+<style>.loader-wrap {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    /* light grey background (NO cyan tone) */
+    background: #f2f2f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* disable interaction */
+    pointer-events: all;
+}
+
+.preloader {
+    background: transparent;
+}
+
+/* SMALL loader */
+.loader-gif {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+/* Disable scroll while loader is active */
+body.loading {
+    overflow: hidden;
+}
+</style>
+      <div class="loader-wrap">
+    <div class="preloader">
+        <img 
+            src="./assets/images/Loading 3.gif" 
+            alt="Loading"
+            class="loader-gif"
+        />
+    </div>
+</div>
+
+
         <!-- preloader end -->
 
 
@@ -96,7 +123,7 @@
                 <div class="outer-box">
                     <div class="left-column">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src="https://sanadanaherbals.com/cdn/shop/t/20/assets/logo.png?v=27324225814327083751753438786" alt=""></a></figure>
+                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area">
                             <!--Mobile Navigation Toggler-->
@@ -139,7 +166,7 @@
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src="https://sanadanaherbals.com/cdn/shop/t/20/assets/logo.png?v=27324225814327083751753438786" alt=""></a></figure>
+                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area">
                             <nav class="main-menu clearfix">
@@ -167,7 +194,7 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="https://sanadanaherbals.com/cdn/shop/t/20/assets/logo.png?v=27324225814327083751753438786" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
@@ -229,8 +256,8 @@
                             <div class="portfolio-block-three">
                                 <div class="inner-box">
                                     <div class="image-box">
-                                        <figure class="image"><img src="https://sanadanaherbals.com/cdn/shop/files/2_5a88ca36-07e8-4e00-ae03-b87dd6769404.jpg?v=1752082653" alt="Arshopilecare - Natural Relief for Piles"></figure>
-                                        <div class="image-link"><a href="https://sanadanaherbals.com/products/arshopilecare?variant=45676358107292"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
+                                        <figure class="image"><img src="https://shop.sanadanaherbals.com/cdn/shop/files/2_5a88ca36-07e8-4e00-ae03-b87dd6769404.jpg?v=1752082653" alt="Arshopilecare - Natural Relief for Piles"></figure>
+                                        <div class="image-link"><a href="https://shop.sanadanaherbals.com/products/arshopilecare?variant=45676358107292"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                                     </div>
                                     <div class="lower-content">
                                         <ul class="post-info">
@@ -240,9 +267,9 @@
                                         </ul>
                                         <h3><a href="https://sanadanaherbals.com/products/arshopilecare?variant=45676358107292">Arshopilecare - Natural Relief for Piles</a></h3>
                                         <ul class="category-list">
-                                            <li><a href="https://sanadanaherbals.com/products/arshopilecare?variant=45676358107292">Piles Relief</a></li>
-                                            <li><a href="https://sanadanaherbals.com/products/arshopilecare?variant=45676358107292">Digestive Care</a></li>
-                                            <li><a href="https://sanadanaherbals.com/products/arshopilecare?variant=45676358107292">Natural Healing</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/arshopilecare?variant=45676358107292">Piles Relief</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/arshopilecare?variant=45676358107292">Digestive Care</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/arshopilecare?variant=45676358107292">Natural Healing</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -252,8 +279,8 @@
                             <div class="portfolio-block-three">
                                 <div class="inner-box">
                                     <div class="image-box">
-                                        <figure class="image"><img src="https://sanadanaherbals.com/cdn/shop/files/1_6c3f7cda-7ccc-4295-ab36-4502381c950d.jpg?v=1755514247" alt="SD Himo Plus - Iron Tonic"></figure>
-                                        <div class="image-link"><a href="https://sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
+                                        <figure class="image"><img src="https://shop.sanadanaherbals.com/cdn/shop/files/1_6c3f7cda-7ccc-4295-ab36-4502381c950d.jpg?v=1755514247" alt="SD Himo Plus - Iron Tonic"></figure>
+                                        <div class="image-link"><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                                     </div>
                                     <div class="lower-content">
                                         <ul class="post-info">
@@ -261,11 +288,11 @@
                                             <li class="gradient-color">/</li>
                                             <li class="gradient-color">200ml</li>
                                         </ul>
-                                        <h3><a href="https://sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460">SD Himo Plus - Iron Replenishment Tonic</a></h3>
+                                        <h3><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460">SD Himo Plus - Iron Replenishment Tonic</a></h3>
                                         <ul class="category-list">
-                                            <li><a href="https://sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460">Iron Support</a></li>
-                                            <li><a href="https://sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460">Blood Health</a></li>
-                                            <li><a href="https://sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460">Vitality</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460">Iron Support</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460">Blood Health</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sd-himo-plus?variant=44982943842460">Vitality</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -275,8 +302,8 @@
                             <div class="portfolio-block-three">
                                 <div class="inner-box">
                                     <div class="image-box">
-                                        <figure class="image"><img src="https://sanadanaherbals.com/cdn/shop/files/1_95339362-4f56-4219-b248-ffa8fffae66b.jpg?v=1755514308" alt="Aminohit - Digestive Tonic"></figure>
-                                        <div class="image-link"><a href="https://sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
+                                        <figure class="image"><img src="https://shop.sanadanaherbals.com/cdn/shop/files/1_95339362-4f56-4219-b248-ffa8fffae66b.jpg?v=1755514308" alt="Aminohit - Digestive Tonic"></figure>
+                                        <div class="image-link"><a href="https://shop.sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                                     </div>
                                     <div class="lower-content">
                                         <ul class="post-info">
@@ -284,11 +311,11 @@
                                             <li class="gradient-color">/</li>
                                             <li class="gradient-color">200ml</li>
                                         </ul>
-                                        <h3><a href="https://sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html">Aminohit - Digestive Wellness Tonic</a></h3>
+                                        <h3><a href="https://shop.sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html">Aminohit - Digestive Wellness Tonic</a></h3>
                                         <ul class="category-list">
-                                            <li><a href="https://sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html">Digestive Health</a></li>
-                                            <li><a href="https://sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html">Bloating Relief</a></li>
-                                            <li><a href="https://sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html">Indigestion</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html">Digestive Health</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html">Bloating Relief</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/aminohit?variant=44982933061788project-details.html">Indigestion</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -298,8 +325,8 @@
                             <div class="portfolio-block-three">
                                 <div class="inner-box">
                                     <div class="image-box">
-                                        <figure class="image"><img src="https://sanadanaherbals.com/cdn/shop/files/2_ae32359b-7dbf-4ac9-97e0-d000c3b61e3b.jpg?v=1752586105" alt="Sand-Cof - Respiratory Syrup"></figure>
-                                        <div class="image-link"><a href="https://sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
+                                        <figure class="image"><img src="https://shop.sanadanaherbals.com/cdn/shop/files/2_ae32359b-7dbf-4ac9-97e0-d000c3b61e3b.jpg?v=1752586105" alt="Sand-Cof - Respiratory Syrup"></figure>
+                                        <div class="image-link"><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                                     </div>
                                     <div class="lower-content">
                                         <ul class="post-info">
@@ -309,9 +336,9 @@
                                         </ul>
                                         <h3><a href="https://sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732">Sand-Cof - Respiratory Health Syrup</a></h3>
                                         <ul class="category-list">
-                                            <li><a href="https://sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732">Cough Relief</a></li>
-                                            <li><a href="https://sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732">Respiratory</a></li>
-                                            <li><a href="https://sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732">Natural</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732">Cough Relief</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732">Respiratory</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/collections/new-products/products/sand-cof?variant=44982928408732">Natural</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -323,8 +350,8 @@
                             <div class="portfolio-block-three">
                                 <div class="inner-box">
                                     <div class="image-box">
-                                        <figure class="image"><img src="https://sanadanaherbals.com/cdn/shop/files/1_d8fd68da-d6b5-4a30-a4c1-52d4ab81dda8.jpg?v=1755514678" alt="Dhathriarishtam - Traditional Tonic"></figure>
-                                        <div class="image-link"><a href="https://sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
+                                        <figure class="image"><img src="https://shop.sanadanaherbals.com/cdn/shop/files/1_d8fd68da-d6b5-4a30-a4c1-52d4ab81dda8.jpg?v=1755514678" alt="Dhathriarishtam - Traditional Tonic"></figure>
+                                        <div class="image-link"><a href="https://shop.sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                                     </div>
                                     <div class="lower-content">
                                         <ul class="post-info">
@@ -332,11 +359,11 @@
                                             <li class="gradient-color">/</li>
                                             <li class="gradient-color">450ml</li>
                                         </ul>
-                                        <h3><a href="https://sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452">Dhathriarishtam - Traditional Ayurvedic Tonic</a></h3>
+                                        <h3><a href="https://shop.sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452">Dhathriarishtam - Traditional Ayurvedic Tonic</a></h3>
                                         <ul class="category-list">
-                                            <li><a href="https://sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452">Traditional</a></li>
-                                            <li><a href="https://sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452">Wellness</a></li>
-                                            <li><a href="https://sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452">Ayurvedic</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452">Traditional</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452">Wellness</a></li>
+                                            <li><a href="https://shop.sanadanaherbals.com/products/dhathriarishtam?variant=45203188023452">Ayurvedic</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -346,11 +373,11 @@
                     </div>
                     <div class="pagination-wrapper mt_20 centred">
                         <ul class="pagination clearfix">
-                            <li><a href="project.html">01</a></li>
-                            <li><a href="project.html" class="current">02</a></li>
-                            <li><a href="project.html">03</a></li>
+                            <!-- <li><a href="project.html">01</a></li> -->
+                            <li><a href="project.html" class="current">01</a></li>
+                            <!-- <li><a href="project.html">03</a></li>
                             <li><a href="project.html">04</a></li>
-                            <li><a href="project.html">05</a></li>
+                            <li><a href="project.html">05</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -389,7 +416,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="https://sanadanaherbals.com/cdn/shop/t/20/assets/logo.png?v=27324225814327083751753438786" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
                                 <p>Sanadana Herbals is dedicated to delivering authentic Ayurvedic and herbal solutions for natural wellness and holistic living.</p>
                                 <ul class="social-links">
                                     <li><a href="https://www.facebook.com/people/Sanadana-herbals/61578721616783/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -490,7 +517,7 @@
             height: 60px;
             bottom: 90px;
             right: 20px;
-            background-color: #00abab;
+            background-color: #35c007;
             color: #FFF;
             border-radius: 50px;
             text-align: center;

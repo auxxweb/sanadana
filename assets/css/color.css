@@ -2,7 +2,7 @@
 /* template-color */
 
 .handle-preloader{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .main-menu .navigation > li.current > a,
@@ -11,7 +11,7 @@
 }
 
 .gradient-color{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .main-header .menu-right-content .support-box a:hover{
@@ -19,29 +19,29 @@
 }
 
 .theme-btn-one{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .theme-btn-one:before{
-	background: linear-gradient(rgba(0, 140, 140, 1), rgba(0, 200, 200, 1));
+	background: linear-gradient(#508456, #00bf63);
 }
 
 .main-header .menu-right-content .link a{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .main-menu .navigation > li > ul,
 .main-menu .navigation > li > .megamenu,
 .main-menu .navigation > li > ul > li > ul{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .curved-circle .video-btn:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .service-block-one .inner-box:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .service-block-one .inner-box h3 a:hover{
@@ -53,24 +53,24 @@
 }
 
 .service-block-one .inner-box .info-list li:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .service-block-one .inner-box .info-list:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .service-block-one .inner-box .link a:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .dots-style-one .owl-dots .owl-dot.active,
 .dots-style-one .owl-dots .owl-dot:hover{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .dots-style-one .owl-dots .owl-dot:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .content_block_one .content-box .clients-info .rating-box .rating-list li{
@@ -82,7 +82,7 @@
 }
 
 .team-block-one .inner-box .lower-content .social-links li a:hover:before{
-  background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+  background: linear-gradient(#00bf63, #508456);
 }
 
 .sortable-masonry .filter-tabs li:hover,
@@ -90,12 +90,13 @@
   color: var(--theme-color);
 }
 
+/* ******* */
 .portfolio-block-two .inner-box .image-box:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#d4d4d4, #e8e8e8);
 }
 
 .portfolio-block-two .inner-box .content-box .info-list li:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .portfolio-block-two .inner-box .content-box h3 a:hover{
@@ -108,23 +109,23 @@
 }
 
 .theme-btn-two span:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .pricing-block-one .pricing-table .feature-list li:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .theme-btn-three span{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .theme-btn-three span:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .theme-btn-three:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .accordion .acc-btn .icon-box{
@@ -136,11 +137,11 @@
 }
 
 .news-block-one .inner-box .image-box .link a{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .news-block-one .inner-box .lower-content .post-date:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .news-block-one .inner-box .lower-content .post-info li a:hover{
@@ -156,15 +157,15 @@
 }
 
 .instagram-block-one .inner-box .image-box{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .instagram-block-one .inner-box .link a{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .main-footer .logo-widget .social-links li a:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .light-header .header-lower .main-menu .navigation > li.current > a, 
@@ -173,7 +174,7 @@
 }
 
 .banner-style-two .curved-circle .curve-text span{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .portfolio-block-one .inner-box .info-inner .category-list li a:hover{
@@ -181,19 +182,19 @@
 }
 
 .feature-block-two .inner-box .count-text:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .feature-block-two .inner-box:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .feature-block-two .inner-box .btn-box a span:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .feature-block-two .inner-box .btn-box a:hover span{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .testimonial-style-two .image-box .image:after{
@@ -209,15 +210,15 @@
 }
 
 .banner-style-three .content-box .inner-box .image-list li:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .banner-style-three .content-box .inner-box .image-list li:last-child:after{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .banner-style-three .curved-circle .curve-text span{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .side-menu .navigation li.current > a{
@@ -229,15 +230,15 @@
 }
 
 .service-block-one .inner-box .image-box .link a{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .portfolio-block-three .inner-box .image-box .image:before {
-  background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+  background: linear-gradient(#d4d4d4, #fcfcfc);
 }
 
 .portfolio-block-three .inner-box .image-box .image-link a{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .portfolio-block-three .inner-box .lower-content h3 a:hover{
@@ -250,7 +251,7 @@
 
 .testimonial-style-three .dots-style-one .owl-dots .owl-dot.active,
 .testimonial-style-three .dots-style-one .owl-dots .owl-dot:hover{
-  background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+  background: linear-gradient(#00bf63, #508456);
 }
 
 .page-title .bread-crumb li a:hover{
@@ -294,11 +295,11 @@
 }
 
 .blog-details-content .tags-list li a:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .blog-details-content .comment-box .comment .reply-btn:before{
-	background: linear-gradient(rgba(0, 200, 200, 1), rgba(0, 140, 140, 1));
+	background: linear-gradient(#00bf63, #508456);
 }
 
 .default-form .form-group input:focus,
