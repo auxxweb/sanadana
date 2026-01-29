@@ -1,16 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<url>
+  <loc>https://sanadanaherbals.com/</loc>
+  <lastmod>2026-01-29</lastmod>
+  <priority>1.0</priority>
+</url>
+
   <url>
-    <loc>https://sandanaherbals.com/</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>1.0</priority>
+    <loc>https://sanadanaherbals.com/about.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://sandanaherbals.com/products/yastimadhu.html</loc>
-    <lastmod>2026-01-01</lastmod>
+    <loc>https://sanadanaherbals.com/products.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/service.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/blog.html</loc>
+    <lastmod>2026-01-29</lastmod>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/contact.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/arshopile-blog.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/sd-himo-plus-blog.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/aminohit-blog.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/sancof-blog.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/Dhathriarishtam-blog.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/faq.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/privacy-policy.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/refund-policy.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/shipping-policy.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadanaherbals.com/terms-conditions.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
