@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /assets/
+Disallow: /tmp/
+Disallow: /drafts/
+
+Sitemap: https://sandanaherbals.com/sitemap.xml
