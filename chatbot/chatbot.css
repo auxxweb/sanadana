@@ -1,0 +1,465 @@
+/* ============================================
+   Sanadana Herbal AI Practitioner - Chatbot
+   Theme: Herbal / Green Natural Brand
+   ============================================ */
+
+:root {
+  --chat-primary: #2e7d32;
+  --chat-primary-dark: #1b5e20;
+  --chat-primary-light: #4caf50;
+  --chat-bg: #f1f8e9;
+  --chat-surface: #ffffff;
+  --chat-user-bubble: #2e7d32;
+  --chat-bot-bubble: #e8f5e9;
+  --chat-text: #1b5e20;
+  --chat-text-muted: #558b2f;
+  --chat-shadow: 0 4px 20px rgba(46, 125, 50, 0.15);
+  --chat-radius: 15px;
+  --chat-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Container - fixed bottom right */
+.sanadana-chatbot {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  font-family: var(--chat-font);
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* Floating trigger - same theme as Order on WhatsApp (#00bf63, #508456) */
+.sanadana-chatbot__trigger {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(#00bf63, #508456);
+  box-shadow: 0 4px 20px rgba(0, 191, 99, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.sanadana-chatbot__trigger:hover {
+  background: linear-gradient(#508456, #00bf63);
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 191, 99, 0.4);
+}
+
+.sanadana-chatbot__trigger svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+/* Chat window */
+.sanadana-chatbot__window {
+  position: absolute;
+  bottom: 76px;
+  right: 0;
+  width: 400px;
+  max-width: calc(100vw - 32px);
+  height: 520px;
+  max-height: calc(100vh - 120px);
+  background: var(--chat-surface);
+  border-radius: var(--chat-radius);
+  box-shadow: var(--chat-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9) translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.sanadana-chatbot__window.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+}
+
+/* Header */
+.sanadana-chatbot__header {
+  background: linear-gradient(135deg, var(--chat-primary) 0%, var(--chat-primary-dark) 100%);
+  color: #fff;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.sanadana-chatbot__title {
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sanadana-chatbot__close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.sanadana-chatbot__close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Messages area */
+.sanadana-chatbot__messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: var(--chat-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sanadana-chatbot__message {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  animation: messageIn 0.25s ease;
+}
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sanadana-chatbot__message--bot {
+  align-self: flex-start;
+  background: var(--chat-bot-bubble);
+  color: var(--chat-text);
+  border-bottom-left-radius: 4px;
+}
+
+.sanadana-chatbot__message--user {
+  align-self: flex-end;
+  background: var(--chat-user-bubble);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.sanadana-chatbot__message--bot a {
+  color: var(--chat-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sanadana-chatbot__message--bot a:hover {
+  text-decoration: underline;
+}
+
+/* Typing indicator */
+.sanadana-chatbot__typing {
+  align-self: flex-start;
+  background: var(--chat-bot-bubble);
+  padding: 12px 16px;
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.sanadana-chatbot__typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--chat-text-muted);
+  animation: typingBounce 1.2s ease-in-out infinite;
+}
+
+.sanadana-chatbot__typing span:nth-child(2) { animation-delay: 0.15s; }
+.sanadana-chatbot__typing span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
+
+/* Input area */
+.sanadana-chatbot__input-wrap {
+  padding: 12px 16px;
+  background: var(--chat-surface);
+  border-top: 1px solid rgba(46, 125, 50, 0.1);
+  flex-shrink: 0;
+}
+
+.sanadana-chatbot__form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.sanadana-chatbot__input {
+  flex: 1;
+  border: 1px solid #c8e6c9;
+  border-radius: 22px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: var(--chat-font);
+  color: var(--chat-text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sanadana-chatbot__input::placeholder {
+  color: #81c784;
+}
+
+.sanadana-chatbot__input:focus {
+  border-color: var(--chat-primary);
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+.sanadana-chatbot__send {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--chat-primary) 0%, var(--chat-primary-dark) 100%);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.sanadana-chatbot__send:hover {
+  transform: scale(1.05);
+}
+
+.sanadana-chatbot__send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sanadana-chatbot__send svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Product list in message */
+.sanadana-chatbot__product-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.sanadana-chatbot__product-list li {
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.sanadana-chatbot__product-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== 100% MOBILE RESPONSIVE ========== */
+
+/* Base: prevent overflow and enable touch scrolling */
+.sanadana-chatbot__window {
+  -webkit-overflow-scrolling: touch;
+  touch-action: manipulation;
+}
+
+.sanadana-chatbot__messages {
+  -webkit-overflow-scrolling: touch;
+  min-height: 0; /* flex scroll fix */
+}
+
+.sanadana-chatbot__message {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sanadana-chatbot__message--bot a {
+  word-break: break-all;
+}
+
+/* Small phones (portrait) - full width, full height */
+@media (max-width: 480px) {
+  .sanadana-chatbot {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .sanadana-chatbot__trigger {
+    width: 56px;
+    height: 56px;
+  }
+
+  .sanadana-chatbot__trigger svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Full-width dialog: use fixed so it can span viewport */
+  .sanadana-chatbot__window {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    border-radius: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.25s ease, visibility 0.25s;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  .sanadana-chatbot__window.is-open {
+    transform: translateY(0);
+  }
+
+  .sanadana-chatbot__header {
+    padding: 12px 14px;
+    padding-top: max(12px, env(safe-area-inset-top));
+    min-height: 48px;
+  }
+
+  .sanadana-chatbot__title {
+    font-size: 15px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sanadana-chatbot__close {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .sanadana-chatbot__messages {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .sanadana-chatbot__message {
+    max-width: 92%;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .sanadana-chatbot__input-wrap {
+    padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0));
+  }
+
+  .sanadana-chatbot__form {
+    gap: 6px;
+  }
+
+  .sanadana-chatbot__input {
+    padding: 12px 14px;
+    font-size: 16px; /* prevents iOS zoom on focus */
+    min-height: 44px;
+  }
+
+  .sanadana-chatbot__send {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .sanadana-chatbot__send svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .sanadana-chatbot__product-list li {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+/* Extra small (e.g. iPhone SE, narrow) */
+@media (max-width: 360px) {
+  .sanadana-chatbot {
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .sanadana-chatbot__title {
+    font-size: 14px;
+  }
+
+  .sanadana-chatbot__message {
+    font-size: 13px;
+  }
+}
+
+/* Landscape on small screens */
+@media (max-height: 500px) and (orientation: landscape) {
+  .sanadana-chatbot__window {
+    height: 90vh;
+    max-height: 90vh;
+    bottom: 64px;
+  }
+}
+
+/* Tablets and medium phones (e.g. 481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .sanadana-chatbot {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .sanadana-chatbot__window {
+    width: min(400px, calc(100vw - 40px));
+    max-width: calc(100vw - 40px);
+    height: min(520px, calc(100vh - 100px));
+    max-height: calc(100vh - 100px);
+    bottom: 76px;
+  }
+
+  .sanadana-chatbot__message {
+    max-width: 88%;
+  }
+
+  .sanadana-chatbot__input {
+    font-size: 16px;
+  }
+}

@@ -757,11 +757,58 @@
   }
 
   .banner-section .inner-box{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
   }
 
   .banner-section .inner-box .single-item{
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .banner-section .inner-box .single-item .icon-box{
+    position: relative;
+    left: 0;
+    margin: 0 auto 12px;
+    display: block;
+  }
+
+  .banner-section .inner-box .single-item h3{
+    text-align: center;
+  }
+
+  .banner-section .inner-box .funfact-inner{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .banner-section .inner-box .counter-block{
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-section .inner-box .counter-block .count-outer{
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+
+  .banner-section .inner-box .counter-block p{
+    text-align: center;
+  }
+
+  .rtl .banner-section .inner-box .counter-block{
+    margin-left: 0;
+  }
+
+  .rtl .banner-section .inner-box .counter-block .count-outer{
+    margin-left: 0;
   }
 
   .banner-section .outer-container{
@@ -860,12 +907,46 @@
 }
 
 @media only screen and (max-width: 599px){
+  .banner-section .inner-box{
+    gap: 32px;
+  }
+
   .banner-section .inner-box .funfact-inner{
-    display: block;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .banner-section .inner-box .counter-block{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-section .inner-box .counter-block .count-outer{
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .banner-section .inner-box .single-item h3{
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .banner-style-three .lower-box .counter-block{
     display: block;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .banner-section .inner-box .counter-block .count-outer{
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .banner-section .inner-box .single-item h3{
+    font-size: 18px;
+    line-height: 26px;
   }
 }
 

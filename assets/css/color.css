@@ -26,6 +26,16 @@
 	background: linear-gradient(#508456, #00bf63);
 }
 
+/* WhatsApp floating button - same theme as Order on WhatsApp */
+.whatsapp-float {
+	background: linear-gradient(#00bf63, #508456) !important;
+	color: #FFF;
+	box-shadow: 2px 2px 12px rgba(0, 191, 99, 0.4);
+}
+.whatsapp-float:hover {
+	background: linear-gradient(#508456, #00bf63) !important;
+}
+
 .main-header .menu-right-content .link a{
 	background: linear-gradient(#00bf63, #508456);
 }

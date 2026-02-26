@@ -1,11 +1,24 @@
 (function($) {
 	
 	"use strict";
+
+	// Throttle scroll/resize handlers for smoother performance
+	function throttle(fn, limit) {
+		var inThrottle;
+		return function() {
+			var args = arguments, ctx = this;
+			if (!inThrottle) {
+				fn.apply(ctx, args);
+				inThrottle = true;
+				setTimeout(function() { inThrottle = false; }, limit);
+			}
+		};
+	}
 	
-	//Hide Loading Box (Preloader)
+	//Hide Loading Box (Preloader) - reduced delay for faster perceived load
 	function handlePreloader() {
 		if($('.loader-wrap').length){
-			$('.loader-wrap').delay(1000).fadeOut(500);
+			$('.loader-wrap').delay(200).fadeOut(400);
 		}
 	}
 
@@ -708,18 +721,18 @@
 
 
 	/* ==========================================================================
-   When document is Scrollig, do
+   When document is Scrollig, do (throttled for smooth 60fps)
    ========================================================================== */
-	
-	$(window).on('scroll', function() {
+	var onScroll = throttle(function() {
 		headerStyle();
 		handleScrollbar();
 		if ($(window).scrollTop() > 200) {
-                $('.scroll-top-inner').addClass('visible');
-            } else {
-                $('.scroll-top-inner').removeClass('visible');
-            }
-	});
+			$('.scroll-top-inner').addClass('visible');
+		} else {
+			$('.scroll-top-inner').removeClass('visible');
+		}
+	}, 16); // ~60fps
+	$(window).on('scroll', onScroll);
 
 	
 	

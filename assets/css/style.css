@@ -1,6 +1,32 @@
  
 /* Css For Sanadana */
 
+/* Performance: smooth scrolling and reduced layout cost */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Below-the-fold sections: browser can skip layout until near viewport */
+.service-section,
+.about-section,
+.feature-section,
+.team-section,
+.portfolio-section,
+.pricing-section,
+.faq-section,
+.testimonial-section,
+.news-section,
+.clients-section,
+.instagram-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* Less gap between banner and Herbal Range section */
+.banner-section + .service-section {
+  padding-top: 50px;
+}
+
 /************ TABLE OF CONTENTS ***************
 1. Fonts
 2. Reset
