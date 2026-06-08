@@ -101,21 +101,17 @@
 .blog-insight-card__media {
   position: relative;
   margin: 0;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
+  overflow: visible;
   background: linear-gradient(165deg, #e8f4f3 0%, #dceeea 100%);
 }
 
 .blog-insight-card__media img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.blog-insight-card__link:hover .blog-insight-card__media img {
-  transform: scale(1.06);
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .blog-insight-card__body {
@@ -195,7 +191,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .blog-insight-card__link,
-  .blog-insight-card__media img,
   .blog-insight-card__read i {
     transition: none;
   }

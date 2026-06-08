@@ -242,6 +242,23 @@
   margin-bottom: 16px;
 }
 
+.blog-grid .news-block-one .inner-box .image-box,
+.blog-grid .news-block-one .inner-box .image-box .image {
+  overflow: visible;
+}
+
+.blog-grid .news-block-one .inner-box .image-box .image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.blog-grid .news-block-one .inner-box:hover .image-box .image img {
+  transform: none;
+}
+
 
 /** sidebar-page-container **/
 
