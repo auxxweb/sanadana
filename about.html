@@ -24,8 +24,8 @@ content="About Sanadana Herbals, Ayurvedic company Kerala, herbal medicine manuf
 
 <!-- Favicon -->
 <link rel="icon"
-href="https://sanadanaherbals.com/assets/images/svg-logo-1.png"
-type="image/x-icon">
+href="https://sanadanaherbals.com/assets/images/favicon.png"
+type="image/png">
 
 <!-- Open Graph (Facebook / WhatsApp) -->
 <meta property="og:type" content="website">
@@ -36,7 +36,7 @@ content="About Sanadana Herbals | Authentic Ayurvedic Brand">
 content="A trusted Ayurvedic brand from Kerala committed to natural healing, traditional wisdom, and modern quality standards.">
 <meta property="og:url" content="https://sanadanaherbals.com/about.html">
 <meta property="og:image"
-content="https://sanadanaherbals.com/assets/images/svg-logo-1.png">
+content="https://sanadanaherbals.com/assets/images/sanadana-header-logo.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="robots" content="index, follow">
@@ -48,7 +48,7 @@ content="About Sanadana Herbals | Ayurvedic Brand from Kerala">
 <meta name="twitter:description"
 content="Discover the story, values, and mission behind Sanadana Herbals and our authentic Ayurvedic formulations.">
 <meta name="twitter:image"
-content="https://sanadanaherbals.com/assets/images/svg-logo-1.png">
+content="https://sanadanaherbals.com/assets/images/sanadana-header-logo.png">
 
 <!-- Local SEO -->
 <meta name="geo.region" content="IN-KL">
@@ -84,9 +84,13 @@ rel="stylesheet">
 <link href="assets/css/module-css/clients.css" rel="stylesheet">
 <link href="assets/css/module-css/video.css" rel="stylesheet">
 <link href="assets/css/module-css/service.css" rel="stylesheet">
+<link href="assets/css/module-css/portfolio.css" rel="stylesheet">
 <link href="assets/css/module-css/testimonial.css" rel="stylesheet">
+<link href="assets/css/module-css/instagram-premium.css" rel="stylesheet">
 <link href="assets/css/module-css/instagram.css" rel="stylesheet">
 
+<link href="assets/css/module-css/footer-premium.css" rel="stylesheet">
+  <link href="assets/css/module-css/site-premium.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
 </head>
 
@@ -122,8 +126,8 @@ window.addEventListener("load", function () {
     inset: 0;
     z-index: 10000;
 
-    /* light grey background (NO cyan tone) */
-    background: #f2f2f2;
+    /* site theme: white preloader backdrop */
+    background: #ffffff;
 
     display: flex;
     align-items: center;
@@ -137,12 +141,12 @@ window.addEventListener("load", function () {
     background: transparent;
 }
 
-/* SMALL loader */
+/* Prominent loader */
 .loader-gif {
-    width: 8rem;
-    height: 8rem;
+    width: 12rem;
+    height: 12rem;
     object-fit: contain;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 /* Disable scroll while loader is active */
@@ -153,7 +157,7 @@ body.loading {
       <div class="loader-wrap">
     <div class="preloader">
         <img 
-            src="./assets/images/Loading 3.gif" 
+            src="./assets/images/sanadana-loader.gif" 
             alt="Loading"
             class="loader-gif"
         />
@@ -179,7 +183,7 @@ body.loading {
                 <div class="outer-box">
                     <div class="left-column">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
+                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/sanadana-header-logo.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area">
                             <!--Mobile Navigation Toggler-->
@@ -211,8 +215,6 @@ body.loading {
                             <div class="icon-box gradient-color"><i class="icon-1"></i></div>
                             <a href="mailto:support@sanadanaherbals.com">support@sanadanaherbals.com</a>
                         </div>
-                        <div class="btn-box mr_30"><a href="index.html" class="theme-btn-one"><span>Order on WhatsApp</span></a></div>
-                        <div class="link"><a href="index.html"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                     </div>
                 </div>
             </div>
@@ -222,7 +224,7 @@ body.loading {
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
+                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/sanadana-header-logo.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area">
                             <nav class="main-menu clearfix">
@@ -234,8 +236,6 @@ body.loading {
                                 <div class="icon-box gradient-color"><i class="icon-1"></i></div>
                                 <a href="mailto:support@sanadanaherbals.com">support@sanadanaherbals.com</a>
                             </div>
-                            <div class="btn-box mr_30"><a href="index.html" class="theme-btn-one"><span>Order on WhatsApp</span></a></div>
-                            <div class="link"><a href="index.html"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                         </div>
                     </div>
                 </div>
@@ -250,7 +250,7 @@ body.loading {
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/sanadana-header-logo.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
@@ -288,6 +288,9 @@ body.loading {
                         <li><a href="index.html">Home</a></li>
                         <li>About</li>
                     </ul>
+                    <p class="page-title__lead">Authentic Ayurvedic wellness — GMP-certified, rooted in Kerala tradition.</p>
+                    <a href="https://shop.sanadanaherbals.com/collections/all" class="premium-shop-cta">Shop the collection <span aria-hidden="true">→</span></a>
+
                 </div>
             </div>
         </section>
@@ -402,8 +405,12 @@ body.loading {
 
             <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                 <figure class="image-box">
-                    <img src="https://srisriayurvedahospital.org/wp-content/uploads/2024/12/3-4.jpg" 
-                         alt="Traditional ayurvedic medicine manufacturing using herbal ingredients in Kerala">
+                    <img src="assets/images/about-sanadana-visual.png" 
+                         alt="Sanadana Herbals Ayurvedic product range — Aminohit, SD Himo Plus, Dhathriarishtam, Arshopilecare, and Sand-Cof on black background"
+                         width="1920"
+                         height="1080"
+                         loading="lazy"
+                         decoding="async">
                 </figure>
             </div>
 
@@ -467,6 +474,154 @@ body.loading {
 <!-- about-style-two end -->
 
 
+<!-- portfolio-style-four -->
+<section class="portfolio-style-four pt_120 pb_120">
+    <div class="auto-container">
+        <div class="sec-title-two mb_50">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-12 col-sm-12 left-column">
+                    <div class="left-content align-3">
+                        <h5>
+                            <img style="width: 2rem;" src="assets/images/svg-logo-1.png" alt="Sanadana Herbals logo">
+                            Our Benefits
+                        </h5>
+                        <p>
+                            Discover why thousands of customers across India trust Sanadana Herbals
+                            for authentic Ayurvedic and herbal wellness solutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 right-column">
+                    <div class="right-content">
+                        <h2>
+                            Trusted Ayurvedic Care <br />Rooted in Nature & Tradition
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="outer-container">
+        <div class="four-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
+
+            <!-- Benefit 1 -->
+            <div class="portfolio-block-four">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="assets/images/trusted-care/trusted-care-aminohit.png"
+                             alt="Aminohit — natural healing through authentic Ayurvedic herbal medicines">
+                    </figure>
+                    <div class="content-box">
+                        <h3><a href="products.html">Natural Healing</a></h3>
+                        <div class="inner">
+                            <ul class="category-list">
+                                <li><a href="products.html">Ayurvedic Care</a></li>
+                            </ul>
+                            <ul class="info-list">
+                                <li>Herbal Medicine</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="portfolio-block-four">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="assets/images/trusted-care/trusted-care-arshopilecare.png"
+                             alt="Arshopilecare — GMP certified Ayurvedic quality assurance and safety standards">
+                    </figure>
+                    <div class="content-box">
+                        <h3><a href="products.html">Quality Assurance</a></h3>
+                        <div class="inner">
+                            <ul class="category-list">
+                                <li><a href="products.html">GMP Certified</a></li>
+                                <li><a href="products.html">Trusted Brand</a></li>
+                            </ul>
+                            <ul class="info-list">
+                                <li>Quality & Safety</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="portfolio-block-four">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="assets/images/trusted-care/trusted-care-dhathriarishtam.png"
+                             alt="Dhathriarishtam — traditional Ayurvedic wisdom and holistic wellness practices">
+                    </figure>
+                    <div class="content-box">
+                        <h3><a href="products.html">Traditional Ayurvedic Wisdom</a></h3>
+                        <div class="inner">
+                            <ul class="category-list">
+                                <li><a href="products.html">Ayurvedic</a></li>
+                            </ul>
+                            <ul class="info-list">
+                                <li>Time-Tested Tradition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="portfolio-block-four">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="assets/images/trusted-care/trusted-care-sand-cof.png"
+                             alt="Sand-Cof — safe and natural herbal products without harmful chemicals">
+                    </figure>
+                    <div class="content-box">
+                        <h3><a href="products.html">Safe & Natural Ingredients</a></h3>
+                        <div class="inner">
+                            <ul class="category-list">
+                                <li><a href="products.html">Natural</a></li>
+                                <li><a href="products.html">Chemical-Free</a></li>
+                            </ul>
+                            <ul class="info-list">
+                                <li>Pure</li>
+                                <li>/</li>
+                                <li>Herbal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 5 -->
+            <div class="portfolio-block-four">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="assets/images/trusted-care/trusted-care-sd-himo-plus.png"
+                             alt="SD Himo Plus — authentic Ayurvedic heritage and holistic wellness approach">
+                    </figure>
+                    <div class="content-box">
+                        <h3><a href="products.html">Authentic Ayurvedic Heritage</a></h3>
+                        <div class="inner">
+                            <ul class="category-list">
+                                <li><a href="products.html">Ayurveda</a></li>
+                                <li><a href="products.html">Heritage</a></li>
+                            </ul>
+                            <ul class="info-list">
+                                <li>Traditional</li>
+                                <li>/</li>
+                                <li>Authentic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- portfolio-style-four end -->
+
 
         <!-- clients-section -->
         <section class="clients-section pb_120">
@@ -520,121 +675,121 @@ body.loading {
 
         <div class="four-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
 
-            <!-- Category 1 -->
+            <!-- Herbal Medicines -->
             <div class="service-block-one">
                 <div class="inner-box">
                     <div class="icon-box">
                         <img style="width: 3rem;" 
-                             src="https://png.pngtree.com/png-clipart/20241117/original/pngtree-green-leaves-herbal-natural-ayurvedic-logo-vector-png-image_17122923.png"
+                             src="assets/images/svg-logo-1.png"
                              alt="Herbal medicines based on ayurvedic formulations">
                     </div>
-                    <div class="category">
-                        <span class="gradient-color">Category 1</span>
-                    </div>
-                    <h3><a href="service-details.html">Herbal Medicines</a></h3>
+                    <h3><a href="products.html">Herbal Medicines</a></h3>
                     <ul class="info-list">
-                        <li><a href="service-details.html">Immunity Support</a></li>
-                        <li><a href="service-details.html">Respiratory Care</a></li>
+                        <li><a href="arshopile-blog.html">Digestive Care</a></li>
+                        <li><a href="sancof-blog.html">Respiratory Care</a></li>
                     </ul>
                     <p>
-                        Ayurvedic herbal medicines prepared using traditional formulations
-                        to support immunity, respiratory health, and natural healing.
+                        Ayurvedic herbal medicines such as Arshopilecare and Sand-Cof, prepared
+                        using classical formulations to support digestive comfort, respiratory
+                        wellness, and natural healing.
                     </p>
                     <div class="image-box">
-                        <div class="link"><a href="blog-details.html"><i class="icon-2"></i></a></div>
+                        <div class="link"><a href="products.html"><i class="icon-2"></i></a></div>
                         <figure class="image">
-                            <img src="https://spinesurgeonsseattle.com/wp-content/uploads/2020/12/herbal-remedies.jpg" 
-                                 alt="Ayurvedic herbal medicines including herbal remedies for wellness">
+                            <img src="assets/images/hero-product-arshopilecare.png" 
+                                 alt="Arshopilecare — Sanadana Herbals ayurvedic herbal medicine"
+                                 loading="lazy"
+                                 decoding="async">
                         </figure>
                     </div>
                 </div>
             </div>
 
-            <!-- Category 2 -->
+            <!-- Ayurvedic Kashayam -->
             <div class="service-block-one">
                 <div class="inner-box">
                     <div class="icon-box">
                         <img style="width: 3rem;" 
-                             src="https://png.pngtree.com/png-clipart/20241117/original/pngtree-green-leaves-herbal-natural-ayurvedic-logo-vector-png-image_17122923.png"
-                             alt="Traditional ayurvedic oils for wellness and body care">
+                             src="assets/images/svg-logo-1.png"
+                             alt="Ayurvedic kashayam classical herbal decoctions">
                     </div>
-                    <div class="category">
-                        <span class="gradient-color">Category 2</span>
-                    </div>
-                    <h3><a href="service-details.html">Ayurvedic Oils</a></h3>
+                    <h3><a href="products.html">Ayurvedic Kashayam</a></h3>
                     <ul class="info-list">
-                        <li><a href="service-details.html">Pain Relief</a></li>
-                        <li><a href="service-details.html">Hair & Body Care</a></li>
+                        <li><a href="Dhathriarishtam-blog.html">Classical Decoctions</a></li>
+                        <li><a href="products.html">Holistic Wellness</a></li>
                     </ul>
                     <p>
-                        Traditional ayurvedic oils created using classical extraction
-                        methods for pain relief, hair care, and daily body wellness.
+                        Traditional Ayurvedic kashayam and classical liquid preparations made
+                        from medicinal herbs—decocted and fermented using time-tested Kerala
+                        methods for restorative daily wellness.
                     </p>
                     <div class="image-box">
-                        <div class="link"><a href="blog-details.html"><i class="icon-2"></i></a></div>
+                        <div class="link"><a href="products.html"><i class="icon-2"></i></a></div>
                         <figure class="image">
-                            <img src="https://media.istockphoto.com/id/174627639/photo/aroma-therapy-oils-placed-next-to-a-white-towel-and-flower.jpg?s=612x612&w=0&k=20&c=TkgkQQR7_9weKAYQBsNj3D-GHM5nWEHRS8hHHl04lAc="
-                                 alt="Ayurvedic herbal oils for pain relief and natural therapy">
+                            <img src="assets/images/hero-product-dhathriarishtam.png" 
+                                 alt="Dhathriarishtam — Sanadana Herbals classical Ayurvedic kashayam tonic"
+                                 loading="lazy"
+                                 decoding="async">
                         </figure>
                     </div>
                 </div>
             </div>
 
-            <!-- Category 3 -->
+            <!-- Wellness Products -->
             <div class="service-block-one">
                 <div class="inner-box">
                     <div class="icon-box">
                         <img style="width: 3rem;" 
-                             src="https://png.pngtree.com/png-clipart/20241117/original/pngtree-green-leaves-herbal-natural-ayurvedic-logo-vector-png-image_17122923.png"
+                             src="assets/images/svg-logo-1.png"
                              alt="Wellness products based on ayurvedic herbal formulations">
                     </div>
-                    <div class="category">
-                        <span class="gradient-color">Category 3</span>
-                    </div>
-                    <h3><a href="service-details.html">Wellness Products</a></h3>
+                    <h3><a href="products.html">Wellness Products</a></h3>
                     <ul class="info-list">
-                        <li><a href="service-details.html">Digestive Care</a></li>
-                        <li><a href="service-details.html">Daily Health</a></li>
+                        <li><a href="aminohit-blog.html">Digestive Care</a></li>
+                        <li><a href="products.html">Daily Health</a></li>
                     </ul>
                     <p>
-                        Natural wellness products formulated to support digestive balance,
-                        daily health, and long-term ayurvedic wellness.
+                        Natural wellness products like Aminohit, formulated to ease acidity,
+                        support digestive balance, and promote everyday Ayurvedic health
+                        without harsh chemicals.
                     </p>
                     <div class="image-box">
-                        <div class="link"><a href="blog-details.html"><i class="icon-2"></i></a></div>
+                        <div class="link"><a href="products.html"><i class="icon-2"></i></a></div>
                         <figure class="image">
-                            <img src="https://maharishiayurvedaindia.com/cdn/shop/articles/tea_for_relaxation_and_wellness_403b44f9-f5e0-4efd-bde8-54afd57377ec_600x600_crop_center.jpg?v=1760419602"
-                                 alt="Ayurvedic wellness products for digestion and daily health">
+                            <img src="assets/images/hero-product-aminohit.png" 
+                                 alt="Aminohit — Sanadana Herbals ayurvedic digestive wellness product"
+                                 loading="lazy"
+                                 decoding="async">
                         </figure>
                     </div>
                 </div>
             </div>
 
-            <!-- Category 4 -->
+            <!-- Herbal Supplements -->
             <div class="service-block-one">
                 <div class="inner-box">
                     <div class="icon-box">
                         <img style="width: 3rem;" 
-                             src="https://png.pngtree.com/png-clipart/20241117/original/pngtree-green-leaves-herbal-natural-ayurvedic-logo-vector-png-image_17122923.png"
+                             src="assets/images/svg-logo-1.png"
                              alt="Herbal supplements made with ayurvedic ingredients">
                     </div>
-                    <div class="category">
-                        <span class="gradient-color">Category 4</span>
-                    </div>
-                    <h3><a href="service-details.html">Herbal Supplements</a></h3>
+                    <h3><a href="products.html">Herbal Supplements</a></h3>
                     <ul class="info-list">
-                        <li><a href="service-details.html">Immunity Boost</a></li>
-                        <li><a href="service-details.html">Vitality Support</a></li>
+                        <li><a href="sd-himo-plus-blog.html">Immunity Boost</a></li>
+                        <li><a href="products.html">Vitality Support</a></li>
                     </ul>
                     <p>
-                        Plant-based herbal supplements developed without harmful chemicals,
-                        supporting immunity, energy, and overall vitality naturally.
+                        Plant-based herbal tonics such as SD Himo Plus, developed without
+                        harmful chemicals to support stamina, immunity, energy, and overall
+                        vitality naturally.
                     </p>
                     <div class="image-box">
-                        <div class="link"><a href="blog-details.html"><i class="icon-2"></i></a></div>
+                        <div class="link"><a href="products.html"><i class="icon-2"></i></a></div>
                         <figure class="image">
-                            <img src="https://www.clinicbarcelona.org/media/cache/960_jpeg/uploads/media/default/0019/17/e579a929e29a742d51c767c97c30776063552bd1.png"
-                                 alt="Ayurvedic herbal supplements for immunity and vitality support">
+                            <img src="assets/images/hero-product-sd-himo-plus.png" 
+                                 alt="SD Himo Plus — Sanadana Herbals ayurvedic herbal supplement tonic"
+                                 loading="lazy"
+                                 decoding="async">
                         </figure>
                     </div>
                 </div>
@@ -777,160 +932,158 @@ body.loading {
 
 
 
-        <!-- instagram-section -->
-        <section class="instagram-section">
-            <div class="outer-container">
-                <div class="instagram-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
-                    <div class="instagram-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/insta/insta (3).png" alt="Sanadana Herbals Reel" onerror="this.src='https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?w=400&q=80'"></figure>
-                            <div class="link"><a href="https://www.instagram.com/reel/DO32AYilJ1M/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="instagram-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/insta/insta (5).png" alt="Sanadana Herbals Reel" onerror="this.src='https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&q=80'"></figure>
-                            <div class="link"><a href="https://www.instagram.com/reel/DQRVT8OjY6K/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="instagram-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/insta/insta (4).png" alt="Sanadana Herbals Reel" onerror="this.src='https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80'"></figure>
-                            <div class="link"><a href="https://www.instagram.com/reel/DQqegtwjzBI/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="instagram-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/insta/insta (1).png" alt="Sanadana Herbals Reel" onerror="this.src='https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80'"></figure>
-                            <div class="link"><a href="https://www.instagram.com/reel/DRKPbJrjx7I/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="instagram-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/insta/insta (2).png" alt="Sanadana Herbals Reel" onerror="this.src='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80'"></figure>
-                            <div class="link"><a href="https://www.instagram.com/reel/DRRhCQ6EVP_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="instagram-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/insta/insta (1).png" alt="Sanadana Herbals Reel" onerror="this.src='https://images.unsplash.com/photo-1606787619248-f301830a5a57?w=400&q=80'"></figure>
-                            <div class="link"><a href="https://www.instagram.com/reel/DRj68oKFMVD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                        </div>
-                    </div>
+                <!-- instagram-section -->
+        <section class="instagram-section instagram-premium pt_90 pb_90" aria-labelledby="instagram-premium-heading">
+            <div class="instagram-premium__bg" aria-hidden="true"></div>
+            <div class="auto-container">
+                <header class="instagram-premium__header">
+                    <p class="instagram-premium__kicker">
+                        <img src="assets/images/svg-logo-1.png" width="28" height="28" alt="" role="presentation">
+                        @sanadana_herbals
+                    </p>
+                    <h2 id="instagram-premium-heading">Wellness Stories From Our Community</h2>
+                    <p class="instagram-premium__intro">
+                        Ayurvedic tips, product highlights, and behind-the-scenes reels—follow us for daily herbal inspiration.
+                    </p>
+                    <a href="https://www.instagram.com/sanadana_herbals/" class="instagram-premium__follow" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                        Follow on Instagram
+                    </a>
+                </header>
+
+                <div class="instagram-premium__grid">
+                    <a class="instagram-premium__card" href="https://www.instagram.com/reel/DO32AYilJ1M/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+                        <figure class="instagram-premium__media">
+                            <img src="assets/images/insta/insta (3).png" alt="Sanadana Herbals Instagram reel on Ayurvedic wellness" width="400" height="600" loading="lazy" decoding="async">
+                            <span class="instagram-premium__overlay">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>Watch reel</span>
+                            </span>
+                        </figure>
+                    </a>
+                    <a class="instagram-premium__card" href="https://www.instagram.com/reel/DQRVT8OjY6K/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+                        <figure class="instagram-premium__media">
+                            <img src="assets/images/insta/insta (5).png" alt="Sanadana Herbals herbal product reel" width="400" height="600" loading="lazy" decoding="async">
+                            <span class="instagram-premium__overlay">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>Watch reel</span>
+                            </span>
+                        </figure>
+                    </a>
+                    <a class="instagram-premium__card" href="https://www.instagram.com/reel/DQqegtwjzBI/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+                        <figure class="instagram-premium__media">
+                            <img src="assets/images/insta/insta (4).png" alt="Sanadana Herbals natural healing reel" width="400" height="600" loading="lazy" decoding="async">
+                            <span class="instagram-premium__overlay">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>Watch reel</span>
+                            </span>
+                        </figure>
+                    </a>
+                    <a class="instagram-premium__card" href="https://www.instagram.com/reel/DRKPbJrjx7I/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+                        <figure class="instagram-premium__media">
+                            <img src="assets/images/insta/insta (1).png" alt="Sanadana Herbals Ayurvedic care reel" width="400" height="600" loading="lazy" decoding="async">
+                            <span class="instagram-premium__overlay">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>Watch reel</span>
+                            </span>
+                        </figure>
+                    </a>
+                    <a class="instagram-premium__card" href="https://www.instagram.com/reel/DRRhCQ6EVP_/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+                        <figure class="instagram-premium__media">
+                            <img src="assets/images/insta/insta (2).png" alt="Sanadana Herbals herbal remedies reel" width="400" height="600" loading="lazy" decoding="async">
+                            <span class="instagram-premium__overlay">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>Watch reel</span>
+                            </span>
+                        </figure>
+                    </a>
+                    <a class="instagram-premium__card" href="https://www.instagram.com/reel/DRj68oKFMVD/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+                        <figure class="instagram-premium__media">
+                            <img src="assets/images/insta/insta (1).png" alt="Sanadana Herbals wellness lifestyle reel" width="400" height="600" loading="lazy" decoding="async">
+                            <span class="instagram-premium__overlay">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>Watch reel</span>
+                            </span>
+                        </figure>
+                    </a>
                 </div>
             </div>
         </section>
         <!-- instagram-section end -->
 
 
+
+
 <!-- main-footer -->
-<footer class="main-footer">
-    <div class="image-layer" style="background-image: url(assets/images/background/footer-bg.jpg);"></div>
-    <div class="pattern-layer">
-        <div class="pattern-1" style="background-image: url(assets/images/shape/shape-13.png);"></div>
-        <div class="pattern-2" style="background-image: url(assets/images/shape/shape-14.png);"></div>
-        <div class="pattern-3" style="background-image: url(assets/images/shape/shape-15.png);"></div>
-        <div class="pattern-4" style="background-image: url(assets/images/shape/shape-16.png);"></div>
+<footer class="main-footer footer-premium" id="site-footer">
+    <div class="footer-premium__inner">
+        <a href="index.html" class="footer-premium__logo">
+            <img src="assets/images/sanadana-header-logo.png"
+                 alt="Sanadana Herbals — Heal With Nature"
+                 width="220" height="56" loading="lazy" decoding="async">
+        </a>
+
+        <ul class="footer-premium__contact">
+            <li>
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <span>SANADANA HERBALS PRIVATE LIMITED CP10/350, MALAPPURAM, KERALA, INDIA</span>
+            </li>
+            <li>
+                <a href="tel:+919995526660">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    +91 9995 552 660
+                </a>
+            </li>
+            <li>
+                <a href="mailto:info@sanadanaherbals.com">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    info@sanadanaherbals.com
+                </a>
+            </li>
+        </ul>
+
+        <ul class="footer-premium__social">
+            <li>
+                <a href="index.html" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/people/Sanadana-herbals/61578721616783/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/sanadana_herbals/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" aria-label="YouTube">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+
+        <nav class="footer-premium__nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <span class="footer-premium__sep" aria-hidden="true">|</span>
+            <a href="about.html">About Us</a>
+            <span class="footer-premium__sep" aria-hidden="true">|</span>
+            <a href="https://shop.sanadanaherbals.com/collections/all">Store</a>
+            <span class="footer-premium__sep" aria-hidden="true">|</span>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <p class="footer-premium__copyright">© 2026 Sanadana Herbals. All Rights Reserved.</p>
     </div>
 
-    <div class="widget-section">
-        <div class="auto-container">
-            <div class="row clearfix">
-
-                <!-- Brand block -->
-                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                    <div class="footer-widget logo-widget">
-                        <figure class="footer-logo">
-                            <a href="index.html">
-                                <img style="width: 12rem;" 
-                                     src="assets/images/logo-sandan-new-2.png" 
-                                     alt="Sanadana Herbals ayurvedic and herbal wellness brand logo">
-                            </a>
-                        </figure>
-                        <p>
-                            Sanadana Herbals is a trusted Kerala-based ayurvedic and herbal wellness
-                            brand delivering authentic solutions for immunity, digestion, respiratory
-                            care, and holistic natural living.
-                        </p>
-                        <ul class="social-links">
-                            <li><a href="https://www.facebook.com/people/Sanadana-herbals/61578721616783/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.instagram.com/sanadana_herbals/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Policy / Trust -->
-                <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
-                    <div class="footer-widget links-widget">
-                        <div class="widget-title">
-                            <h5>Top Links</h5>
-                        </div>
-                        <div class="widget-content">
-                            <ul class="links-list clearfix">
-                                <li><a href="about.html">About Sanadana Herbals</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="refund-policy.html">Refund Policy</a></li>
-                                <li><a href="shipping-policy.html">Shipping Policy</a></li>
-                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Internal navigation -->
-                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                    <div class="footer-widget links-widget">
-                        <div class="widget-title">
-                            <h5>Explore Now</h5>
-                        </div>
-                        <div class="widget-content">
-                            <ul class="links-list clearfix">
-                                <li><a href="contact.html">Contact Sanadana Herbals</a></li>
-                                <li><a href="blog.html">Ayurvedic Wellness Blogs</a></li>
-                                <li><a href="products.html">Ayurvedic & Herbal Products</a></li>
-                                <li><a href="service.html">Why Choose Ayurveda</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Local SEO -->
-                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                    <div class="footer-widget contact-widget">
-                        <div class="widget-title">
-                            <h5>Working Hours</h5>
-                        </div>
-                        <div class="widget-content">
-                            <p>Our office is open <span>07 AM – 10 PM</span></p>
-                            <h6>Monday – Friday</h6>
-                            <span class="text">Weekends</span>
-
-                            <h5>Address</h5>
-                            <p>
-                                Sanadana Herbals Private Limited<br />
-                                CP10/350, Pullenkode, Kalikavu<br />
-                                Malappuram, Kerala, India<br />
-                                Pin: 676525
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom centred">
-        <div class="auto-container">
-            <div class="copyright">
-                <p>© 2026 Sanadana Herbals. All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
+    <a href="#" class="footer-premium__scroll-top" id="footer-scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
 </footer>
 <!-- main-footer end -->
+
 
 
 
@@ -955,32 +1108,13 @@ body.loading {
     <script src="assets/js/jquery.circleType.js"></script>
 
     <!-- main-js -->
+    <script src="assets/js/footer-premium.js" defer></script>
     <script src="assets/js/script.js"></script>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/919497577660" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <style>
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 90px;
-            right: 20px;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .whatsapp-float i { margin: 0; line-height: 1; }
-    </style>
 
     <!-- Sanadana Herbal AI Chatbot (entire site) -->
     <link rel="stylesheet" href="chatbot/chatbot.css">

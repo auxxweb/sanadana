@@ -27,6 +27,24 @@
   filter: grayscale(100%);
 }
 
+.team-section--why-ayurveda .team-block-one .inner-box:hover .image-box img{
+  filter: none;
+  transform: scale(1.02);
+}
+
+.team-section--why-ayurveda .team-block-one .inner-box .image-box{
+  border-radius: 14px;
+  background: #fff;
+  aspect-ratio: 4 / 3;
+}
+
+.team-section--why-ayurveda .team-block-one .inner-box .image-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
 .team-block-one .inner-box .lower-content{
   position: relative;
   display: block;

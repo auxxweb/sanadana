@@ -9,7 +9,7 @@
 <title>Sanadana Herbals | FAQ - Frequently Asked Questions</title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="https://sanadanaherbals.com/assets/images/svg-logo-1.png" type="image/x-icon">
+<link rel="icon" href="https://sanadanaherbals.com/assets/images/favicon.png" type="image/png">
 <link rel="manifest" href="./manifest.json">
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap" rel="stylesheet">
@@ -32,6 +32,8 @@
 <link href="assets/css/module-css/page-title.css" rel="stylesheet">
 <link href="assets/css/module-css/faq.css" rel="stylesheet">
 <link href="assets/css/module-css/clients.css" rel="stylesheet">
+<link href="assets/css/module-css/footer-premium.css" rel="stylesheet">
+  <link href="assets/css/module-css/site-premium.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
 
 </head>
@@ -68,8 +70,8 @@ window.addEventListener("load", function () {
     inset: 0;
     z-index: 10000;
 
-    /* light grey background (NO cyan tone) */
-    background: #f2f2f2;
+    /* site theme: white preloader backdrop */
+    background: #ffffff;
 
     display: flex;
     align-items: center;
@@ -83,12 +85,12 @@ window.addEventListener("load", function () {
     background: transparent;
 }
 
-/* SMALL loader */
+/* Prominent loader */
 .loader-gif {
-    width: 8rem;
-    height: 8rem;
+    width: 12rem;
+    height: 12rem;
     object-fit: contain;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 /* Disable scroll while loader is active */
@@ -99,7 +101,7 @@ body.loading {
       <div class="loader-wrap">
     <div class="preloader">
         <img 
-            src="./assets/images/Loading 3.gif" 
+            src="./assets/images/sanadana-loader.gif" 
             alt="Loading"
             class="loader-gif"
         />
@@ -125,7 +127,7 @@ body.loading {
                 <div class="outer-box">
                     <div class="left-column">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
+                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/sanadana-header-logo.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area">
                             <!--Mobile Navigation Toggler-->
@@ -157,8 +159,6 @@ body.loading {
                             <div class="icon-box gradient-color"><i class="icon-1"></i></div>
                             <a href="mailto:sanadanaherbals@gmail.com">sanadanaherbals@gmail.com</a>
                         </div>
-                        <div class="btn-box mr_30"><a href="https://wa.me/919497577660" class="theme-btn-one" target="_blank"><span>Order on WhatsApp</span></a></div>
-                        <div class="link"><a href="index.html"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                     </div>
                 </div>
             </div>
@@ -168,7 +168,7 @@ body.loading {
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
+                            <figure class="logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/sanadana-header-logo.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area">
                             <nav class="main-menu clearfix">
@@ -180,8 +180,6 @@ body.loading {
                                 <div class="icon-box gradient-color"><i class="icon-1"></i></div>
                                 <a href="mailto:sanadanaherbals@gmail.com">sanadanaherbals@gmail.com</a>
                             </div>
-                            <div class="btn-box mr_30"><a href="https://wa.me/919497577660" class="theme-btn-one" target="_blank"><span>Order on WhatsApp</span></a></div>
-                            <div class="link"><a href="index.html"><img src="assets/images/icons/icon-1.svg" alt=""></a></div>
                         </div>
                     </div>
                 </div>
@@ -196,7 +194,7 @@ body.loading {
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/sanadana-header-logo.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
@@ -234,6 +232,9 @@ body.loading {
                         <li><a href="index.html">Home</a></li>
                         <li>FAQ</li>
                     </ul>
+                    <p class="page-title__lead">Authentic Ayurvedic wellness — GMP-certified, rooted in Kerala tradition.</p>
+                    <a href="https://shop.sanadanaherbals.com/collections/all" class="premium-shop-cta">Shop the collection <span aria-hidden="true">→</span></a>
+
                 </div>
             </div>
         </section>
@@ -938,85 +939,77 @@ body.loading {
         <!-- clients-section end -->
 
 
-        <!-- main-footer -->
-        <footer class="main-footer">
-            <div class="image-layer" style="background-image: url(assets/images/background/footer-bg.jpg);"></div>
-            <div class="pattern-layer">
-                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-13.png);"></div>
-                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-14.png);"></div>
-                <div class="pattern-3" style="background-image: url(assets/images/shape/shape-15.png);"></div>
-                <div class="pattern-4" style="background-image: url(assets/images/shape/shape-16.png);"></div>
-            </div>
-            <div class="widget-section">
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img style="width: 12rem;" src="./assets/images/logo-sandan-new-2.png" alt=""></a></figure>
-                                <p>Sanadana Herbals is dedicated to delivering authentic Ayurvedic and herbal solutions for natural wellness and holistic living.</p>
-                                <ul class="social-links">
-                                    <li><a href="https://www.facebook.com/people/Sanadana-herbals/61578721616783/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://www.instagram.com/sanadana_herbals/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget links-widget">
-                                <div class="widget-title">
-                                    <h5>Top Links</h5>
-                                </div>
-                                <div class="widget-content">
-                                    <ul class="links-list clearfix">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                        <li><a href="refund-policy.html">Refund Policy</a></li>
-                                        <li><a href="shipping-policy.html">Shipping Policy</a></li>
-                                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget links-widget">
-                                <div class="widget-title">
-                                    <h5>Explore Now</h5>
-                                </div>
-                                <div class="widget-content">
-                                    <ul class="links-list clearfix">
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="blog.html">Blogs</a></li>
-                                        <li><a href="products.html">Products</a></li>
-                                        <li><a href="service.html">Why Sanadana</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget contact-widget">
-                                <div class="widget-title">
-                                    <h5>Working Hours</h5>
-                                </div>
-                                <div class="widget-content">
-                                    <p>Our Office are open <span>07AM - 22PM</span></p>
-                                    <h6>Monday - Friday</h6>
-                                    <span class="text">Weekends</span>
-                                    <h5>Address</h5>
-                                    <p>SANADANA HERBALS PRIVATE LIMITED<br />CP10/350, PULLENKODE, KALIKAVU<br />MALAPPURAM, KERALA, INDIA<br />Pin: 676525</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom centred">
-                <div class="auto-container">
-                    <div class="copyright"><p>© 2026 Sanadana Herbals. All Rights Reserved.</p></div>
-                </div>
-            </div>
-        </footer>
-        <!-- main-footer end -->
+        
+<!-- main-footer -->
+<footer class="main-footer footer-premium" id="site-footer">
+    <div class="footer-premium__inner">
+        <a href="index.html" class="footer-premium__logo">
+            <img src="assets/images/sanadana-header-logo.png"
+                 alt="Sanadana Herbals — Heal With Nature"
+                 width="220" height="56" loading="lazy" decoding="async">
+        </a>
+
+        <ul class="footer-premium__contact">
+            <li>
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <span>SANADANA HERBALS PRIVATE LIMITED CP10/350, MALAPPURAM, KERALA, INDIA</span>
+            </li>
+            <li>
+                <a href="tel:+919995526660">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    +91 9995 552 660
+                </a>
+            </li>
+            <li>
+                <a href="mailto:info@sanadanaherbals.com">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    info@sanadanaherbals.com
+                </a>
+            </li>
+        </ul>
+
+        <ul class="footer-premium__social">
+            <li>
+                <a href="index.html" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/people/Sanadana-herbals/61578721616783/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/sanadana_herbals/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" aria-label="YouTube">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+
+        <nav class="footer-premium__nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <span class="footer-premium__sep" aria-hidden="true">|</span>
+            <a href="about.html">About Us</a>
+            <span class="footer-premium__sep" aria-hidden="true">|</span>
+            <a href="https://shop.sanadanaherbals.com/collections/all">Store</a>
+            <span class="footer-premium__sep" aria-hidden="true">|</span>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <p class="footer-premium__copyright">© 2026 Sanadana Herbals. All Rights Reserved.</p>
+    </div>
+
+    <a href="#" class="footer-premium__scroll-top" id="footer-scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</footer>
+<!-- main-footer end -->
+
 
 
 
@@ -1040,35 +1033,13 @@ body.loading {
     <script src="assets/js/jquery.circleType.js"></script>
 
     <!-- main-js -->
+    <script src="assets/js/footer-premium.js" defer></script>
     <script src="assets/js/script.js"></script>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/919497577660" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <style>
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 90px;
-            right: 20px;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .whatsapp-float i {
-            margin: 0;
-            line-height: 1;
-        }
-    </style>
 
     <!-- Sanadana Herbal AI Chatbot (entire site) -->
     <link rel="stylesheet" href="chatbot/chatbot.css">

@@ -4,22 +4,8 @@
 /* Performance: smooth scrolling and reduced layout cost */
 html {
   scroll-behavior: smooth;
-}
-
-/* Below-the-fold sections: browser can skip layout until near viewport */
-.service-section,
-.about-section,
-.feature-section,
-.team-section,
-.portfolio-section,
-.pricing-section,
-.faq-section,
-.testimonial-section,
-.news-section,
-.clients-section,
-.instagram-section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 400px;
+  /* Avoid width jump when scrollbar appears — reduces ST pin “flash” / gap on load */
+  scrollbar-gutter: stable;
 }
 
 /* Less gap between banner and Herbal Range section */
@@ -95,7 +81,7 @@ html {
 
 
 :root{
-  --theme-color: #00bf63;
+  --theme-color: rgb(0, 167, 167);
   --text-color: #656565;
   --title-color: #1F1F1F;
   --text-font: 'DM Sans', sans-serif;
@@ -2016,7 +2002,7 @@ button.ltr {
 .slide-text-box{
   position: relative;
   width: 100%;
-  background: #508456;
+  background: rgb(0, 115, 115);
   padding: 37px 0px;
   transform: rotate(-3deg);
   margin-top: -50px;
@@ -2026,7 +2012,7 @@ button.ltr {
 .slide-text-box:before{
   position: absolute;
   content: '';
-  background: #508456;
+  background: rgb(0, 115, 115);
   width: calc(100% + 20px);
   height: 100%;
   top: 0px;
@@ -2421,7 +2407,487 @@ button.ltr {
   background: var(--title-color);
 }
 
+@keyframes sanadana-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+body.loading .loader-gif {
+  animation: sanadana-loader-spin 1.2s linear infinite;
+  transform-origin: center center;
+}
+
+/* ------------------------------------------------------------------
+   Premium herbal navigation — teal theme, glass sticky bar, motion
+   (compact bar: smaller logo, links, CTA, utilities)
+   ------------------------------------------------------------------ */
+
+.main-header {
+  top: 8px;
+}
+
+.main-header .header-lower {
+  padding: 4px 56px;
+}
+
+@media (max-width: 1199px) {
+  .main-header .header-lower {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .main-header .left-column .logo-box {
+    margin-right: 28px !important;
+  }
+}
+
+.main-header .header-lower::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(90%, 1040px);
+  height: 1.5px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 167, 167, 0.35),
+    rgba(0, 115, 115, 0.45),
+    rgba(0, 167, 167, 0.35),
+    transparent
+  );
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.main-header .left-column .logo-box {
+  margin-right: 56px;
+}
+
+/* Override inline logo width in header / sticky / mobile drawer */
+.main-header .logo-box img,
+.sticky-header .logo-box img,
+.mobile-menu .nav-logo img {
+  width: 7.5rem !important;
+  max-width: min(7.5rem, 42vw);
+  height: auto !important;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+}
+
+.main-menu .navigation > li {
+  margin: 0 8px;
+}
+
+.main-menu .navigation > li > a {
+  padding: 12px 1.25rem 14px;
+  font-size: 12.5px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  border-radius: 999px;
+  transition:
+    color 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.main-menu .navigation > li:hover > a {
+  background: transparent;
+  transform: translateY(-1px);
+}
+
+.main-menu .navigation > li.current > a {
+  background: transparent;
+  color: var(--theme-color);
+}
+
+.main-header .left-column .logo-box a,
+.sticky-header .logo-box a {
+  display: inline-block;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.35s ease;
+}
+
+.main-header .left-column .logo-box a:hover img,
+.sticky-header .logo-box a:hover img {
+  transform: scale(1.03);
+  filter: drop-shadow(0 6px 16px rgba(0, 167, 167, 0.2));
+}
+
+.main-header .menu-right-content .support-box,
+.sticky-header .menu-right-content .support-box {
+  padding-left: 24px;
+}
+
+.main-header .menu-right-content .support-box.mr_75,
+.sticky-header .menu-right-content .support-box.mr_75 {
+  margin-right: 28px !important;
+}
+
+.main-header .menu-right-content .btn-box.mr_30,
+.sticky-header .menu-right-content .btn-box.mr_30 {
+  margin-right: 12px !important;
+}
+
+.main-header .menu-right-content .support-box .icon-box,
+.sticky-header .menu-right-content .support-box .icon-box {
+  top: 0;
+  font-size: 14px;
+}
+
+.main-header .menu-right-content .support-box a,
+.sticky-header .menu-right-content .support-box a {
+  font-size: 12.5px;
+  line-height: 1.35;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.main-header .menu-right-content .support-box:hover a,
+.sticky-header .menu-right-content .support-box:hover a {
+  transform: translateX(2px);
+}
+
+/** Floating action buttons — WhatsApp (size; colors in color.css) */
+.whatsapp-float {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  bottom: 74px;
+  right: 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+  box-shadow: none !important;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.06);
+}
+
+.whatsapp-float i {
+  margin: 0;
+  line-height: 1;
+}
+
+@media (max-width: 575px) {
+  .whatsapp-float {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/**
+ * Mobile / tablet: stack exactly two FABs — AI chat (bottom) + WhatsApp (above).
+ * Matches products.html and other inner pages (no index-only oversized WhatsApp).
+ */
+@media (max-width: 991px) {
+  :root {
+    --fab-size: 44px;
+    --fab-gap: 12px;
+    --fab-edge: clamp(14px, 3.5vw, 18px);
+    --fab-safe-bottom: max(var(--fab-edge), env(safe-area-inset-bottom, 0px));
+  }
+
+  .sanadana-chatbot {
+    bottom: var(--fab-safe-bottom) !important;
+    right: var(--fab-edge) !important;
+  }
+
+  .sanadana-chatbot__trigger {
+    width: var(--fab-size);
+    height: var(--fab-size);
+  }
+
+  .whatsapp-float {
+    width: var(--fab-size) !important;
+    height: var(--fab-size) !important;
+    right: var(--fab-edge) !important;
+    bottom: calc(var(--fab-safe-bottom) + var(--fab-size) + var(--fab-gap)) !important;
+    font-size: 22px;
+  }
+
+  /* Home index: only WhatsApp + chat — no third scroll-to-top FAB */
+  body.page-home .footer-premium__scroll-top {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --fab-size: 40px;
+    --fab-gap: 10px;
+    --fab-edge: 14px;
+  }
+}
+
+.main-header .menu-right-content .link a,
+.sticky-header .menu-right-content .link a {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+  box-shadow: 0 4px 14px rgba(0, 167, 167, 0.22);
+}
+
+.main-header .menu-right-content .link a img,
+.sticky-header .menu-right-content .link a img {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+}
+
+.main-header .menu-right-content .link a:hover,
+.sticky-header .menu-right-content .link a:hover {
+  transform: scale(1.05) translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0, 115, 115, 0.26);
+}
+
+.main-header .menu-right-content .btn-box .theme-btn-one,
+.sticky-header .menu-right-content .btn-box .theme-btn-one {
+  font-size: 12px;
+  line-height: 1.35;
+  padding: 7px 16px;
+  box-shadow: 0 5px 16px rgba(0, 167, 167, 0.24);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.main-header .menu-right-content .btn-box .theme-btn-one span,
+.sticky-header .menu-right-content .btn-box .theme-btn-one span {
+  padding-right: 18px;
+}
+
+.main-header .menu-right-content .btn-box .theme-btn-one span:before,
+.sticky-header .menu-right-content .btn-box .theme-btn-one span:before {
+  font-size: 10px;
+}
+
+.main-header .menu-right-content .btn-box .theme-btn-one:hover,
+.sticky-header .menu-right-content .btn-box .theme-btn-one:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 115, 115, 0.28);
+}
+
+/* Dropdowns: light “clinical” panel instead of flat teal block */
+.main-menu .navigation > li > ul,
+.main-menu .navigation > li > .megamenu,
+.main-menu .navigation > li > ul > li > ul {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border: 1px solid rgba(0, 167, 167, 0.18);
+  border-radius: 14px;
+  box-shadow:
+    0 4px 0 rgba(255, 255, 255, 0.85) inset,
+    0 24px 48px rgba(0, 55, 55, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+.main-menu .navigation > li > ul > li > a,
+.main-menu .navigation > li > .megamenu li > a {
+  color: var(--title-color) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.main-menu .navigation > li > ul > li > a {
+  padding: 8px 18px !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+.main-menu .navigation > li > .megamenu li > a {
+  padding: 8px 0 !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+.main-menu .navigation > li > ul > li > a:hover,
+.main-menu .navigation > li > .megamenu li > a:hover {
+  color: rgb(0, 115, 115) !important;
+  background: rgba(0, 167, 167, 0.06);
+}
+
+.main-menu .navigation > li > .megamenu h4 {
+  color: rgb(0, 115, 115) !important;
+}
+
+.main-menu .navigation > li > ul,
+.main-menu .navigation > li > .megamenu {
+  margin-top: 8px;
+}
+
+.main-menu .navigation > li.dropdown > .megamenu {
+  padding: 22px 36px;
+}
+
+/* Sticky bar — frosted glass */
+.sticky-header {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid rgba(0, 167, 167, 0.12) !important;
+  box-shadow: 0 12px 40px rgba(0, 45, 45, 0.08);
+}
+
+.sticky-header .main-menu .navigation > li > a {
+  color: var(--title-color) !important;
+  padding: 12px 1.25rem 14px !important;
+}
+
+.sticky-header .main-menu .navigation > li.current > a {
+  color: var(--theme-color) !important;
+  background: transparent !important;
+}
+
+.sticky-header .main-menu .navigation > li.dropdown > a:before {
+  top: 16px;
+}
+
+.sticky-header .main-menu:before {
+  top: 8px;
+}
+
+.menu-area .mobile-nav-toggler {
+  font-size: 28px;
+  line-height: 38px;
+  border-radius: 10px;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.25s ease;
+}
+
+.menu-area .mobile-nav-toggler:hover {
+  box-shadow: 0 0 0 2px rgba(0, 167, 167, 0.35);
+  transform: scale(1.03);
+}
+
+.menu-area .mobile-nav-toggler .icon-bar {
+  width: 22px;
+  margin-bottom: 4px;
+}
+
+/* Nav links — always center-aligned in the header bar */
+.main-header .header-lower > .outer-box,
+.sticky-header .auto-container > .outer-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px 20px;
+}
+
+.main-header .left-column {
+  display: contents;
+}
+
+.main-header .header-lower .logo-box,
+.sticky-header .logo-box {
+  grid-column: 1;
+  justify-self: start;
+  margin-right: 0 !important;
+}
+
+.main-header .header-lower .menu-area,
+.sticky-header .menu-area {
+  grid-column: 2;
+  justify-self: center;
+  width: max-content;
+  max-width: 100%;
+}
+
+.main-header .header-lower .menu-right-content,
+.sticky-header .menu-right-content {
+  grid-column: 3;
+  justify-self: end;
+}
+
+.main-header .main-menu,
+.sticky-header .main-menu {
+  float: none;
+}
+
+.main-header .main-menu .navigation,
+.sticky-header .main-menu .navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  float: none;
+}
+
+.main-header .main-menu .navigation > li,
+.sticky-header .main-menu .navigation > li {
+  float: none;
+}
+
+/* Mobile drawer — centered labels */
+.mobile-menu .navigation li > a {
+  text-align: center;
+}
+
+.mobile-menu .navigation li ul li > a {
+  text-align: center;
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 1199px) {
+  .main-header .header-lower > .outer-box {
+    grid-template-columns: 1fr auto;
+  }
+
+  .main-header .header-lower .logo-box {
+    grid-column: 1;
+  }
+
+  .main-header .header-lower .menu-area {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .main-header .header-lower .menu-right-content {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-menu .navigation > li > a,
+  .main-header .logo-box img,
+  .sticky-header .logo-box img,
+  .mobile-menu .nav-logo img,
+  .main-header .menu-right-content .support-box a,
+  .sticky-header .menu-right-content .support-box a,
+  .main-header .menu-right-content .link a,
+  .sticky-header .menu-right-content .link a,
+  .main-header .menu-right-content .btn-box .theme-btn-one,
+  .sticky-header .menu-right-content .btn-box .theme-btn-one {
+    transition: none !important;
+  }
+
+  .main-menu .navigation > li:hover > a,
+  .main-header .menu-right-content .support-box:hover a,
+  .sticky-header .menu-right-content .support-box:hover a,
+  .main-header .menu-right-content .link a:hover,
+  .sticky-header .menu-right-content .link a:hover,
+  .main-header .menu-right-content .btn-box .theme-btn-one:hover,
+  .sticky-header .menu-right-content .btn-box .theme-btn-one:hover {
+    transform: none !important;
+  }
+}
 
 
 

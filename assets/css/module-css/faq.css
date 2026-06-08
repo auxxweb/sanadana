@@ -6,6 +6,30 @@
   position: relative;
 }
 
+.faq-section--centered .bg-layer{
+  display: none;
+}
+
+.faq-section--centered .content-column{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-section--centered .sec-title.centred .sub-title{
+  justify-content: center;
+}
+
+.faq-section--centered .content-box{
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Space below “View all FAQs” before testimonial band */
+.faq-section--centered .content-box > .btn-box.centred {
+  margin-bottom: clamp(2.25rem, 6vw, 3.75rem);
+}
+
 .faq-section .bg-layer{
   position: absolute;
   left: 0px;

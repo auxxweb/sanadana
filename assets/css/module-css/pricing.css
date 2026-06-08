@@ -5,6 +5,32 @@
   position: relative;
 }
 
+.pricing-section--hero-bg {
+  overflow: clip;
+  isolation: isolate;
+  background: #fafcfb;
+}
+
+.pricing-section--hero-bg .auto-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Our Commitment — center Shop Now on each card */
+.pricing-section--hero-bg .pricing-block-one .pricing-table .table-content {
+  text-align: center;
+}
+
+.pricing-section--hero-bg .pricing-block-one .pricing-table .feature-list {
+  text-align: left;
+}
+
+.pricing-section--hero-bg .pricing-block-one .pricing-table .table-content > .theme-btn-three {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .pricing-block-one .pricing-table{
   position: relative;
   display: block;

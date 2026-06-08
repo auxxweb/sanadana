@@ -1,0 +1,210 @@
+/**
+ * Hero benefits scene — ambient glow behind product (callout labels removed).
+ */
+
+.hero-benefits-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  transform-origin: 50% 48%;
+  will-change: transform;
+  backface-visibility: hidden;
+  /* Matches frosted card inner padding so labels + lines stay inside the card */
+  --hero-card-inset: clamp(0.85rem, 4.5vw, 1.45rem);
+}
+
+.hero-benefits__bg-expand {
+  position: absolute;
+  inset: -15%;
+  z-index: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse 70% 65% at 50% 45%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(244, 250, 249, 0.75) 42%,
+    transparent 72%
+  );
+  transform: scale(0.35);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-benefits__sets {
+  display: none !important;
+}
+
+.hero-benefits__set {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-benefits__set[aria-hidden="true"] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.hero-benefits__lines,
+.hero-benefits__line,
+.hero-benefits__line-end {
+  display: none !important;
+}
+
+.hero-benefits__set .hero-benefits__callouts {
+  position: absolute;
+  inset: var(--hero-card-inset, clamp(0.85rem, 4.5vw, 1.45rem));
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-sizing: border-box;
+}
+
+.hero-benefit {
+  position: absolute;
+  left: var(--bx, 50%);
+  top: var(--by, 50%);
+  min-width: 0;
+  max-width: min(9.5rem, 46%);
+  text-align: center;
+  opacity: 0;
+  will-change: transform, opacity, filter;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+/* Per-product layouts — stay inside inset card area */
+.hero-benefits__set--layout-corners .hero-benefit--align-left {
+  max-width: min(8.75rem, 44%);
+}
+
+.hero-benefits__set--layout-corners .hero-benefit--align-right {
+  max-width: min(8.75rem, 44%);
+}
+
+.hero-benefits__set--layout-diamond .hero-benefit--align-left[style*="50%"] {
+  max-width: min(8.5rem, 42%);
+}
+
+.hero-benefits__set--layout-fan .hero-benefit[style*="10%"] {
+  max-width: min(8.75rem, 43%);
+}
+
+.hero-benefits__set--layout-fan .hero-benefit[style*="78%"] {
+  max-width: min(9rem, 44%);
+}
+
+.hero-benefit__kicker,
+.hero-benefit__desc {
+  display: none;
+}
+
+.hero-benefit__text {
+  display: block;
+  font-family: var(--title-font);
+  font-size: clamp(0.65rem, 1.05vw, 0.8125rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.hero-benefit--align-left {
+  text-align: left;
+}
+
+.hero-benefit--align-right {
+  text-align: right;
+}
+
+.hero-benefits-scene .hero-split__plinth {
+  z-index: 1;
+}
+
+/* Glass card — back layer */
+.hero-benefits-scene .hero-split__frame {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Product carousel — front layer */
+.hero-benefits-scene .hero-split__viz {
+  position: absolute;
+  inset: var(--hero-card-inset, clamp(0.85rem, 4.5vw, 1.45rem));
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Leaf burst — behind product image, in front of glass card */
+.hero-leaf-burst {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.hero-leaf {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  max-width: clamp(2.5rem, 6vw, 4.25rem);
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 0;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  filter: drop-shadow(0 6px 14px rgba(0, 50, 40, 0.14));
+  transition: none;
+}
+
+.hero-split__product-card .hero-split__product-img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  max-width: min(100%, 470px);
+  max-height: min(60vh, 600px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  filter: drop-shadow(0 28px 56px rgba(0, 40, 40, 0.18));
+}
+
+.hero-benefits-scene .hero-split__viz-panel {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Benefit callouts + leaf burst stay visible on tablet/phone (scroll-driven in JS) */
+@media (max-width: 991px) {
+  .hero-benefit__text {
+    font-size: clamp(0.59rem, 2.8vw, 0.72rem);
+  }
+
+  .hero-leaf {
+    max-width: clamp(2rem, 11vw, 3.25rem);
+  }
+}

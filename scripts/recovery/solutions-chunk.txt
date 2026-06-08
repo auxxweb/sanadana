@@ -1,0 +1,2368 @@
+-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>
+            </div>
+
+            <motion class="our-solutions-carousel-wrap">
+                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">
+
+                <div class="solution-product-slide">
+                <article class="solution-product-card digestive_care">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"        <motion class="sortable-masonry">
+            <div class="filters centred mb_50">
+                <ul class="filter-tabs filter-btns clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care">Digestive Care</li>
+                </ul>
+            </div>
+
+            <div class="items-container row clearfix">
+
+                <article class="col-12 masonry-item small-column solution-product-card all digestive_care">","new_string":"        <div class="our-solutions-panel">
+            <div class="filters centred mb_50">
+                <ul class="filter-tabs filter-btns our-solutions-filters clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all" data-slide="0">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products" data-slide="2">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements" data-slide="4">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care" data-slide="3">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care" data-slide="1">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>
+            </div>
+
+            <div class="our-solutions-carousel-wrap">
+                <motion class="our-solutions-carousel owl-carousel owl-theme dots-style-one">
+
+                <div class="solution-product-slide">
+                <article class="solution-product-card digestive_care">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"        <div class="sortable-masonry">","new_string":"        <motion class="our-solutions-panel">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"        <motion class="our-solutions-panel">","new_string":"        <motion class="our-solutions-panel">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":846,"limit":20}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Fixing the invalid tag and completing the carousel conversion.
+
+[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"        <motion class="our-solutions-panel">","new_string":"        <div class="our-solutions-panel">"}},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_patch-carousel.js","contents":"const fs = require("fs");
+const path = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html";
+let html = fs.readFileSync(path, "utf8");
+
+html = html.replace(/<motion\\b/g, "<div").replace(/<\\/motion>/g, "</div>");
+
+const filtersOld = `<ul class="filter-tabs filter-btns clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care">Digestive Care</li>
+                </ul>`;
+
+const filtersNew = `<ul class="filter-tabs filter-btns our-solutions-filters clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all" data-slide="0">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products" data-slide="2">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements" data-slide="4">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care" data-slide="3">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care" data-slide="1">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>`;
+
+html = html.replace(filtersOld, filtersNew);
+
+html = html.replace(
+  `            <motion class="items-container row clearfix">`,
+  `            <div class="our-solutions-carousel-wrap">
+                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">`
+);
+html = html.replace(
+  `            <motion class="items-container row clearfix">`,
+  `            <motion class="our-solutions-carousel-wrap">
+                <motion class="our-solutions-carousel owl-carousel owl-theme dots-style-one">`
+);
+
+// fix if still div version
+html = html.replace(
+  `            <div class="items-container row clearfix">`,
+  `            <div class="our-solutions-carousel-wrap">
+                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">`
+);
+
+const articleOpen = /<article class="col-12 masonry-item small-column solution-product-card all (\\w+)">/g;
+html = html.replace(articleOpen, (m, cat) => {
+  return `                <div class="solution-product-slide">\
+                <article class="solution-product-card ${cat}">`;
+});
+
+html = html.replace(
+  /<\\/article>\
+\
+                <article/g,
+  "</article>\
+                </div>\
+\
+                <div class=\\"solution-product-slide\\">\
+                <article"
+);
+
+// close last slide and carousel
+html = html.replace(
+  `                </article>
+
+            </div>
+
+            </motion>`,
+  `                </article>
+                </div>
+
+                </div>
+            </div>`
+);
+
+html = html.replace(
+  `                </article>
+
+            </div>
+
+            </div>`,
+  `                </article>
+                </motion>
+
+                </motion>
+            </motion>`
+);
+
+// Clean any remaining motion tags from replace mistake
+html = html.replace(/<motion\\b/g, "<div").replace(/<\\/motion>/g, "</div>");
+
+// Fix duplicate broken closing structure - read and fix manually if needed
+const broken = `                </article>
+                </div>
+
+                </div>
+            </div>
+
+            </motion>`;
+const fixed = `                </article>
+                </motion>
+
+                </motion>
+            </motion>`;
+html = html.replace(broken, fixed.replace(/motion/g, "motion"));
+html = html.replace(
+  `                </article>
+                </div>
+
+                </div>
+            </div>
+
+            </div>`,
+  `                </article>
+                </div>
+
+                </motion>
+            </motion>`
+);
+
+html = html.replace(/<motion\\b/g, "<motion").replace(/<\\/motion>/g, "</motion>");
+// final div fix
+html = html.replace(/<motion\\b/g, "<div").replace(/<\\/motion>/g, "</motion>");
+html = html.replace(/<\\/motion>/g, "</div>");
+
+fs.writeFileSync(path, html);
+console.log("patched carousel");
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_patch-carousel.js","contents":"const fs = require("fs");
+const path = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html";
+let html = fs.readFileSync(path, "utf8");
+
+html = html.replace(/<\\/?motion\\b[^>]*>/gi, (tag) =>
+  tag.startsWith("</") ? "</motion>" : tag.replace(/motion/i, "motion")
+);
+html = html.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+
+const filtersOld = `<ul class="filter-tabs filter-btns clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care">Digestive Care</li>
+                </ul>`;
+
+const filtersNew = `<ul class="filter-tabs filter-btns our-solutions-filters clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all" data-slide="0">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products" data-slide="2">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements" data-slide="4">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care" data-slide="3">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care" data-slide="1">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>`;
+
+if (!html.includes("our-solutions-filters")) {
+  html = html.replace(filtersOld, filtersNew);
+}
+
+html = html.replace(
+  `<motion class="items-container row clearfix">`.replace("motion", "motion"),
+  `<motion class="our-solutions-carousel-wrap">
+                <motion class="our-solutions-carousel owl-carousel owl-theme dots-style-one">`
+);
+
+html = html.replace(
+  `<div class="items-container row clearfix">`,
+  `<div class="our-solutions-carousel-wrap">
+                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">`
+);
+
+html = html.replace(
+  /<article class="col-12 masonry-item small-column solution-product-card all (\\w+)">/g,
+  `<div class="solution-product-slide">
+                <article class="solution-product-card $1">`
+);
+
+html = html.replace(
+  /<\\/article>\\s*\
+\\s*<div class="solution-product-slide">/g,
+  `</article>
+                </div>
+
+                <motion class="solution-product-slide">`.replace(/motion/g, "div")
+);
+
+// First article shouldn't have been double-wrapped - fix first slide only once
+html = html.replace(
+  `</article>
+                </div>
+
+                <div class="solution-product-slide">
+                <article class="solution-product-card digestive_care">`,
+  `<div class="solution-product-slide">
+                <article class="solution-product-card digestive_care">`
+);
+
+// Close carousel after last article
+const endPattern = /(\\s*<\\/article>\\s*)\
+(\\s*<\\/motion>\\s*\
+\\s*<\\/motion>\\s*\
+\\s*<\\/motion>)/;
+const m = html.match(/solution-dhathriarishtam[\\s\\S]*?<\\/article>/);
+if (m) {
+  const idx = html.lastIndexOf("solution-dhathriarishtam");
+  const endArticle = html.indexOf("</article>", idx);
+  if (endArticle > 0) {
+    const after = html.slice(endArticle + "</article>".length, endArticle + 80);
+    if (!after.includes("solution-product-slide")) {
+      html =
+        html.slice(0, endArticle + "</article>".length) +
+        `
+                </div>
+
+                </div>
+            </motion>` +
+        html.slice(endArticle + "</article>".length).replace(
+          /^\\s*<\\/motion>\\s*\
+\\s*<\\/motion>\\s*\
+\\s*<\\/motion>/,
+          ""
+        );
+    }
+  }
+}
+
+html = html.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+
+// Remove stray extra closing divs after carousel
+html = html.replace(
+  `                </div>
+            </div>
+
+            </div>
+        </div>`,
+  `                </div>
+            </div>
+        </div>`
+);
+
+fs.writeFileSync(path, html);
+console.log("done");
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":846,"limit":155}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Rewriting the Our Solutions block in one pass to avoid markup errors.
+
+[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":828,"limit":20}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"owl-carousel|dots-style-one","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\our-solutions-products.css"}},{"type":"tool_use","name":"Grep","input":{"pattern":"our-solutions|script\\.js","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"owlCarousel|\\.owl-","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js\\testimonial-premium.js"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js\\script.js","offset":285,"limit":90}},{"type":"tool_use","name":"Grep","input":{"pattern":"enableMasonry|sortable-masonry|our-solutions","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1745,"limit":25}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js\\script.js","offset":545,"limit":90}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\service.css","offset":180,"limit":50}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Implementing the Our Solutions carousel: updating HTML, CSS, and JS.
+
+[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"        <motion class="our-solutions-panel">","new_string":"        <motion class="our-solutions-panel">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"        <motion class="our-solutions-panel">
+            <div class="filters centred mb_50">
+                <ul class="filter-tabs filter-btns clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care">Digestive Care</li>
+                </ul>
+            </div>
+
+            <div class="items-container row clearfix">
+
+                <article class="col-12 masonry-item small-column solution-product-card all digestive_care">","new_string":"        <div class="our-solutions-panel">
+            <motion class="filters centred mb_50">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                <ul class="filter-tabs filter-btns clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care">Digestive Care</li>
+                </ul>","new_string":"                <ul class="filter-tabs filter-btns our-solutions-filters clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all" data-slide="0">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products" data-slide="2">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements" data-slide="4">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care" data-slide="3">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care" data-slide="1">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"            <motion class="items-container row clearfix">
+
+                <article class="col-12 masonry-item small-column solution-product-card all digestive_care">","new_string":"            <div class="our-solutions-carousel-wrap">
+                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">
+
+                <div class="solution-product-slide">
+                <article class="solution-product-card digestive_care">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"            <div class="items-container row clearfix">
+
+                <article class="col-12 masonry-item small-column solution-product-card all digestive_care">","new_string":"            <motion class="our-solutions-carousel-wrap">
+                <motion class="our-solutions-carousel owl-carousel owl-theme dots-style-one">
+
+                <motion class="solution-product-slide">
+                <article class="solution-product-card digestive_care">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Fixing accidental `motion` tags and completing the carousel structure.
+
+[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"motion","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":858,"limit":135}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","contents":"const fs = require("fs");
+const path = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html";
+let html = fs.readFileSync(path, "utf8");
+
+html = html.replace(/<\\/?motion\\b[^>]*>/gi, (tag) => {
+  if (tag.startsWith("</")) return "</motion>";
+  return tag.replace(/<motion/i, "<div").replace(/<\\/motion>/i, "</motion>");
+});
+html = html.replace(/<motion\\b/gi, "<motion").replace(/<\\/motion>/gi, "</motion>");
+html = html.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+
+const slides = [
+  "digestive_care",
+  "respiratory_care",
+  "wellness_products",
+  "immunity_care",
+  "herbal_supplements",
+];
+
+for (const cat of slides) {
+  const re = new RegExp(
+    `</article>\\\\s*\\\
+\\\\s*<article class="col-12 masonry-item small-column solution-product-card all ${cat}">`,
+    "g"
+  );
+  html = html.replace(
+    re,
+    `</article>
+                </motion>
+
+                <motion class="solution-product-slide">
+                <article class="solution-product-card ${cat}">`
+  );
+}
+html = html.replace(/<motion\\b/gi, "<motion").replace(/<\\/motion>/gi, "</motion>");
+html = html.replace(/<motion\\b/gi, "<motion");
+html = html.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</motion>");
+html = html.replace(/<\\/motion>/gi, "</div>");
+
+// First slide already has wrapper; fix remaining masonry articles
+html = html.replace(
+  /<article class="col-12 masonry-item small-column solution-product-card all (\\w+)">/g,
+  (match, cat) => {
+    return `<div class="solution-product-slide">
+                <article class="solution-product-card ${cat}">`;
+  }
+);
+
+// Close last slide and carousel
+html = html.replace(
+  /(<a href="Dhathriarishtam-blog\\.html" class="theme-btn-one solution-product-card__cta"><span>View product<\\/span><\\/a>\\s*<\\/div>\\s*<\\/motion>\\s*<\\/article>)\\s*\
+\\s*<\\/div>\\s*\
+\\s*<\\/div>\\s*\
+\\s*<\\/motion>/,
+  `$1
+                </div>
+
+                </div>
+            </div>`
+);
+
+// Fallback close if pattern differs
+if (!html.includes("our-solutions-carousel owl-carousel")) {
+  console.error("carousel missing");
+  process.exit(1);
+}
+
+const afterLast = html.indexOf("solution-dhathriarishtam");
+const endArt = html.indexOf("</article>", html.indexOf("Dhathriarishtam-blog", afterLast));
+if (endArt > 0) {
+  const snippet = html.slice(endArt, endArt + 120);
+  if (!snippet.includes("solution-product-slide")) {
+    // already closed
+  } else if (snippet.match(/<\\/article>\\s*\
+\\s*<\\/motion>/)) {
+    // ok
+  }
+}
+
+// Fix duplicate/extra closing divs
+html = html.replace(
+  `                </article>
+
+            </div>
+
+            </motion>
+        </motion>`,
+  `                </article>
+                </div>
+
+                </div>
+            </div>`
+);
+html = html.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+
+// Ensure proper structure after last article
+const marker = 'href="Dhathriarishtam-blog.html"';
+const idx = html.lastIndexOf(marker);
+if (idx > 0) {
+  const endIdx = html.indexOf("</article>", idx);
+  if (endIdx > 0) {
+    const rest = html.slice(endIdx + 10, endIdx + 200);
+    if (!rest.trimStart().startsWith("</motion>") && !rest.trimStart().startsWith("</div>")) {
+      // insert close slide
+    }
+    const fixed = html.slice(0, endIdx + 10) +
+      `
+                </div>
+
+                </div>
+            </motion>` +
+      html.slice(endIdx + 10).replace(/^\\s*<\\/motion>\\s*\
+\\s*<\\/motion>\\s*\
+\\s*<\\/motion>/, "");
+    if (fixed.length !== html.length) html = fixed;
+  }
+}
+
+html = html.replace(/<motion\\b/gi, "<motion").replace(/<\\/motion>/gi, "</motion>");
+html = html.replace(/<motion\\b/gi, "<motion");
+html = html.replace(/<motion\\b/gi, "<motion");
+html = html.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+
+// Manual fix for closing - read file section
+const start = html.indexOf('class="our-solutions-carousel-wrap"');
+const end = html.indexOf('<div class="more-btn centred pt_20">');
+let block = html.slice(start, end);
+block = block.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+
+// Wrap slides 2-5
+const cats = ["respiratory_care", "wellness_products", "immunity_care", "herbal_supplements"];
+for (const cat of cats) {
+  block = block.replace(
+    new RegExp(
+      `</article>\\\\s*\\\
+\\\\s*<article class="col-12 masonry-item small-column solution-product-card all ${cat}">`,
+      "g"
+    ),
+    `</article>
+                </div>
+
+                <div class="solution-product-slide">
+                <article class="solution-product-card ${cat}">`
+  );
+  block = block.replace(
+    new RegExp(
+      `</article>\\\\s*\\\
+\\\\s*<article class="solution-product-card ${cat}">`,
+      "g"
+    ),
+    `</article>
+                </div>
+
+                <motion class="solution-product-slide">
+                <article class="solution-product-card ${cat}">`.replace(/motion/g, "motion")
+  );
+}
+block = block.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</motion>");
+block = block.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+
+// Close carousel at end of block
+block = block.replace(
+  /(<\\/article>)\\s*(\
+\\s*<\\/div>\\s*)+(\
+\\s*<\\/div>\\s*)*/,
+  `$1
+                </motion>
+
+                </motion>
+            </motion>`.replace(/motion/g, "motion")
+);
+block = block.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</motion>");
+block = block.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+
+// Simpler: rebuild closing from last article
+const lastClose = block.lastIndexOf("</article>");
+if (lastClose > 0) {
+  const before = block.slice(0, lastClose + 10);
+  block = before + `
+                </div>
+
+                </motion>
+            </motion>`.replace(/motion/g, "motion");
+  block = block.replace(/<motion\\b/gi, "<div").replace(/<\\/motion>/gi, "</div>");
+}
+
+html = html.slice(0, start) + block + html.slice(end);
+
+fs.writeFileSync(path, html);
+console.log("fixed");
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Using a clean splice script for the full section:
+
+[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","contents":"const fs = require("fs");
+const path = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html";
+let html = fs.readFileSync(path, "utf8");
+
+const startMarker = '        <div class="our-solutions-panel">';
+const endMarker = '        <motion class="more-btn centred pt_20">'.replace("motion", "div");
+const endMarker2 = '        <div class="more-btn centred pt_20">';
+
+const start = html.indexOf(startMarker);
+let end = html.indexOf(endMarker2);
+if (start < 0 || end < 0) {
+  console.error("markers not found", { start, end });
+  process.exit(1);
+}
+
+const panel = `        <div class="our-solutions-panel">
+            <div class="filters centred mb_50">
+                <ul class="filter-tabs filter-btns our-solutions-filters clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all" data-slide="0">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products" data-slide="2">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements" data-slide="4">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care" data-slide="3">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care" data-slide="1">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>
+            </div>
+
+            <div class="our-solutions-carousel-wrap">
+                <motion class="our-solutions-carousel owl-carousel owl-theme dots-style-one">
+`.replace(/<motion /g, "<div ").replace(/motion>/g, "motion>").replace(/motion>/g, "motion>").replace(/<motion /g, "<motion ").replace(/<motion /g, "<div ");
+
+// Fix the typo in template - use div only
+const panelFixed = panel.replace(/<motion /g, "<div ");
+
+const slides = [
+  {
+    cat: "digestive_care",
+    img: "solution-arshopilecare.png",
+    alt: "Arshopilecare Ayurvedic product box and bottle for piles and fissure relief",
+    category: "Digestive Care",
+    title: "Arshopilecare",
+    href: "arshopile-blog.html",
+    tagline: "Natural Ayurvedic relief for piles, fissures &amp; anal discomfort",
+    desc: "Say goodbye to pain, itching, and bleeding caused by piles and fissures with Arshopilecare, your trusted Ayurvedic solution. This natural formulation helps reduce swelling, control bleeding, and ease discomfort effectively, without surgery. Designed for safe, long-term use, it supports smooth bowel movements, promotes healing, and provides gentle relief so you can return to a comfortable, confident life.",
+    highlights: `<li><i class="fas fa-check-circle" aria-hidden="true"></i> Reduces swelling and anal discomfort</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> Supports smooth bowel movements</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> 100% natural, GMP-crafted Ayurvedic formula</li>`,
+  },
+  {
+    cat: "respiratory_care",
+    img: "solution-sand-cof.png",
+    alt: "Sand Cof cough syrup box and bottle by Sanadana Herbals",
+    category: "Respiratory Care",
+    title: "Sand Cof Syrup",
+    href: "sancof-blog.html",
+    tagline: "Ayurvedic remedy for wet and dry cough, 100 ml",
+    desc: "Sand Cof Syrup is an Ayurvedic formulation to manage all types of cough, including wet and dry cough. It helps heal soreness and pain in the throat with a cooling, soothing effect. A blend of clinically tested herbs with anti-inflammatory and antibacterial properties. No alcohol, no drowsiness.",
+    highlights: `<li><i class="fas fa-wind" aria-hidden="true"></i> Relief for wet, dry, whooping and seasonal cough</li>
+                                <li><i class="fas fa-child" aria-hidden="true"></i> Kids: 5 ml, 3 to 4 times daily. Adults: 10 ml, 3 to 4 times daily</li>
+                                <li><i class="fas fa-exclamation-circle" aria-hidden="true"></i> Use under physician supervision; read label before use</li>`,
+  },
+  {
+    cat: "wellness_products",
+    img: "solution-aminohit.png",
+    alt: "Aminohit digestive tonic bottle by Sanadana Herbals",
+    category: "Wellness Products",
+    title: "Aminohit",
+    href: "aminohit-blog.html",
+    tagline: "Complete digestive tonic for bloating and gut wellness",
+    desc: "Derived from the ancient Ayurvedic text Sharangadhara Samhitha, Aminohit relieves stomach gas and bloating and promotes a healthy gut. This potent blend of digestive and appetising herbs eases abdominal discomfort, restores appetite, and helps you move past post-meal heaviness and indigestion.",
+    highlights: `<li><i class="fas fa-check-circle" aria-hidden="true"></i> Eases bloating, belching and indigestion</li>
+                                <li><i class="fas fa-utensils" aria-hidden="true"></i> Restores appetite and reduces post-meal heaviness</li>
+                                <li><i class="fas fa-leaf" aria-hidden="true"></i> Herbal and natural, no added fragrance, colour, or mineral oil</li>`,
+  },
+  {
+    cat: "immunity_care",
+    img: "solution-sd-himo-plus.png",
+    alt: "SD Himo Plus general tonic bottle by Sanadana Herbals",
+    category: "Immunity Care",
+    title: "SD Himo Plus",
+    href: "sd-himo-plus-blog.html",
+    tagline: "General tonic to replenish iron and relieve anemia",
+    desc: "SD Himo Plus, enriched with Kasisa and blood-nourishing herbs such as Bilva, Shatavari, Draksha, and Amla, helps replenish blood iron levels and relieve anemia. This herbo-mineral combination is non-nauseating, non-constipating, and has no metallic taste, ideal when weakness, dizziness, or fatigue point to low hemoglobin.",
+    highlights: `<li><i class="fas fa-tint" aria-hidden="true"></i> Boosts hemoglobin levels</li>
+                                <li><i class="fas fa-heart" aria-hidden="true"></i> Supports iron and folic acid deficiency anemia</li>
+                                <li><i class="fas fa-utensils" aria-hidden="true"></i> Enhances appetite and digestion</li>
+                                <li><i class="fas fa-smile" aria-hidden="true"></i> Gentle on the stomach, safe for kids and mothers</li>`,
+  },
+  {
+    cat: "herbal_supplements",
+    img: "solution-dhathriarishtam.png",
+    alt: "Dhathriarishtam Ayurvedic wellness tonic bottle by Sanadana Herbals",
+    category: "Herbal Supplements",
+    title: "Dhathriarishtam",
+    href: "Dhathriarishtam-blog.html",
+    tagline: "Traditional wellness tonic enriched with Amla",
+    desc: "Discover the timeless power of Ayurveda with Dhathriarishtam, a rejuvenating tonic with the natural goodness of Indian gooseberry (Amla), rich in vitamin C and antioxidants. It strengthens immunity, aids digestion, and promotes vitality, with benefits for skin radiance and hair strength. Crafted using authentic Ayurvedic methods, free from harmful chemicals, artificial colours, or flavours.",
+    highlights: `<li><i class="fas fa-shield-virus" aria-hidden="true"></i> Supports immunity and daily vitality</li>
+                                <li><i class="fas fa-seedling" aria-hidden="true"></i> Aids digestive balance and overall rejuvenation</li>
+                                <li><i class="fas fa-spa" aria-hidden="true"></i> Pleasant tangy taste for everyday wellness</li>`,
+  },
+];
+
+function slideHtml(s) {
+  return `
+                <div class="solution-product-slide">
+                <article class="solution-product-card ${s.cat}">
+                    <div class="solution-product-card__inner">
+                        <figure class="solution-product-card__media">
+                            <img src="assets/images/solutions/${s.img}"
+                                 alt="${s.alt}"
+                                 width="600" height="600" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="solution-product-card__body">
+                            <span class="solution-product-card__category">${s.category}</span>
+                            <h3><a href="${s.href}">${s.title}</a></h3>
+                            <p class="solution-product-card__tagline">${s.tagline}</p>
+                            <p class="solution-product-card__desc">
+                                ${s.desc}
+                            </p>
+                            <ul class="solution-product-card__highlights">
+                                ${s.highlights}
+                            </ul>
+                            <a href="${s.href}" class="theme-btn-one solution-product-card__cta"><span>View product</span></a>
+                        </div>
+                    </div>
+                </article>
+                </div>`;
+}
+
+const section =
+  `        <div class="our-solutions-panel">
+            <div class="filters centred mb_50">
+                <ul class="filter-tabs filter-btns our-solutions-filters clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all" data-slide="0">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products" data-slide="2">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements" data-slide="4">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care" data-slide="3">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care" data-slide="1">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>
+            </div>
+
+            <div class="our-solutions-carousel-wrap">
+                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">
+` +
+  slides.map(slideHtml).join("") +
+  `
+                </div>
+            </div>
+        </motion>
+`;
+
+const sectionClean = section.replace(/<\\/motion>\\s*$/, "</div>").replace(/<motion\\b/g, "<div").replace(/<\\/motion>/g, "</div>");
+// Fix erroneous closing - section should end with </motion> replaced
+const sectionFinal = sectionClean.replace(
+  `        </motion>
+`,
+  `        </div>
+`
+);
+
+html = html.slice(0, start) + sectionFinal + html.slice(end);
+fs.writeFileSync(path, html);
+console.log("OK");
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","contents":"const fs = require("fs");
+const path = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html";
+let html = fs.readFileSync(path, "utf8");
+
+const startMarker = '        <div class="our-solutions-panel">';
+const endMarker = '        <motion class="more-btn centred pt_20">';
+const endMarker2 = '        <div class="more-btn centred pt_20">';
+
+const start = html.indexOf(startMarker);
+const end = html.indexOf(endMarker2);
+if (start < 0 || end < 0) {
+  console.error("markers not found", { start, end });
+  process.exit(1);
+}
+
+const slides = [
+  {
+    cat: "digestive_care",
+    img: "solution-arshopilecare.png",
+    alt: "Arshopilecare Ayurvedic product box and bottle for piles and fissure relief",
+    category: "Digestive Care",
+    title: "Arshopilecare",
+    href: "arshopile-blog.html",
+    tagline: "Natural Ayurvedic relief for piles, fissures &amp; anal discomfort",
+    desc: "Say goodbye to pain, itching, and bleeding caused by piles and fissures with Arshopilecare, your trusted Ayurvedic solution. This natural formulation helps reduce swelling, control bleeding, and ease discomfort effectively, without surgery. Designed for safe, long-term use, it supports smooth bowel movements, promotes healing, and provides gentle relief so you can return to a comfortable, confident life.",
+    highlights: `<li><i class="fas fa-check-circle" aria-hidden="true"></i> Reduces swelling and anal discomfort</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> Supports smooth bowel movements</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> 100% natural, GMP-crafted Ayurvedic formula</li>`,
+  },
+  {
+    cat: "respiratory_care",
+    img: "solution-sand-cof.png",
+    alt: "Sand Cof cough syrup box and bottle by Sanadana Herbals",
+    category: "Respiratory Care",
+    title: "Sand Cof Syrup",
+    href: "sancof-blog.html",
+    tagline: "Ayurvedic remedy for wet and dry cough, 100 ml",
+    desc: "Sand Cof Syrup is an Ayurvedic formulation to manage all types of cough, including wet and dry cough. It helps heal soreness and pain in the throat with a cooling, soothing effect. A blend of clinically tested herbs with anti-inflammatory and antibacterial properties. No alcohol, no drowsiness.",
+    highlights: `<li><i class="fas fa-wind" aria-hidden="true"></i> Relief for wet, dry, whooping and seasonal cough</li>
+                                <li><i class="fas fa-child" aria-hidden="true"></i> Kids: 5 ml, 3 to 4 times daily. Adults: 10 ml, 3 to 4 times daily</li>
+                                <li><i class="fas fa-exclamation-circle" aria-hidden="true"></i> Use under physician supervision; read label before use</li>`,
+  },
+  {
+    cat: "wellness_products",
+    img: "solution-aminohit.png",
+    alt: "Aminohit digestive tonic bottle by Sanadana Herbals",
+    category: "Wellness Products",
+    title: "Aminohit",
+    href: "aminohit-blog.html",
+    tagline: "Complete digestive tonic for bloating and gut wellness",
+    desc: "Derived from the ancient Ayurvedic text Sharangadhara Samhitha, Aminohit relieves stomach gas and bloating and promotes a healthy gut. This potent blend of digestive and appetising herbs eases abdominal discomfort, restores appetite, and helps you move past post-meal heaviness and indigestion.",
+    highlights: `<li><i class="fas fa-check-circle" aria-hidden="true"></i> Eases bloating, belching and indigestion</li>
+                                <li><i class="fas fa-utensils" aria-hidden="true"></i> Restores appetite and reduces post-meal heaviness</li>
+                                <li><i class="fas fa-leaf" aria-hidden="true"></i> Herbal and natural, no added fragrance, colour, or mineral oil</li>`,
+  },
+  {
+    cat: "immunity_care",
+    img: "solution-sd-himo-plus.png",
+    alt: "SD Himo Plus general tonic bottle by Sanadana Herbals",
+    category: "Immunity Care",
+    title: "SD Himo Plus",
+    href: "sd-himo-plus-blog.html",
+    tagline: "General tonic to replenish iron and relieve anemia",
+    desc: "SD Himo Plus, enriched with Kasisa and blood-nourishing herbs such as Bilva, Shatavari, Draksha, and Amla, helps replenish blood iron levels and relieve anemia. This herbo-mineral combination is non-nauseating, non-constipating, and has no metallic taste, ideal when weakness, dizziness, or fatigue point to low hemoglobin.",
+    highlights: `<li><i class="fas fa-tint" aria-hidden="true"></i> Boosts hemoglobin levels</li>
+                                <li><i class="fas fa-heart" aria-hidden="true"></i> Supports iron and folic acid deficiency anemia</li>
+                                <li><i class="fas fa-utensils" aria-hidden="true"></i> Enhances appetite and digestion</li>
+                                <li><i class="fas fa-smile" aria-hidden="true"></i> Gentle on the stomach, safe for kids and mothers</li>`,
+  },
+  {
+    cat: "herbal_supplements",
+    img: "solution-dhathriarishtam.png",
+    alt: "Dhathriarishtam Ayurvedic wellness tonic bottle by Sanadana Herbals",
+    category: "Herbal Supplements",
+    title: "Dhathriarishtam",
+    href: "Dhathriarishtam-blog.html",
+    tagline: "Traditional wellness tonic enriched with Amla",
+    desc: "Discover the timeless power of Ayurveda with Dhathriarishtam, a rejuvenating tonic with the natural goodness of Indian gooseberry (Amla), rich in vitamin C and antioxidants. It strengthens immunity, aids digestion, and promotes vitality, with benefits for skin radiance and hair strength. Crafted using authentic Ayurvedic methods, free from harmful chemicals, artificial colours, or flavours.",
+    highlights: `<li><i class="fas fa-shield-virus" aria-hidden="true"></i> Supports immunity and daily vitality</li>
+                                <li><i class="fas fa-seedling" aria-hidden="true"></i> Aids digestive balance and overall rejuvenation</li>
+                                <li><i class="fas fa-spa" aria-hidden="true"></i> Pleasant tangy taste for everyday wellness</li>`,
+  },
+];
+
+function slideHtml(s) {
+  return `
+                <div class="solution-product-slide">
+                <article class="solution-product-card ${s.cat}">
+                    <div class="solution-product-card__inner">
+                        <figure class="solution-product-card__media">
+                            <img src="assets/images/solutions/${s.img}"
+                                 alt="${s.alt}"
+                                 width="600" height="600" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="solution-product-card__body">
+                            <span class="solution-product-card__category">${s.category}</span>
+                            <h3><a href="${s.href}">${s.title}</a></h3>
+                            <p class="solution-product-card__tagline">${s.tagline}</p>
+                            <p class="solution-product-card__desc">
+                                ${s.desc}
+                            </p>
+                            <ul class="solution-product-card__highlights">
+                                ${s.highlights}
+                            </ul>
+                            <a href="${s.href}" class="theme-btn-one solution-product-card__cta"><span>View product</span></a>
+                        </div>
+                    </motion>
+                </article>
+                </div>`;
+}
+
+// Fix accidental motion in template
+function slideHtmlClean(s) {
+  return slideHtml(s).replace(/<\\/motion>/g, "</div>");
+}
+
+const section =
+  `        <div class="our-solutions-panel">
+            <div class="filters centred mb_50">
+                <ul class="filter-tabs filter-btns our-solutions-filters clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all" data-slide="0">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products" data-slide="2">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements" data-slide="4">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care" data-slide="3">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care" data-slide="1">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>
+            </div>
+
+            <div class="our-solutions-carousel-wrap">
+                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">
+` +
+  slides.map(slideHtmlClean).join("") +
+  `
+                </div>
+            </div>
+        </motion>
+`;
+
+const sectionFinal = section.replace(/<\\/motion>\\s*$/, "</motion>").replace(/        <\\/motion>\
+$/, "        </div>\
+");
+
+html = html.slice(0, start) + sectionFinal + html.slice(end);
+fs.writeFileSync(path, html);
+console.log("OK");
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","contents":"const fs = require("fs");
+const path = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html";
+let html = fs.readFileSync(path, "utf8");
+
+const startMarker = '        <motion class="our-solutions-panel">';
+const startMarker2 = '        <div class="our-solutions-panel">';
+const endMarker = '        <div class="more-btn centred pt_20">';
+
+const start = html.indexOf(startMarker2);
+const end = html.indexOf(endMarker);
+if (start < 0 || end < 0) {
+  console.error("markers not found", { start, end });
+  process.exit(1);
+}
+
+const slides = [
+  {
+    cat: "digestive_care",
+    img: "solution-arshopilecare.png",
+    alt: "Arshopilecare Ayurvedic product box and bottle for piles and fissure relief",
+    category: "Digestive Care",
+    title: "Arshopilecare",
+    href: "arshopile-blog.html",
+    tagline: "Natural Ayurvedic relief for piles, fissures &amp; anal discomfort",
+    desc: "Say goodbye to pain, itching, and bleeding caused by piles and fissures with Arshopilecare, your trusted Ayurvedic solution. This natural formulation helps reduce swelling, control bleeding, and ease discomfort effectively, without surgery. Designed for safe, long-term use, it supports smooth bowel movements, promotes healing, and provides gentle relief so you can return to a comfortable, confident life.",
+    highlights: `<li><i class="fas fa-check-circle" aria-hidden="true"></i> Reduces swelling and anal discomfort</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> Supports smooth bowel movements</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i> 100% natural, GMP-crafted Ayurvedic formula</li>`,
+  },
+  {
+    cat: "respiratory_care",
+    img: "solution-sand-cof.png",
+    alt: "Sand Cof cough syrup box and bottle by Sanadana Herbals",
+    category: "Respiratory Care",
+    title: "Sand Cof Syrup",
+    href: "sancof-blog.html",
+    tagline: "Ayurvedic remedy for wet and dry cough, 100 ml",
+    desc: "Sand Cof Syrup is an Ayurvedic formulation to manage all types of cough, including wet and dry cough. It helps heal soreness and pain in the throat with a cooling, soothing effect. A blend of clinically tested herbs with anti-inflammatory and antibacterial properties. No alcohol, no drowsiness.",
+    highlights: `<li><i class="fas fa-wind" aria-hidden="true"></i> Relief for wet, dry, whooping and seasonal cough</li>
+                                <li><i class="fas fa-child" aria-hidden="true"></i> Kids: 5 ml, 3 to 4 times daily. Adults: 10 ml, 3 to 4 times daily</li>
+                                <li><i class="fas fa-exclamation-circle" aria-hidden="true"></i> Use under physician supervision; read label before use</li>`,
+  },
+  {
+    cat: "wellness_products",
+    img: "solution-aminohit.png",
+    alt: "Aminohit digestive tonic bottle by Sanadana Herbals",
+    category: "Wellness Products",
+    title: "Aminohit",
+    href: "aminohit-blog.html",
+    tagline: "Complete digestive tonic for bloating and gut wellness",
+    desc: "Derived from the ancient Ayurvedic text Sharangadhara Samhitha, Aminohit relieves stomach gas and bloating and promotes a healthy gut. This potent blend of digestive and appetising herbs eases abdominal discomfort, restores appetite, and helps you move past post-meal heaviness and indigestion.",
+    highlights: `<li><i class="fas fa-check-circle" aria-hidden="true"></i> Eases bloating, belching and indigestion</li>
+                                <li><i class="fas fa-utensils" aria-hidden="true"></i> Restores appetite and reduces post-meal heaviness</li>
+                                <li><i class="fas fa-leaf" aria-hidden="true"></i> Herbal and natural, no added fragrance, colour, or mineral oil</li>`,
+  },
+  {
+    cat: "immunity_care",
+    img: "solution-sd-himo-plus.png",
+    alt: "SD Himo Plus general tonic bottle by Sanadana Herbals",
+    category: "Immunity Care",
+    title: "SD Himo Plus",
+    href: "sd-himo-plus-blog.html",
+    tagline: "General tonic to replenish iron and relieve anemia",
+    desc: "SD Himo Plus, enriched with Kasisa and blood-nourishing herbs such as Bilva, Shatavari, Draksha, and Amla, helps replenish blood iron levels and relieve anemia. This herbo-mineral combination is non-nauseating, non-constipating, and has no metallic taste, ideal when weakness, dizziness, or fatigue point to low hemoglobin.",
+    highlights: `<li><i class="fas fa-tint" aria-hidden="true"></i> Boosts hemoglobin levels</li>
+                                <li><i class="fas fa-heart" aria-hidden="true"></i> Supports iron and folic acid deficiency anemia</li>
+                                <li><i class="fas fa-utensils" aria-hidden="true"></i> Enhances appetite and digestion</li>
+                                <li><i class="fas fa-smile" aria-hidden="true"></i> Gentle on the stomach, safe for kids and mothers</li>`,
+  },
+  {
+    cat: "herbal_supplements",
+    img: "solution-dhathriarishtam.png",
+    alt: "Dhathriarishtam Ayurvedic wellness tonic bottle by Sanadana Herbals",
+    category: "Herbal Supplements",
+    title: "Dhathriarishtam",
+    href: "Dhathriarishtam-blog.html",
+    tagline: "Traditional wellness tonic enriched with Amla",
+    desc: "Discover the timeless power of Ayurveda with Dhathriarishtam, a rejuvenating tonic with the natural goodness of Indian gooseberry (Amla), rich in vitamin C and antioxidants. It strengthens immunity, aids digestion, and promotes vitality, with benefits for skin radiance and hair strength. Crafted using authentic Ayurvedic methods, free from harmful chemicals, artificial colours, or flavours.",
+    highlights: `<li><i class="fas fa-shield-virus" aria-hidden="true"></i> Supports immunity and daily vitality</li>
+                                <li><i class="fas fa-seedling" aria-hidden="true"></i> Aids digestive balance and overall rejuvenation</li>
+                                <li><i class="fas fa-spa" aria-hidden="true"></i> Pleasant tangy taste for everyday wellness</li>`,
+  },
+];
+
+function slideHtml(s) {
+  return `
+                <div class="solution-product-slide">
+                <article class="solution-product-card ${s.cat}">
+                    <div class="solution-product-card__inner">
+                        <figure class="solution-product-card__media">
+                            <img src="assets/images/solutions/${s.img}"
+                                 alt="${s.alt}"
+                                 width="600" height="600" loading="lazy" decoding="async">
+                        </figure>
+                        <motion class="solution-product-card__body">
+                            <span class="solution-product-card__category">${s.category}</span>
+                            <h3><a href="${s.href}">${s.title}</a></h3>
+                            <p class="solution-product-card__tagline">${s.tagline}</p>
+                            <p class="solution-product-card__desc">
+                                ${s.desc}
+                            </p>
+                            <ul class="solution-product-card__highlights">
+                                ${s.highlights}
+                            </ul>
+                            <a href="${s.href}" class="theme-btn-one solution-product-card__cta"><span>View product</span></a>
+                        </motion>
+                    </div>
+                </article>
+                </div>`;
+}
+
+let slidesHtml = slides
+  .map((s) => slideHtml(s).replace(/<motion /g, "<div ").replace(/<\\/motion>/g, "</div>"))
+  .join("");
+
+const section = `        <div class="our-solutions-panel">
+            <div class="filters centred mb_50">
+                <ul class="filter-tabs filter-btns our-solutions-filters clearfix">
+                    <li class="active filter" data-role="button" data-filter=".all" data-slide="0">All</li>
+                    <li class="filter" data-role="button" data-filter=".wellness_products" data-slide="2">Wellness Products</li>
+                    <li class="filter" data-role="button" data-filter=".herbal_supplements" data-slide="4">Herbal Supplements</li>
+                    <li class="filter" data-role="button" data-filter=".immunity_care" data-slide="3">Immunity Care</li>
+                    <li class="filter" data-role="button" data-filter=".respiratory_care" data-slide="1">Respiratory Care</li>
+                    <li class="filter" data-role="button" data-filter=".digestive_care" data-slide="0">Digestive Care</li>
+                </ul>
+            </div>
+
+            <div class="our-solutions-carousel-wrap">
+                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">
+${slidesHtml}
+                </div>
+            </div>
+        </div>
+`;
+
+html = html.slice(0, start) + section + html.slice(end);
+fs.writeFileSync(path, html);
+console.log("OK");
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","old_string":"                        <motion class="solution-product-card__body">
+                            <span class="solution-product-card__category">${s.category}</span>
+                            <h3><a href="${s.href}">${s.title}</a></h3>
+                            <p class="solution-product-card__tagline">${s.tagline}</p>
+                            <p class="solution-product-card__desc">
+                                ${s.desc}
+                            </p>
+                            <ul class="solution-product-card__highlights">
+                                ${s.highlights}
+                            </ul>
+                            <a href="${s.href}" class="theme-btn-one solution-product-card__cta"><span>View product</span></a>
+                        </motion>","new_string":"                        <motion class="solution-product-card__body">
+                            <span class="solution-product-card__category">${s.category}</span>
+                            <h3><a href="${s.href}">${s.title}</a></h3>
+                            <p class="solution-product-card__tagline">${s.tagline}</p>
+                            <p class="solution-product-card__desc">
+                                ${s.desc}
+                            </p>
+                            <ul class="solution-product-card__highlights">
+                                ${s.highlights}
+                            </ul>
+                            <a href="${s.href}" class="theme-btn-one solution-product-card__cta"><span>View product</span></a>
+                        </div>"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","old_string":"                        <motion class="solution-product-card__body">","new_string":"                        <div class="solution-product-card__body">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","old_string":"let slidesHtml = slides
+  .map((s) => slideHtml(s).replace(/<motion /g, "<div ").replace(/<\\/motion>/g, "</div>"))
+  .join("");","new_string":"let slidesHtml = slides.map(slideHtml).join("");"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","old_string":"const startMarker = '        <motion class="our-solutions-panel">';
+const startMarker2 = '        <motion class="our-solutions-panel">';","new_string":"const startMarker2 = '        <div class="our-solutions-panel">';"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","limit":20}},{"type":"tool_use","name":"Grep","input":{"pattern":"motion","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js","old_string":"const startMarker = '        <motion class="our-solutions-panel">';
+const startMarker2 = '        <motion class="our-solutions-panel">';","new_string":"const startMarker2 = '        <div class="our-solutions-panel">';"}},{"type":"tool_use","name":"Shell","input":{"command":"node "c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js"","description":"Run carousel HTML splice script"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"motion","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":846,"limit":50}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":980,"limit":25}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"portfolio-section|our-solutions","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\style.css","offset":1698,"limit":40}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"single-item-carousel|dots-style-one","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","head_limit":5}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\style.css","offset":1520,"limit":50}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js\\our-solutions-carousel.js","contents":"/**
+ * Our Solutions — horizontal product carousel + category filter tabs
+ */
+(function ($) {
+  "use strict";
+
+  var slideFilters = [
+    ".digestive_care",
+    ".respiratory_care",
+    ".wellness_products",
+    ".immunity_care",
+    ".herbal_supplements",
+  ];
+
+  $(function () {
+    var $carousel = $(".our-solutions-carousel");
+    var $panel = $(".our-solutions-panel");
+    var $filters = $panel.find(".our-solutions-filters li");
+
+    if (!$carousel.length || typeof $.fn.owlCarousel !== "function") {
+      return;
+    }
+
+    $carousel.owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: true,
+      dots: true,
+      items: 1,
+      smartSpeed: 550,
+      autoplay: false,
+      navText: [
+        '<span class="icon-6" aria-hidden="true"></span>',
+        '<span class="icon-7" aria-hidden="true"></span>',
+      ],
+      responsive: {
+        0: { items: 1 },
+        768: { items: 1 },
+        1200: { items: 1 },
+      },
+    });
+
+    function setActiveFilter(index) {
+      var selector = slideFilters[index];
+      if (!selector) {
+        return;
+      }
+      $filters.removeClass("active");
+      $filters.filter('[data-filter="' + selector + '"]').addClass("active");
+    }
+
+    $carousel.on("changed.owl.carousel", function (event) {
+      if (!event.namespace) {
+        return;
+      }
+      var index = event.relatedTarget.normalize(event.item.index, true);
+      setActiveFilter(index);
+    });
+
+    $filters.on("click", function (e) {
+      e.preventDefault();
+      var $tab = $(this);
+      var slide = parseInt($tab.attr("data-slide"), 10);
+
+      $filters.removeClass("active");
+      $tab.addClass("active");
+
+      if (!isNaN(slide)) {
+        $carousel.trigger("to.owl.carousel", [slide, 400, true]);
+      }
+
+      return false;
+    });
+  });
+})(window.jQuery);
+"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\our-solutions-products.css","old_string":"/**
+ * Our Solutions — product cards with image + details (filter tabs)
+ */
+
+.portfolio-section .items-container .solution-product-card {
+  width: 100% !important;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}","new_string":"/**
+ * Our Solutions — product carousel with image + details and filter tabs
+ */
+
+.our-solutions-panel .filter-tabs li {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 26px;
+  color: #656565;
+  margin: 0 22px;
+  cursor: pointer;
+  transition: color 0.35s ease;
+}
+
+.our-solutions-panel .filter-tabs li:before {
+  position: absolute;
+  content: "";
+  background: #656565;
+  width: 1px;
+  height: 14px;
+  top: 5px;
+  right: -25px;
+  transform: rotate(25deg);
+}
+
+.our-solutions-panel .filter-tabs li:last-child:before {
+  display: none;
+}
+
+.our-solutions-panel .filter-tabs li:hover,
+.our-solutions-panel .filter-tabs li.active {
+  color: rgb(0, 115, 115);
+}
+
+.our-solutions-carousel-wrap {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+.our-solutions-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+.our-solutions-carousel .solution-product-slide {
+  width: 100%;
+}
+
+.our-solutions-carousel .solution-product-card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\our-solutions-products.css","old_string":"@media (prefers-reduced-motion: reduce) {
+  .solution-product-card__inner {
+    transition: none;
+  }
+}","new_string":".our-solutions-carousel.owl-carousel .owl-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.our-solutions-carousel.owl-carousel .owl-nav button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 167, 167, 0.35);
+  background: #fff;
+  color: rgb(0, 115, 115);
+  box-shadow: 0 8px 24px rgba(0, 45, 45, 0.08);
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.our-solutions-carousel.owl-carousel .owl-nav button:hover {
+  background: rgb(0, 115, 115);
+  border-color: rgb(0, 115, 115);
+  color: #fff;
+}
+
+.our-solutions-carousel.owl-carousel .owl-nav button span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.our-solutions-carousel.dots-style-one .owl-dots {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 767px) {
+  .our-solutions-panel .filter-tabs li {
+    margin: 0 10px 8px;
+    font-size: 14px;
+  }
+
+  .our-solutions-panel .filter-tabs li:before {
+    right: -14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solution-product-card__inner,
+  .our-solutions-carousel.owl-carousel .owl-nav button {
+    transition: none;
+  }
+}"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/testimonial-premium.js" defer></script>","new_string":"    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/our-solutions-carousel.js" defer></script>
+    <script src="assets/js/testimonial-premium.js" defer></script>"}},{"type":"tool_use","name":"Delete","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_patch-carousel.js"}},{"type":"tool_use","name":"Delete","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_fix-solutions-carousel.js"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Glob","input":{"glob_pattern":"_patch*","target_directory":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js\\our-solutions-carousel.js","old_string":"    $carousel.on("changed.owl.carousel", function (event) {
+      if (!event.namespace) {
+        return;
+      }
+      var index = event.relatedTarget.normalize(event.item.index, true);
+      setActiveFilter(index);
+    });","new_string":"    $carousel.on("changed.owl.carousel", function (event) {
+      if (!event.namespace) {
+        return;
+      }
+      var index = event.relatedTarget.normalize(event.item.index, true);
+      if (
+        index === 0 &&
+        $filters.filter('[data-filter=".all"].active').length
+      ) {
+        return;
+      }
+      setActiveFilter(index);
+    });"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"The **Our Solutions** carousel is finished. Here’s what was implemented:
+
+### Carousel
+- Replaced the masonry/Isotope layout with an **Owl Carousel** (one product per slide, horizontal swipe).
+- All **5 products** are in slides with the same card layout (image left, details right).
+- **Bottom navigation**: teal circular prev/next buttons (`icon-6` / `icon-7`) and **dots** (`dots-style-one`), aligned with the rest of the site.
+
+### Filter tabs
+- Tabs use `data-slide` to jump to the matching product:
+  - Digestive Care / All → Arshopilecare (slide 0)
+  - Respiratory Care → Sand Cof (slide 1)
+  - Wellness Products → Aminohit (slide 2)
+  - Immunity Care → SD Himo Plus (slide 3)
+  - Herbal Supplements → Dhathriarishtam (slide 4)
+- Swiping updates the active category tab; **All** stays highlighted on slide 0 when you choose it.
+
+### Files
+- `index.html` — carousel markup and script include
+- `assets/js/our-solutions-carousel.js` — Owl init + tab sync
+- `assets/css/module-css/our-solutions-products.css` — carousel, nav, dots, and filter styles
+- Removed temporary patch scripts
+
+Refresh the homepage and test the Our Solutions section: swipe or use the arrows/dots, and click the category tabs to confirm each product loads correctly.
+
+[REDACTED]"}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"<user_query>
+two carousal navingation dot buttons View All Products are not needed
+</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Removing duplicate carousel navigation and the "View All Products" button.
+
+[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":985,"limit":20}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js\\our-solutions-carousel.js"}},{"type":"tool_use","name":"Grep","input":{"pattern":"our-solutions|owl-nav|owl-dots|more-btn","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"our-solutions","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js\\script.js"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\portfolio.css","offset":510,"limit":30}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"portfolio-section.*owl|\\.portfolio-section","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Removing carousel arrows, dots, and the "View all products" button. Filter tabs and swipe will remain for navigation.
+
+[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                <motion class="our-solutions-carousel owl-carousel owl-theme dots-style-one">","new_string":"                <div class="our-solutions-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"        <div class="more-btn centred pt_20">
+            <a href="products.html" class="theme-btn-two">
+                <span>View all products</span>
+            </a>
+        </div>","new_string":""}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                <div class="our-solutions-carousel owl-carousel owl-theme dots-style-one">","new_string":"                <motion class="our-solutions-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                <motion class="our-solutions-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">","new_string":"                <motion class="our-solutions-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"our-solutions-carousel","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                <motion class="our-solutions-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">","new_string":"                <div class="our-solutions-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\js\\our-solutions-carousel.js","old_string":"    $carousel.owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: true,
+      dots: true,
+      items: 1,
+      smartSpeed: 550,
+      autoplay: false,
+      navText: [
+        '<span class="icon-6" aria-hidden="true"></span>',
+        '<span class="icon-7" aria-hidden="true"></span>',
+      ],
+      responsive: {
+        0: { items: 1 },
+        768: { items: 1 },
+        1200: { items: 1 },
+      },
+    });","new_string":"    $carousel.owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: false,
+      dots: false,
+      items: 1,
+      smartSpeed: 550,
+      autoplay: false,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 1 },
+        1200: { items: 1 },
+      },
+    });"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\our-solutions-products.css","old_string":".our-solutions-carousel.owl-carousel .owl-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.our-solutions-carousel.owl-carousel .owl-nav button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 167, 167, 0.35);
+  background: #fff;
+  color: rgb(0, 115, 115);
+  box-shadow: 0 8px 24px rgba(0, 45, 45, 0.08);
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.our-solutions-carousel.owl-carousel .owl-nav button:hover {
+  background: rgb(0, 115, 115);
+  border-color: rgb(0, 115, 115);
+  color: #fff;
+}
+
+.our-solutions-carousel.owl-carousel .owl-nav button span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.our-solutions-carousel.dots-style-one .owl-dots {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 767px) {","new_string":"@media (max-width: 767px) {"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\our-solutions-products.css","old_string":"@media (prefers-reduced-motion: reduce) {
+  .solution-product-card__inner,
+  .our-solutions-carousel.owl-carousel .owl-nav button {
+    transition: none;
+  }
+}","new_string":"@media (prefers-reduced-motion: reduce) {
+  .solution-product-card__inner {
+    transition: none;
+  }
+}"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"motion|View all products|more-btn","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","glob":"*"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Removed the extra carousel controls and the Our Solutions CTA:
+
+1. **Carousel arrows and dots** — turned off in JS (`nav: false`, `dots: false`) and hidden with `owl-nav-none owl-dots-none` on the carousel.
+2. **“View all products”** — removed the button under the Our Solutions section.
+3. **CSS** — removed the custom nav/dot styles that are no longer used.
+
+You can still move between products with the **category filter tabs** and by **swiping** on touch devices. Refresh the page to see the update.
+
+[REDACTED]"}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"<user_query>
+i dont want side image on section "Our Frequency"  . put the remaiing content at the centre alligned.
+</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"Frequency|frequency","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1085,"limit":120}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1200,"limit":80}},{"type":"tool_use","name":"Grep","input":{"pattern":"faq-section|content_block_four","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\faq.css"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1275,"limit":40}},{"type":"tool_use","name":"Grep","input":{"pattern":"faq\\.css","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Removing the side background image and centering the FAQ ("Our Frequency") content.
+
+[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"<!-- faq-section -->
+<section class="faq-section pt_50 pb_50">
+    <div class="bg-layer" style="background-image: url(assets/images/new/img\\ \\(3\\).webp);"></motion>
+    <div class="auto-container">
+        <motion class="row clearfix">
+            <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 content-column">
+                <div class="content_block_four">
+                    <div class="content-box">
+                        <div class="sec-title mb_45">","new_string":"<!-- faq-section -->
+<section class="faq-section faq-section--centered pt_50 pb_50">
+    <div class="auto-container">
+        <div class="row clearfix justify-content-center">
+            <div class="col-xl-8 col-lg-10 col-md-12 content-column">
+                <div class="content_block_four">
+                    <div class="content-box">
+                        <div class="sec-title centred mb_45">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1097,"limit":25}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"<!-- faq-section -->
+<section class="faq-section pt_50 pb_50">
+    <div class="bg-layer" style="background-image: url(assets/images/new/img\\ \\(3\\).webp);"></motion>
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 content-column">
+                <motion class="content_block_four">
+                    <div class="content-box">
+                        <div class="sec-title mb_45">","new_string":"<!-- faq-section -->
+<section class="faq-section faq-section--centered pt_50 pb_50">
+    <div class="auto-container">
+        <div class="row clearfix justify-content-center">
+            <div class="col-xl-8 col-lg-10 col-md-12 content-column">
+                <div class="content_block_four">
+                    <div class="content-box">
+                        <div class="sec-title centred mb_45">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"<!-- faq-section -->
+<section class="faq-section pt_50 pb_50">
+    <motion class="bg-layer" style="background-image: url(assets/images/new/img\\ \\(3\\).webp);"></motion>
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 content-column">
+                <div class="content_block_four">
+                    <div class="content-box">
+                        <div class="sec-title mb_45">","new_string":"<!-- faq-section -->
+<section class="faq-section faq-section--centered pt_50 pb_50">
+    <div class="auto-container">
+        <div class="row clearfix justify-content-center">
+            <div class="col-xl-8 col-lg-10 col-md-12 content-column">
+                <div class="content_block_four">
+                    <div class="content-box">
+                        <motion class="sec-title centred mb_45">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"<section class="faq-section pt_50 pb_50">","new_string":"<section class="faq-section faq-section--centered pt_50 pb_50">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"    <div class="bg-layer" style="background-image: url(assets/images/new/img\\ \\(3\\).webp);"></div>
+    <motion class="auto-container">","new_string":"    <div class="auto-container">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1098,"limit":12}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"    <div class="bg-layer" style="background-image: url(assets/images/new/img\\ \\(3\\).webp);"></motion>","new_string":""}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"        <div class="row clearfix">
+            <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 content-column">","new_string":"        <div class="row clearfix justify-content-center">
+            <div class="col-xl-8 col-lg-10 col-md-12 content-column">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <div class="sec-title mb_45">
+                            <div class="sub-title">
+                                <motion class="icon-box">
+                                    <img src="assets/images/svg-logo-1.png" style="width: 2rem;" 
+                                         alt="Ayurvedic and herbal wellness FAQ icon">
+                                </div>
+                                <h5>Our Frequency</h5>","new_string":"                        <div class="sec-title centred mb_45">
+                            <div class="sub-title">
+                                <div class="icon-box">
+                                    <img src="assets/images/svg-logo-1.png" style="width: 2rem;" 
+                                         alt="Ayurvedic and herbal wellness FAQ icon">
+                                </div>
+                                <h5>Our Frequency</h5>"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"bg-layer","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <div class="sec-title mb_45">
+                            <div class="sub-title">
+                                <motion class="icon-box">
+                                    <img src="assets/images/svg-logo-1.png" style="width: 2rem;" 
+                                         alt="Ayurvedic and herbal wellness FAQ icon">","new_string":"                        <motion class="sec-title centred mb_45">
+                            <div class="sub-title">
+                                <div class="icon-box">
+                                    <img src="assets/images/svg-logo-1.png" style="width: 2rem;" 
+                                         alt="Ayurvedic and herbal wellness FAQ icon">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1099,"limit":20}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1280,"limit":12}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <motion class="sec-title mb_45">","new_string":"                        <div class="sec-title centred mb_45">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <div class="sec-title mb_45">
+                            <div class="sub-title">
+                                <div class="icon-box">
+                                    <img src="assets/images/svg-logo-1.png" style="width: 2rem;" 
+                                         alt="Ayurvedic and herbal wellness FAQ icon">
+                                </div>
+                                <h5>Our Frequency</h5>","new_string":"                        <div class="sec-title centred mb_45">
+                            <div class="sub-title">
+                                <div class="icon-box">
+                                    <img src="assets/images/svg-logo-1.png" style="width: 2rem;" 
+                                         alt="Ayurvedic and herbal wellness FAQ icon">
+                                </motion>
+                                <h5>Our Frequency</h5>"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                                </motion>
+                                <h5>Our Frequency</h5>","new_string":"                                </div>
+                                <h5>Our Frequency</h5>"}},{"type":"tool_use","name":"Shell","input":{"command":"node -e "const fs=require('fs');const p='c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html';let h=fs.readFileSync(p,'utf8');h=h.replace(/\
+    <div class=\\"bg-layer\\"[^]*?<\\/motion>\
+/,'\
+');h=h.replace(/\
+    <div class=\\"bg-layer\\"[\\s\\S]*?<\\/motion>\
+/,'\
+');h=h.replace(/    <div class=\\"bg-layer\\"[^<]*<\\/div>\\r?\
+/,'');fs.writeFileSync(p,h);console.log(h.includes('bg-layer')?'still has bg-layer':'bg-layer removed');"","description":"Remove FAQ bg-layer div via Node"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <div class="btn-box mt_30">
+                            <a href="faq.html" class="theme-btn-one">
+                                <span>View All FAQs</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- faq-section end -->","new_string":"                        <div class="btn-box centred mt_30">
+                            <a href="faq.html" class="theme-btn-one">
+                                <span>View All FAQs</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- faq-section end -->"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Shell","input":{"command":"node -e "const fs=require('fs');const p='c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html';let h=fs.readFileSync(p,'utf8');const before=h.length;h=h.replace(/    <div class=\\"bg-layer\\"[\\s\\S]*?<\\/motion>\
+/,'');if(h.length===before)h=h.replace(/    <motion class=\\"bg-layer\\"[\\s\\S]*?<\\/motion>\
+/,'');if(h.length===before)h=h.replace(/    <div class=\\"bg-layer\\"[^>]*><\\/div>\\r?\
+/,'');fs.writeFileSync(p,h);console.log('bg-layer:',h.includes('bg-layer'));"","description":"Remove FAQ bg-layer with Node regex"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\faq.css","old_string":".faq-section{
+  position: relative;
+}
+
+.faq-section .bg-layer{","new_string":".faq-section{
+  position: relative;
+}
+
+.faq-section--centered .bg-layer{
+  display: none;
+}
+
+.faq-section--centered .content-column{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-section--centered .sec-title.centred .sub-title{
+  justify-content: center;
+}
+
+.faq-section--centered .content-box{
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-section .bg-layer{"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_remove-faq-bg.js","contents":"const fs = require("fs");
+const p = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html";
+let h = fs.readFileSync(p, "utf8");
+const line = h.split("\
+").find((l) => l.includes("bg-layer") && l.includes("faq"));
+if (line) {
+  h = h.replace(line + "\
+", "");
+  fs.writeFileSync(p, h);
+  console.log("removed bg-layer line");
+} else {
+  console.log("bg-layer line not found");
+}
+"}},{"type":"tool_use","name":"Shell","input":{"command":"node "c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_remove-faq-bg.js"","description":"Run script to remove FAQ bg-layer line"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"bg-layer","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","-B":2}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_remove-faq-bg.js","contents":"const fs = require("fs");
+const p = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/index.html";
+const lines = fs.readFileSync(p, "utf8").split(/\\r?\
+/);
+const idx = lines.findIndex((l) => l.includes('class="bg-layer"'));
+if (idx === -1) {
+  console.log("not found");
+  process.exit(1);
+}
+lines.splice(idx, 1);
+fs.writeFileSync(p, lines.join("\
+"));
+console.log("removed line", idx + 1);
+"}},{"type":"tool_use","name":"Shell","input":{"command":"node "c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_remove-faq-bg.js"","description":"Remove bg-layer line by line index"}},{"type":"tool_use","name":"Delete","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_remove-faq-bg.js"}},{"type":"tool_use","name":"Grep","input":{"pattern":"motion","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"<section class="faq-section faq-section--centered pt_50 pb_50">
+    <div class="bg-layer" style="background-image: url(assets/images/new/img\\ \\(3\\).webp);"></div>
+    <div class="auto-container">","new_string":"<section class="faq-section faq-section--centered pt_50 pb_50">
+    <div class="auto-container">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"\\.sec-title\\.centred|sub-title","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\style.css","head_limit":30}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1097,"limit":25}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"centred|centered","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\style.css","head_limit":20}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\style.css","offset":720,"limit":50}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\style.css","offset":365,"limit":15}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1280,"limit":15}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\faq.css","limit":45}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"The **Our Frequency** (FAQ) section is updated:
+
+### Changes
+1. **Removed the side image** — the left background image (`bg-layer`) is gone.
+2. **Centered the content** — the block uses a narrower centered column (`col-xl-8`), with the heading, intro text, accordions, and “View All FAQs” button all center-aligned.
+3. **Added `faq-section--centered` styles** in `faq.css` so the layout stays centered and the side image does not return on larger screens.
+
+Refresh the page to see the FAQ section full-width and centered, without the image on the left.
+
+[REDACTED]"}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"<user_query>
+i want to redesign the Sanadana Herbals AyurvedaAyurveda & Wellness
+Expert Insights on Herbal Medicine & Natural Healing
+
+Ayurvedic Knowledge That Supports Real Wellness section which is used as blogs section. and also the cards under that. 
+</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Locating the blog section and reviewing its structure and styles before redesigning it.
+
+[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"Expert Insights|Ayurvedic Knowledge|Wellness Expert","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}},{"type":"tool_use","name":"Grep","input":{"pattern":"blog|news-section","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","-i":true}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1383,"limit":180}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\
+ews.css","limit":120}},{"type":"tool_use","name":"Grep","input":{"pattern":"news\\.css","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":698,"limit":50}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\about-sanadana-premium.css","limit":80}},{"type":"tool_use","name":"Glob","input":{"glob_pattern":"**/blog*.webp","target_directory":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\images"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":518,"limit":45}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\
+ews.css","offset":115,"limit":100}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Redesigning the blog section with a premium herbal layout and updated cards to match the site's other sections.
+
+[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\blog-insights-premium.css","contents":"/**
+ * Blog / insights section — premium herbal editorial grid
+ */
+
+.blog-insights-premium {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f4faf9 0%, #eef6f5 45%, #f8fbfa 100%);
+}
+
+.blog-insights-premium__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 50% at 10% 0%, rgba(0, 167, 167, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 95% 100%, rgba(0, 115, 115, 0.08) 0%, transparent 50%);
+}
+
+.blog-insights-premium .auto-container {
+  position: relative;
+  z-index: 1;
+}
+
+.blog-insights-premium__header {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.blog-insights-premium__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(0, 115, 115);
+}
+
+.blog-insights-premium__kicker img {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+}
+
+.blog-insights-premium__tagline {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  font-weight: 600;
+  line-height: 1.5;
+  color: #3d4847;
+}
+
+.blog-insights-premium__header h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.2;
+  font-family: var(--title-font);
+  color: var(--title-color);
+}
+
+.blog-insights-premium__intro {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #5a6564;
+}
+
+.blog-insights-premium__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.blog-insights-premium__grid .blog-insight-card:nth-child(4),
+.blog-insights-premium__grid .blog-insight-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+@media (min-width: 992px) {
+  .blog-insights-premium__grid .blog-insight-card:nth-child(4) {
+    grid-column: 2 / 3;
+  }
+
+  .blog-insights-premium__grid .blog-insight-card:nth-child(5) {
+    grid-column: 3 / 4;
+  }
+}
+
+.blog-insight-card {
+  margin: 0;
+}
+
+.blog-insight-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0, 167, 167, 0.12);
+  box-shadow: 0 10px 36px rgba(0, 45, 45, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.blog-insight-card__link:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 167, 167, 0.28);
+  box-shadow: 0 18px 48px rgba(0, 55, 55, 0.12);
+}
+
+.blog-insight-card__media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(165deg, #e8f4f3 0%, #dceeea 100%);
+}
+
+.blog-insight-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-insight-card__link:hover .blog-insight-card__media img {
+  transform: scale(1.06);
+}
+
+.blog-insight-card__category {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(0, 115, 115, 0.92);
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+.blog-insight-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1.35rem 1.35rem;
+}
+
+.blog-insight-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.65rem;
+  font-size: 0.8125rem;
+  color: #6b7776;
+}
+
+.blog-insight-card__meta i {
+  color: rgb(0, 167, 167);
+  font-size: 0.75rem;
+}
+
+.blog-insight-card__body h3 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.0625rem, 1.5vw, 1.1875rem);
+  line-height: 1.35;
+  font-family: var(--title-font);
+  color: var(--title-color);
+  transition: color 0.25s ease;
+}
+
+.blog-insight-card__link:hover h3 {
+  color: rgb(0, 115, 115);
+}
+
+.blog-insight-card__excerpt {
+  margin: 0 0 1rem;
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #5a6564;
+}
+
+.blog-insight-card__read {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(0, 115, 115);
+}
+
+.blog-insight-card__read i {
+  font-size: 0.75rem;
+  transition: transform 0.25s ease;
+}
+
+.blog-insight-card__link:hover .blog-insight-card__read i {
+  transform: translateX(4px);
+}
+
+.blog-insights-premium__footer {
+  margin-top: 2.5rem;
+}
+
+.blog-insights-premium__footer .theme-btn-two {
+  display: inline-block;
+}
+
+@media (max-width: 1199px) {
+  .blog-insights-premium__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .blog-insights-premium__grid .blog-insight-card:nth-child(4),
+  .blog-insights-premium__grid .blog-insight-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-insights-premium__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-insights-premium__header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-insight-card__link,
+  .blog-insight-card__media img,
+  .blog-insight-card__read i {
+    transition: none;
+  }
+
+  .blog-insight-card__link:hover {
+    transform: none;
+  }
+}
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\blog-insights-premium.css","old_string":".blog-insights-premium__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.blog-insights-premium__grid .blog-insight-card:nth-child(4),
+.blog-insights-premium__grid .blog-insight-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+@media (min-width: 992px) {
+  .blog-insights-premium__grid .blog-insight-card:nth-child(4) {
+    grid-column: 2 / 3;
+  }
+
+  .blog-insights-premium__grid .blog-insight-card:nth-child(5) {
+    grid-column: 3 / 4;
+  }
+}","new_string":".blog-insights-premium__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\blog-insights-premium.css","old_string":"@media (max-width: 1199px) {
+  .blog-insights-premium__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .blog-insights-premium__grid .blog-insight-card:nth-child(4),
+  .blog-insights-premium__grid .blog-insight-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-insights-premium__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-insights-premium__header {
+    margin-bottom: 2rem;
+  }
+}","new_string":"@media (max-width: 767px) {
+  .blog-insights-premium__header {
+    margin-bottom: 2rem;
+  }
+}"}},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html","contents":"<!-- blog insights section -->
+<section class="blog-insights-premium pt_120 pb_120" aria-labelledby="blog-insights-heading">
+    <motion class="blog-insights-premium__bg" aria-hidden="true"></motion>
+    <div class="auto-container">
+        <header class="blog-insights-premium__header centred">
+            <p class="blog-insights-premium__kicker">
+                <img src="assets/images/svg-logo-1.png" width="28" height="28" alt="" role="presentation">
+                Sanadana Herbals · Ayurveda &amp; Wellness
+            </p>
+            <p class="blog-insights-premium__tagline">Expert Insights on Herbal Medicine &amp; Natural Healing</p>
+            <h2 id="blog-insights-heading">Ayurvedic Knowledge That Supports Real Wellness</h2>
+            <p class="blog-insights-premium__intro">
+                Practical guides on herbal care, digestion, immunity, and everyday Ayurvedic living—written by our wellness team.
+            </p>
+        </header>
+
+        <div class="blog-insights-premium__grid">
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="arshopile-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/3_31f7d683-5fbe-4ea3-92fe-da1596a81166.jpg?v=1764832331"
+                             alt="Natural Ayurvedic treatment for piles" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Piles Care</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 05 Feb · Sanadana Herbals</p>
+                        <h3>Ayurvedic Approach to Managing Piles Naturally</h3>
+                        <p class="blog-insight-card__excerpt">How digestion, lifestyle, and gentle herbal support work together for lasting piles relief.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="sd-himo-plus-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/SDHIMOPLUS_2_595af0d2-0ea2-4f42-8e19-cf8b87a6a053.jpg?v=1755514247"
+                             alt="Ayurvedic iron tonic for low hemoglobin" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Immunity Care</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 07 Feb · Sanadana Herbals</p>
+                        <h3>How Ayurvedic Iron Tonics Support Blood Health</h3>
+                        <p class="blog-insight-card__excerpt">Traditional iron tonics that help replenish hemoglobin and ease fatigue without harsh side effects.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="aminohit-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/5_5870fa25-e0a9-4e9d-ad5e-f99aa9692d30.jpg?v=1755514308"
+                             alt="Ayurvedic digestive wellness herbs" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Digestive Health</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 09 Feb · Sanadana Herbals</p>
+                        <h3>Improving Digestion Naturally with Ayurveda</h3>
+                        <p class="blog-insight-card__excerpt">Herbs and daily habits to restore appetite, reduce bloating, and support a balanced gut.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="sancof-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/2_ae32359b-7dbf-4ac9-97e0-d000c3b61e3b.jpg?v=1752586105"
+                             alt="Ayurvedic herbal cough syrup" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Respiratory Care</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 11 Feb · Sanadana Herbals</p>
+                        <h3>Ayurvedic Remedies for Cough &amp; Respiratory Care</h3>
+                        <p class="blog-insight-card__excerpt">Soothing herbal approaches for wet and dry cough—without alcohol or drowsiness.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </motion>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="Dhathriarishtam-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/5_56a6f0e3-c2ea-408f-b7ad-f2d83a162bd7.jpg?v=1755514678"
+                             alt="Dhathriarishtam traditional ayurvedic tonic" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Rasayana</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 12 Feb · Sanadana Herbals</p>
+                        <h3>Why Traditional Ayurvedic Tonics Still Matter Today</h3>
+                        <p class="blog-insight-card__excerpt">Classical rasayanas like Dhathriarishtam for immunity, digestion, and everyday vitality.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+
+        <div class="blog-insights-premium__footer centred">
+            <a href="blog.html" class="theme-btn-two"><span>Explore all articles</span></a>
+        </div>
+    </div>
+</section>
+<!-- blog insights section end -->
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html","old_string":"    <motion class="blog-insights-premium__bg" aria-hidden="true"></motion>","new_string":"    <motion class="blog-insights-premium__bg" aria-hidden="true"></motion>"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html","old_string":"    <motion class="blog-insights-premium__bg" aria-hidden="true"></motion>","new_string":"    <div class="blog-insights-premium__bg" aria-hidden="true"></motion>"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html","old_string":"                    </motion>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="Dhathriarishtam-blog.html">","new_string":"                    </motion>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="Dhathriarishtam-blog.html">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Shell","input":{"command":"node -e "const fs=require('fs');const p='c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/_blog-section.html';let s=fs.readFileSync(p,'utf8');s=s.replace(/<\\/?motion\\b/g,m=>m.startsWith('</')?'</motion>':'<motion').replace(/<motion/g,'<div').replace(/<\\/motion>/g,'</div>');fs.writeFileSync(p,s);"","description":"Fix motion tags in blog section template"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"motion","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html"}},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_splice-blog.js","contents":"const fs = require("fs");
+const root = "c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana";
+const indexPath = root + "/index.html";
+const sectionPath = root + "/_blog-section.html";
+
+let html = fs.readFileSync(indexPath, "utf8");
+const section = fs.readFileSync(sectionPath, "utf8");
+
+const start = html.indexOf("<!-- news-section -->");
+const end = html.indexOf("<!-- news-section end -->");
+if (start < 0 || end < 0) {
+  console.error("markers missing");
+  process.exit(1);
+}
+
+const endLine = end + "<!-- news-section end -->".length;
+html = html.slice(0, start) + section + "\
+\
+" + html.slice(endLine);
+fs.writeFileSync(indexPath, html);
+console.log("spliced");
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Shell","input":{"command":"node "c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_splice-blog.js"","description":"Replace news-section with new blog section in index.html"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"<link href="assets/css/module-css/news.css" rel="stylesheet">","new_string":"<link href="assets/css/module-css/news.css" rel="stylesheet">
+<link href="assets/css/module-css/blog-insights-premium.css" rel="stylesheet">"}},{"type":"tool_use","name":"Delete","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html"}},{"type":"tool_use","name":"Delete","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_splice-blog.js"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1383,"limit":10}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html","contents":"<!-- blog insights section -->
+<section class="blog-insights-premium pt_120 pb_120" aria-labelledby="blog-insights-heading">
+    <div class="blog-insights-premium__bg" aria-hidden="true"></div>
+    <motion class="auto-container">
+        <header class="blog-insights-premium__header centred">
+            <p class="blog-insights-premium__kicker">
+                <img src="assets/images/svg-logo-1.png" width="28" height="28" alt="" role="presentation">
+                Sanadana Herbals · Ayurveda &amp; Wellness
+            </p>
+            <p class="blog-insights-premium__tagline">Expert Insights on Herbal Medicine &amp; Natural Healing</p>
+            <h2 id="blog-insights-heading">Ayurvedic Knowledge That Supports Real Wellness</h2>
+            <p class="blog-insights-premium__intro">
+                Practical guides on herbal care, digestion, immunity, and everyday Ayurvedic living—written by our wellness team.
+            </p>
+        </header>
+
+        <div class="blog-insights-premium__grid">
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="arshopile-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/3_31f7d683-5fbe-4ea3-92fe-da1596a81166.jpg?v=1764832331"
+                             alt="Natural Ayurvedic treatment for piles" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Piles Care</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 05 Feb · Sanadana Herbals</p>
+                        <h3>Ayurvedic Approach to Managing Piles Naturally</h3>
+                        <p class="blog-insight-card__excerpt">How digestion, lifestyle, and gentle herbal support work together for lasting piles relief.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="sd-himo-plus-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/SDHIMOPLUS_2_595af0d2-0ea2-4f42-8e19-cf8b87a6a053.jpg?v=1755514247"
+                             alt="Ayurvedic iron tonic for low hemoglobin" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Immunity Care</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 07 Feb · Sanadana Herbals</p>
+                        <h3>How Ayurvedic Iron Tonics Support Blood Health</h3>
+                        <p class="blog-insight-card__excerpt">Traditional iron tonics that help replenish hemoglobin and ease fatigue without harsh side effects.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="aminohit-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/5_5870fa25-e0a9-4e9d-ad5e-f99aa9692d30.jpg?v=1755514308"
+                             alt="Ayurvedic digestive wellness herbs" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Digestive Health</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 09 Feb · Sanadana Herbals</p>
+                        <h3>Improving Digestion Naturally with Ayurveda</h3>
+                        <p class="blog-insight-card__excerpt">Herbs and daily habits to restore appetite, reduce bloating, and support a balanced gut.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="sancof-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/2_ae32359b-7dbf-4ac9-97e0-d000c3b61e3b.jpg?v=1752586105"
+                             alt="Ayurvedic herbal cough syrup" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Respiratory Care</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 11 Feb · Sanadana Herbals</p>
+                        <h3>Ayurvedic Remedies for Cough &amp; Respiratory Care</h3>
+                        <p class="blog-insight-card__excerpt">Soothing herbal approaches for wet and dry cough—without alcohol or drowsiness.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-insight-card">
+                <a class="blog-insight-card__link" href="Dhathriarishtam-blog.html">
+                    <figure class="blog-insight-card__media">
+                        <img src="https://shop.sanadanaherbals.com/cdn/shop/files/5_56a6f0e3-c2ea-408f-b7ad-f2d83a162bd7.jpg?v=1755514678"
+                             alt="Dhathriarishtam traditional ayurvedic tonic" width="640" height="400" loading="lazy" decoding="async">
+                        <span class="blog-insight-card__category">Rasayana</span>
+                    </figure>
+                    <div class="blog-insight-card__body">
+                        <p class="blog-insight-card__meta"><i class="far fa-calendar-alt" aria-hidden="true"></i> 12 Feb · Sanadana Herbals</p>
+                        <h3>Why Traditional Ayurvedic Tonics Still Matter Today</h3>
+                        <p class="blog-insight-card__excerpt">Classical rasayanas like Dhathriarishtam for immunity, digestion, and everyday vitality.</p>
+                        <span class="blog-insight-card__read">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+
+        <div class="blog-insights-premium__footer centred">
+            <a href="blog.html" class="theme-btn-two"><span>Explore all articles</span></a>
+        </div>
+    </div>
+</section>
+<!-- blog insights section end -->
+"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html","old_string":"    <motion class="auto-container">","new_string":"    <div class="auto-container">"}},{"type":"tool_use","name":"Shell","input":{"command":"node -e "const fs=require('fs');const r='c:/Users/Hello Systems/Documents/sanadana-herbals/sanadana';let h=fs.readFileSync(r+'/index.html','utf8');const s=fs.readFileSync(r+'/_blog-section.html','utf8');const a=h.indexOf('<!-- news-section -->');const b=h.indexOf('<!-- news-section end -->');if(a<0||b<0)throw new Error('missing');h=h.slice(0,a)+s+'\
+\
+'+h.slice(b+'<!-- news-section end -->'.length);fs.writeFileSync(r+'/index.html',h);console.log('ok');"","description":"Splice new blog section into index.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"blog-insights|news-section|motion","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}},{"type":"tool_use","name":"Grep","input":{"pattern":"blog-insights-premium","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","glob":"*"}},{"type":"tool_use","name":"Delete","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_blog-section.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":1385,"limit":110}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"The **Ayurveda & Wellness / blog insights** block is redesigned on the homepage. Here’s what changed:
+
+### Section header
+- **Centered layout** with a soft teal gradient background (aligned with your other premium sections)
+- Clear hierarchy:
+  - **Sanadana Herbals · Ayurveda & Wellness** (logo + label — fixes the old cramped split title)
+  - **Expert Insights on Herbal Medicine & Natural Healing**
+  - **Ayurvedic Knowledge That Supports Real Wellness**
+  - Short intro line under the heading
+
+### Blog cards
+- Replaced the old carousel cards with a **responsive grid** (3 → 2 → 1 columns)
+- Each card includes:
+  - Featured image with hover zoom
+  - **Category badge** (e.g. Piles Care, Respiratory Care)
+  - Date and author line
+  - Title + short excerpt
+  - **“Read article →”** link
+- Whole card is clickable
+- Subtle lift and teal border on hover
+
+### Other
+- **“Explore all articles”** button links to `blog.html`
+- Removed the old Owl carousel (no duplicate dots/arrows)
+
+New styles live in `assets/css/module-css/blog-insights-premium.css`. Refresh the homepage to see it. If you want the same layout on `blog.html`, say the word and we can apply it there too.
+
+[REDACTED]"}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"<user_query>
+cards badges at left top corner should be removed on all cards.
+</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"blog-insight-card__category","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <span class="blog-insight-card__category">Piles Care</span>","new_string":""}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <span class="blog-insight-card__category">Immunity Care</span>","new_string":""}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <span class="blog-insight-card__category">Digestive Health</span>","new_string":""}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <span class="blog-insight-card__category">Respiratory Care</span>","new_string":""}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <span class="blog-insight-card__category">Rasayana</span>","new_string":""}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\blog-insights-premium.css","old_string":".blog-insight-card__category {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(0, 115, 115, 0.92);
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+.blog-insight-card__body {","new_string":".blog-insight-card__body {"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Removed the top-left category badges from all five blog cards in `index.html`, and removed the related styles from `blog-insights-premium.css`. Cards now show only the image, date line, title, excerpt, and read link. Refresh the page to see the update.
+
+[REDACTED]"}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"[Image]
+[Image]
+[Image]
+[Image]
+[Image]
+[Image]
+<image_files>
+The following images were provdied by the user and saved to the workspace for future use:
+1. C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana/assets/c__Users_Hello_Systems_AppData_Roaming_Cursor_User_workspaceStorage_9fd1c4ddae6fe2cb2075110df84de3ef_images_SDHIMOPLUS_2_595af0d2-0ea2-4f42-8e19-cf8b87a6a053-82dba8b9-1085-4d69-913d-80242c81e615.png
+2. C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana/assets/c__Users_Hello_Systems_AppData_Roaming_Cursor_User_workspaceStorage_9fd1c4ddae6fe2cb2075110df84de3ef_images_3_9aeb2be4-9779-4a7f-b719-c1a9e563bc2e-eb60a74a-2ef1-4dfe-8598-c8875c2f03de.png
+3. C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana/assets/c__Users_Hello_Systems_AppData_Roaming_Cursor_User_workspaceStorage_9fd1c4ddae6fe2cb2075110df84de3ef_images_5_5870fa25-e0a9-4e9d-ad5e-f99aa9692d30-71b5380f-8ef9-436e-9a57-e47841d1cf6f.png
+4. C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana/assets/c__Users_Hello_Systems_AppData_Roaming_Cursor_User_workspaceStorage_9fd1c4ddae6fe2cb2075110df84de3ef_images_6-a1941951-75a8-475a-984f-74cf75edf25b.png
+5. C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana/assets/c__Users_Hello_Systems_AppData_Roaming_Cursor_User_workspaceStorage_9fd1c4ddae6fe2cb2075110df84de3ef_images_3_31f7d683-5fbe-4ea3-92fe-da1596a81166-296b7129-427c-49ba-80f8-8e49cf38aed5.png
+6. C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana/assets/c__Users_Hello_Systems_AppData_Roaming_Cursor_User_workspaceStorage_9fd1c4ddae6fe2cb2075110df84de3ef_images_5_56a6f0e3-c2ea-408f-b7ad-f2d83a162bd7-0d53a8f9-e0c5-48c6-b1c8-34ef4e733269.png
+
+These images can be copied for use in other locations.
+</image_files>
+<user_query>
+Why Choose Ayurveda
+Over Other Medications i want to cahnge images on this section. replace with uploaded images.
+</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Locating the "Why Choose Ayurveda" section and replacing its images with your uploads.
+
+[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":713,"limit":120}},{"type":"tool_use","name":"Glob","input":{"glob_pattern":"**/*SDHIMOPLUS*","target_directory":"c:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana\\assets"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Glob","input":{"glob_pattern":"**/*.png","target_directory":"c:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana\\assets"}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\team.css","limit":80}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Shell","input":{"command":"Get-ChildItem "C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana\\assets" -Recurse -Filter "*.png" | Select-Object -First 20 FullName","description":"List uploaded PNG files in Cursor assets folder"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Glob","input":{"glob_pattern":"**/*595af0d2*","target_directory":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}},{"type":"tool_use","name":"Glob","input":{"glob_pattern":"**/*why-ayurveda*","target_directory":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Shell","input":{"command":"dir "C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana\\assets" 2>$null; dir "C:\\Users\\Hello Systems\\.cursor\\projects\\c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana\\assets\\c__Users*" 2>$null | Select-Object -First 15 Name","description":"List Cursor assets directory for uploaded images"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Copying uploaded images into the project and updating the Why Ayurveda carousel.
+
+[REDACTED]"},{"type":"tool_use","name":"Write","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_copy-why-ayurveda-images.js","contents":"const fs = require("fs");
+const path = require("path");
+
+const srcDir =
+  "C:/Users/Hello Systems/.cursor/projects/c-Users-Hello-Systems-Documents-sanadana-herbals-sanadana/assets";
+const destDir =
+  "C:/Users/Hello Systems/Documents/sanadana-herbals/sanadana/assets/images/why-ayurveda";
+
+const mappings = [
+  {
+    match: "SDHIMOPLUS_2_595af0d2",
+    dest: "why-ayurveda-sd-himo-plus.png",
+  },
+  {
+    match: "images_3_9aeb2be4",
+    dest: "why-ayurveda-sand-cof.png",
+  },
+  {
+    match: "5_5870fa25-e0a9",
+    dest: "why-ayurveda-aminohit.png",
+  },
+  {
+    match: "images_6-a1941951",
+    dest: "why-ayurveda-arshopilecare-quality.png",
+  },
+  {
+    match: "3_31f7d683-5fbe",
+    dest: "why-ayurveda-arshopilecare-ingredients.png",
+  },
+  {
+    match: "5_56a6f0e3-c2ea",
+    dest: "why-ayurveda-dhathriarishtam.png",
+  },
+];
+
+fs.mkdirSync(destDir, { recursive: true });
+const files = fs.readdirSync(srcDir);
+
+for (const { match, dest } of mappings) {
+  const found = files.find((f) => f.includes(match));
+  if (!found) {
+    console.error("Missing:", match);
+    process.exit(1);
+  }
+  fs.copyFileSync(path.join(srcDir, found), path.join(destDir, dest));
+  console.log("Copied", dest);
+}
+"}},{"type":"tool_use","name":"Shell","input":{"command":"node "c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_copy-why-ayurveda-images.js"","description":"Copy Why Ayurveda images to assets folder"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"<!-- why choose ayurveda-section -->
+<section class="team-section centred pt_120 pb_120">","new_string":"<!-- why choose ayurveda-section -->
+<section class="team-section team-section--why-ayurveda centred pt_120 pb_120">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <img src="https://static.vecteezy.com/system/resources/thumbnails/060/705/571/small/traditional-mortar-and-pestle-for-grinding-ingredients-photo.jpeg" 
+                             alt="Natural ayurvedic herbs used in herbal cough syrup and traditional medicine" loading="lazy" decoding="async">","new_string":"                        <img src="assets/images/why-ayurveda/why-ayurveda-arshopilecare-quality.png" 
+                             alt="Arshopilecare — 100% natural, vegan, GMP-certified Ayurvedic care" width="600" height="600" loading="lazy" decoding="async">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <img src="https://gentleayurvedic.com/cdn/shop/files/mortar-pestle-with-ayurvedic-herbs.jpg?v=1737381144&width=1500" 
+                             alt="Holistic ayurvedic treatment for digestive and respiratory wellness" loading="lazy" decoding="async">","new_string":"                        <img src="assets/images/why-ayurveda/why-ayurveda-dhathriarishtam.png" 
+                             alt="Dhathriarishtam traditional Ayurvedic tonic for immunity and vitality" width="600" height="600" loading="lazy" decoding="async">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <img src="https://static.vecteezy.com/system/resources/thumbnails/035/978/179/small/ai-generated-indian-ayurveda-herbal-medicine-free-photo.jpg" 
+                             alt="Safe ayurvedic medicine for long term use with minimal side effects" loading="lazy" decoding="async">","new_string":"                        <img src="assets/images/why-ayurveda/why-ayurveda-aminohit.png" 
+                             alt="Aminohit natural Ayurvedic antacid for safe digestive relief" width="600" height="600" loading="lazy" decoding="async">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <img src="https://png.pngtree.com/thumb_back/fh260/background/20240913/pngtree-a-photo-showcasing-ayurvedic-oils-and-herbs-used-in-treatments-image_16198387.jpg" 
+                             alt="Preventive ayurvedic care supporting immunity and vitality" loading="lazy" decoding="async">","new_string":"                        <img src="assets/images/why-ayurveda/why-ayurveda-sd-himo-plus.png" 
+                             alt="SD Himo Plus Ayurvedic tonic for immunity, energy, and blood health" width="600" height="600" loading="lazy" decoding="async">"}},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"                        <img src="https://static.vecteezy.com/system/resources/thumbnails/052/247/286/small/a-wooden-frame-surrounded-by-various-types-of-nuts-and-seeds-photo.jpeg" 
+                             alt="Time tested ayurvedic science and classical herbal medicine texts" loading="lazy" decoding="async">","new_string":"                        <img src="assets/images/why-ayurveda/why-ayurveda-arshopilecare-ingredients.png" 
+                             alt="Arshopilecare with 15+ classical Ayurvedic ingredients" width="600" height="600" loading="lazy" decoding="async">"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\team.css","old_string":".team-block-one .inner-box:hover .image-box img{
+  filter: grayscale(100%);
+}","new_string":".team-block-one .inner-box:hover .image-box img{
+  filter: grayscale(100%);
+}
+
+.team-section--why-ayurveda .team-block-one .inner-box:hover .image-box img{
+  filter: none;
+  transform: scale(1.02);
+}
+
+.team-section--why-ayurveda .team-block-one .inner-box .image-box{
+  border-radius: 14px;
+  background: #fff;
+  aspect-ratio: 4 / 3;
+}
+
+.team-section--why-ayurveda .team-block-one .inner-box .image-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}"}},{"type":"tool_use","name":"Delete","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\_copy-why-ayurveda-images.js"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Updated the **Why Choose Ayurveda Over Other Medications** carousel with your uploaded product images.
+
+### Image mapping (5 cards)
+| Card | Image |
+|------|--------|
+| **Natural & Herbal** | Arshopilecare (100% natural / vegan badges) |
+| **Holistic Treatment** | Dhathriarishtam |
+| **Minimal Side Effects** | Aminohit |
+| **Preventive Care** | SD Himo Plus |
+| **Time-Tested Science** | Arshopilecare (15+ ingredients) |
+
+Files are in `assets/images/why-ayurveda/`.
+
+### Display tweaks
+- **No grayscale** on hover (product graphics stay in full color)
+- **`object-fit: contain`** so infographic text and labels aren’t cropped
+- White rounded image area on the dark section background
+
+**Sand Cof** was also copied to the folder but isn’t used yet (5 slides, 6 images). If you want it in the carousel, say which card to swap or if you’d like a 6th slide added. Refresh the homepage to see the changes.
+
+[REDACTED]"}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"<user_query>
+Our Commitment
+ section backgrund should be like hero section.
+</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"Our Commitment|commitment|pricing-section","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}},{"type":"tool_use","name":"Grep","input":{"pattern":"hero|banner","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","head_limit":40}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","offset":997,"limit":100}},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\hero-split.css","limit":80}},{"type":"tool_use","name":"Grep","input":{"pattern":"hero-premium|banner-section--split|ambient|glow","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Grep","input":{"pattern":"pricing-section","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css"}},{"type":"tool_use","name":"Grep","input":{"pattern":"pricing\\.css","path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\assets\\css\\module-css\\pricing.css","limit":50}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Applying the hero section's ambient background and glow layers to the Our Commitment section.
+
+[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"c:\\Users\\Hello Systems\\Documents\\sanadana-herbals\\sanadana\\index.html","old_string":"

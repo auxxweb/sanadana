@@ -1,0 +1,444 @@
+/**
+ * Sitewide premium layer — refined neutrals, minimal brand teal, sales-focused clarity.
+ * Loads after theme modules; inner pages rely on .page-title (home has none).
+ */
+
+:root {
+  --premium-bg: #fafcfb;
+  --premium-surface: #ffffff;
+  --premium-ink: #1a1a1a;
+  --premium-muted: #5c6564;
+  --premium-border: rgba(0, 0, 0, 0.08);
+  --premium-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+  --premium-accent: rgb(0, 115, 115);
+  --premium-accent-soft: rgba(0, 167, 167, 0.12);
+}
+
+.boxed_wrapper {
+  background: var(--premium-bg);
+}
+
+/* —— Inner page hero (breadcrumb band) —— */
+.page-title {
+  padding: clamp(7.5rem, 14vw, 9.5rem) 0 clamp(3.5rem, 7vw, 5rem);
+  background: linear-gradient(180deg, #ffffff 0%, var(--premium-bg) 100%);
+  border-bottom: 1px solid var(--premium-border);
+}
+
+.page-title .shape-layer,
+.page-title .pattern-layer,
+.page-title .curved-circle {
+  display: none !important;
+}
+
+.page-title .content-box {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.page-title h1 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--premium-ink);
+  margin-bottom: 0.75rem;
+}
+
+.page-title .bread-crumb {
+  padding-left: 0;
+}
+
+.page-title .bread-crumb::before {
+  display: none;
+}
+
+.page-title .bread-crumb li {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--premium-muted);
+}
+
+.page-title .bread-crumb li a {
+  color: var(--premium-ink);
+  transition: color 0.25s ease;
+}
+
+.page-title .bread-crumb li a:hover {
+  color: var(--premium-accent);
+}
+
+.page-title__lead {
+  max-width: 36rem;
+  margin: 0.75rem auto 1.25rem;
+  font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
+  line-height: 1.6;
+  color: var(--premium-muted);
+}
+
+.page-title .premium-shop-cta {
+  margin-bottom: 0;
+}
+
+/* Tone down gradient text on inner pages (keep buttons) */
+.page-title .gradient-color,
+.sec-title .gradient-color:not(.theme-btn-one span):not(.theme-btn-two span):not(.theme-btn-three span),
+.feature-section .gradient-color,
+.about-section .gradient-color,
+.portfolio-section .gradient-color,
+.news-section .gradient-color,
+.blog-section .gradient-color {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: var(--premium-ink) !important;
+  color: var(--premium-ink) !important;
+}
+
+/* —— Section titles —— */
+.sec-title .sub-title h5 {
+  color: var(--premium-muted);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+}
+
+.sec-title h2 {
+  color: var(--premium-ink);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.sec-title .sub-title .icon-box img {
+  opacity: 0.85;
+  filter: grayscale(0.15);
+}
+
+/* —— Feature / why-us blocks —— */
+.feature-section .inner-container {
+  background: var(--premium-surface);
+  border: 1px solid var(--premium-border);
+  border-radius: 1rem;
+  box-shadow: var(--premium-shadow);
+  padding: clamp(2rem, 5vw, 3.25rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+.feature-section .bg-color {
+  display: none;
+}
+
+.feature-block-one .inner-box .icon-box {
+  color: var(--premium-ink);
+}
+
+.feature-block-one .inner-box h3 {
+  color: var(--premium-ink);
+}
+
+.feature-block-one .inner-box p {
+  color: var(--premium-muted);
+}
+
+/* —— Service cards —— */
+.service-block-one .inner-box {
+  background: var(--premium-surface);
+  border: 1px solid var(--premium-border);
+  border-radius: 1rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.service-block-one .inner-box::before,
+.service-section.alternat-2 .service-block-one .inner-box::before {
+  display: none;
+}
+
+.service-block-one .inner-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: var(--premium-shadow);
+  background: var(--premium-surface) !important;
+}
+
+.service-block-one .inner-box h3 {
+  color: var(--premium-ink);
+}
+
+/* —— Product grid (products page) —— */
+.portfolio-style-three .filters {
+  margin-bottom: clamp(2rem, 4vw, 3rem) !important;
+}
+
+.sortable-masonry .filter-tabs li {
+  color: var(--premium-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+
+.sortable-masonry .filter-tabs li::before {
+  display: none;
+}
+
+.sortable-masonry .filter-tabs li:hover,
+.sortable-masonry .filter-tabs li.active {
+  color: var(--premium-ink) !important;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 999px;
+}
+
+.portfolio-block-three .inner-box {
+  background: var(--premium-surface);
+  border: 1px solid var(--premium-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.portfolio-block-three .inner-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--premium-shadow);
+}
+
+.portfolio-block-three .inner-box .image-box .image::before {
+  background: rgba(26, 26, 26, 0.25) !important;
+}
+
+.portfolio-block-three .inner-box .lower-content {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.portfolio-block-three .inner-box .lower-content .post-info li.gradient-color {
+  background: none !important;
+  -webkit-text-fill-color: var(--premium-muted) !important;
+  color: var(--premium-muted) !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portfolio-block-three .inner-box .lower-content h3 a {
+  color: var(--premium-ink);
+}
+
+.portfolio-block-three .inner-box .lower-content h3 a:hover {
+  color: var(--premium-accent);
+}
+
+.portfolio-block-three .inner-box .lower-content .category-list li a {
+  color: var(--premium-muted);
+}
+
+.portfolio-block-three .inner-box .lower-content .category-list li a:hover {
+  color: var(--premium-accent);
+}
+
+/* —— Product / portfolio grid (legacy blocks) —— */
+.portfolio-block-two .inner-box {
+  border-radius: 1rem;
+  border: 1px solid var(--premium-border);
+  background: var(--premium-surface);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+  margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.portfolio-block-two .inner-box .image-box {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.portfolio-block-two .inner-box .image-box::before {
+  background: rgba(26, 26, 26, 0.35) !important;
+}
+
+.portfolio-block-two .inner-box .content-box {
+  opacity: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.98));
+  border-radius: 0 0 1rem 1rem;
+}
+
+.portfolio-block-two .inner-box .content-box h3 a {
+  color: var(--premium-ink);
+}
+
+.portfolio-block-two .inner-box .content-box h3 a:hover {
+  color: var(--premium-accent);
+}
+
+/* —— Pricing / commitment cards —— */
+.pricing-block-one .pricing-table {
+  border: 1px solid var(--premium-border);
+  border-radius: 1rem;
+  box-shadow: var(--premium-shadow);
+}
+
+.pricing-block-one .pricing-table .table-header h3 {
+  color: var(--premium-ink);
+}
+
+.pricing-block-one .pricing-table .gradient-color {
+  background: none !important;
+  -webkit-text-fill-color: var(--premium-muted) !important;
+  color: var(--premium-muted) !important;
+}
+
+.pricing-block-one .pricing-table .feature-list li.light {
+  color: #b8b8b8;
+}
+
+/* —— Testimonials —— */
+.testimonial-block-one .inner-box,
+.testimonial-block-two .inner-box {
+  background: var(--premium-surface);
+  border: 1px solid var(--premium-border);
+  border-radius: 1rem;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.05);
+}
+
+/* —— FAQ —— */
+.faq-section .accordion .acc-btn {
+  color: var(--premium-ink);
+}
+
+.faq-section .accordion .acc-btn .icon-box {
+  color: var(--premium-ink) !important;
+}
+
+/* —— Blog / news cards —— */
+.news-block-one .inner-box,
+.blog-details-content {
+  border-radius: 1rem;
+}
+
+.news-block-one .inner-box .lower-content {
+  background: var(--premium-surface);
+  border: 1px solid var(--premium-border);
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+}
+
+/* —— Contact —— */
+.contact-section .form-inner,
+.contact-section .info-inner {
+  background: var(--premium-surface);
+  border: 1px solid var(--premium-border);
+  border-radius: 1rem;
+  box-shadow: var(--premium-shadow);
+}
+
+/* —— Policy / text pages —— */
+.policy-section,
+.privacy-section {
+  background: var(--premium-surface);
+  border-radius: 1rem;
+  border: 1px solid var(--premium-border);
+  padding: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 3rem;
+}
+
+/* —— CTAs: keep teal on primary buttons only —— */
+.theme-btn-one {
+  box-shadow: 0 8px 24px rgba(0, 100, 100, 0.2);
+}
+
+.theme-btn-one:hover {
+  box-shadow: 0 12px 32px rgba(0, 100, 100, 0.28);
+}
+
+/* Premium inline shop link pattern */
+.premium-shop-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #fff !important;
+  background: linear-gradient(135deg, rgb(0, 140, 140), rgb(0, 100, 100));
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(0, 80, 80, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-shop-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 80, 80, 0.3);
+  color: #fff !important;
+}
+
+/* Section rhythm */
+section.pt_120,
+section.pb_120 {
+  padding-top: clamp(4rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4rem, 8vw, 7.5rem);
+}
+
+/* Instagram strip on inner pages */
+.instagram-premium {
+  background: var(--premium-surface);
+  border-top: 1px solid var(--premium-border);
+}
+
+/* Footer: subtle hover, not heavy teal */
+.footer-premium__contact a:hover,
+.footer-premium__nav a:hover,
+.footer-premium__social a:hover {
+  color: var(--premium-ink);
+}
+
+/* Main header: reduce teal rule intensity on inner pages */
+.page-title ~ * .sec-title .sub-title h5 {
+  color: var(--premium-muted);
+}
+
+/**
+ * Home index only: responsive.css hides `.sticky-header` below 1200px, so the
+ * primary bar (`.header-lower`) is fixed once `.fixed-header` is applied by script.
+ */
+@media (max-width: 1200px) {
+  body.page-home .main-header.fixed-header .header-lower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    backdrop-filter: saturate(180%) blur(14px);
+    box-shadow: 0 10px 36px rgba(0, 45, 45, 0.09);
+    border-bottom: 1px solid rgba(0, 167, 167, 0.12);
+  }
+
+  body.page-home .main-header.fixed-header {
+    top: 0;
+  }
+
+  body.page-home .main-header.fixed-header .header-lower::after {
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-title {
+    padding-top: clamp(6.5rem, 18vw, 8rem);
+    padding-bottom: clamp(2.5rem, 6vw, 3.5rem);
+  }
+
+  .feature-section .inner-container {
+    padding: 1.75rem 1.25rem;
+  }
+}

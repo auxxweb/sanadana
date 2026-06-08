@@ -1,0 +1,336 @@
+/**
+ * About Sanadana — split: full-height product photo (left) + text (right)
+ */
+
+.about-sanadana-premium {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-sanadana-premium__split {
+  display: grid;
+  grid-template-columns: minmax(300px, min(54vw, 640px)) minmax(0, 1fr);
+  align-items: stretch;
+  min-height: clamp(460px, 62vh, 720px);
+}
+
+.about-sanadana-premium__media {
+  position: relative;
+  align-self: stretch;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.about-sanadana-premium__media-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  min-height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+/* Fade black product panel into light text column */
+.about-sanadana-premium__media-edge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(28%, 120px);
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(10, 10, 10, 0.35) 40%,
+    rgba(10, 10, 10, 0.92) 100%
+  );
+}
+
+.about-sanadana-premium__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: clamp(1.75rem, 4vw, 3.25rem) 0;
+  overflow: hidden;
+}
+
+.about-sanadana-premium__wash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 70% at 100% 25%, rgba(0, 167, 167, 0.22) 0%, transparent 58%),
+    radial-gradient(ellipse 55% 50% at 80% 90%, rgba(0, 115, 115, 0.12) 0%, transparent 52%),
+    linear-gradient(165deg, rgba(10, 10, 10, 0.98) 0%, rgba(10, 10, 10, 0.94) 55%, rgba(10, 10, 10, 0.98) 100%);
+}
+
+.about-sanadana-premium__wash::after {
+  content: "";
+  position: absolute;
+  right: -2%;
+  bottom: 4%;
+  width: min(36vw, 200px);
+  height: min(36vw, 200px);
+  background: url("../../images/svg-logo-1.png") no-repeat center / contain;
+  opacity: 0.05;
+  transform: rotate(12deg);
+  filter: grayscale(1);
+}
+
+.about-sanadana-premium__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.about-sanadana-premium__main {
+  position: relative;
+  max-width: 36rem;
+  padding-right: clamp(0px, 3vw, 2.5rem);
+}
+
+.about-sanadana-premium__main::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 167, 167) 0%,
+    rgba(0, 167, 167, 0.35) 42%,
+    rgba(0, 115, 115, 0.55) 100%
+  );
+  opacity: 0.85;
+}
+
+.about-sanadana-premium__kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(0, 115, 115);
+}
+
+.about-sanadana-premium__kicker img {
+  width: 1.75rem;
+  height: auto;
+  opacity: 0.9;
+}
+
+.about-sanadana-premium__main h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.65rem, 2.4vw + 1rem, 2.35rem);
+  line-height: 1.18;
+  font-weight: 700;
+  font-family: var(--title-font);
+  color: rgba(245, 249, 248, 0.98);
+  letter-spacing: -0.02em;
+}
+
+.about-sanadana-premium__lead {
+  margin: 0 0 1.75rem;
+  max-width: 38rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.about-sanadana-premium__benefits {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-sanadana-premium__benefits > li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.about-sanadana-premium__benefit-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 167, 167, 0.22);
+  background: rgba(0, 0, 0, 0.35);
+  color: rgb(0, 167, 167);
+  font-size: 1.15rem;
+  box-shadow: 0 4px 14px rgba(0, 115, 115, 0.08);
+}
+
+.about-sanadana-premium__benefits h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.0625rem;
+  line-height: 1.3;
+  font-weight: 700;
+  font-family: var(--title-font);
+  color: rgba(245, 249, 248, 0.98);
+}
+
+.about-sanadana-premium__benefits p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.about-sanadana-premium__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.25rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(0, 167, 167, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 55, 55, 0.18);
+}
+
+.about-sanadana-premium__rating strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(0, 167, 167);
+  letter-spacing: 0.02em;
+}
+
+.about-sanadana-premium__rating span {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.about-sanadana-premium__stars {
+  display: flex;
+  gap: 2px;
+  color: rgb(0, 167, 167);
+  font-size: 0.85rem;
+}
+
+.about-sanadana-premium__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
+.about-sanadana-premium__story {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: rgb(0, 167, 167);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 167, 167, 0.35);
+  padding-bottom: 2px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.about-sanadana-premium__story:hover {
+  color: rgb(0, 167, 167);
+  border-bottom-color: rgb(0, 167, 167);
+}
+
+@media (max-width: 991px) {
+  .about-sanadana-premium__split {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .about-sanadana-premium__media {
+    min-height: clamp(280px, 62vw, 440px);
+    height: auto;
+    background: #0a0a0a;
+  }
+
+  .about-sanadana-premium__media-img {
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-position: center bottom;
+  }
+
+  .about-sanadana-premium__media-edge {
+    width: 100%;
+    height: min(28%, 72px);
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(10, 10, 10, 0.2) 35%,
+      rgba(10, 10, 10, 0.92) 100%
+    );
+  }
+
+  .about-sanadana-premium__content {
+    padding-top: clamp(1.5rem, 4vw, 2.5rem);
+    padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .about-sanadana-premium__main {
+    max-width: none;
+    text-align: center;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-sanadana-premium__kicker {
+    justify-content: center;
+  }
+
+  .about-sanadana-premium__main::after {
+    display: none;
+  }
+
+  .about-sanadana-premium__lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-sanadana-premium__benefits > li {
+    text-align: left;
+  }
+
+  .about-sanadana-premium__rating {
+    justify-content: center;
+    width: 100%;
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-sanadana-premium__foot {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-sanadana-premium__story {
+    transition: none;
+  }
+}

@@ -1,0 +1,274 @@
+/**
+ * "Our Herbal Range" — four-column trust / quality strip (reference layout).
+ */
+
+.service-section--herbal-trust {
+  padding-top: clamp(2rem, 4vw, 3.25rem) !important;
+  padding-bottom: clamp(4.5rem, 9vw, 7.5rem) !important;
+  background: var(--premium-bg, #fafcfb);
+}
+
+.banner-section + .service-section--herbal-trust {
+  padding-top: clamp(2rem, 4vw, 3.25rem) !important;
+}
+
+.service-section--herbal-trust .auto-container {
+  text-align: center;
+}
+
+.service-section--herbal-trust .sec-title {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.service-section--herbal-trust .sec-title.mb_50 {
+  margin-bottom: clamp(2.5rem, 5vw, 3.25rem) !important;
+}
+
+.service-section--herbal-trust .sec-title .sub-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-left: 0;
+}
+
+.service-section--herbal-trust .sec-title .sub-title .icon-box {
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+.herbal-trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: clamp(2rem, 5vw, 3rem) 0;
+  text-align: center;
+}
+
+.herbal-trust-strip__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 18rem;
+}
+
+.herbal-trust-strip__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(5.5rem, 12vw, 6.75rem);
+  height: clamp(5.5rem, 12vw, 6.75rem);
+  border-radius: 50%;
+  border: 2.5px solid #1fa37a;
+  background: rgba(31, 163, 122, 0.06);
+  color: #1fa37a;
+  font-size: clamp(1.65rem, 4vw, 2.1rem);
+  flex-shrink: 0;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.herbal-trust-strip__item:hover .herbal-trust-strip__icon {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(31, 163, 122, 0.2);
+  border-color: rgb(0, 167, 167);
+  color: rgb(0, 145, 125);
+}
+
+.herbal-trust-strip__icon--natural {
+  font-size: clamp(1.35rem, 3.2vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.35rem;
+}
+
+.herbal-trust-strip__icon--vegan {
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+}
+
+.herbal-trust-strip__vegan-leaves {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.herbal-trust-strip__vegan-label {
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.herbal-trust-strip__icon-small {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.herbal-trust-strip__icon-leaf {
+  font-size: 1.15em;
+  line-height: 1;
+}
+
+.herbal-trust-strip__title {
+  margin: 0 auto;
+  font-size: clamp(0.95rem, 1.65vw, 1.05rem);
+  line-height: 1.35;
+  font-family: var(--title-font);
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  max-width: 16ch;
+  text-align: center;
+}
+
+.herbal-trust-strip__item:nth-child(2) .herbal-trust-strip__title {
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.herbal-trust-strip__rule {
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1px;
+  background: rgb(0, 167, 167);
+}
+
+.herbal-trust-strip__item:nth-child(2) .herbal-trust-strip__rule {
+  background: #1a1a1a;
+}
+
+.herbal-trust-strip__desc {
+  margin: 0 auto;
+  font-size: clamp(0.875rem, 1.35vw, 0.95rem);
+  line-height: 1.55;
+  color: #555;
+  max-width: 22ch;
+  text-align: center;
+}
+
+/* Mobile / tablet: infinite horizontal marquee (items scroll right → left) */
+@media only screen and (max-width: 991px) {
+  .herbal-trust-strip--marquee {
+    display: block;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .herbal-trust-strip__viewport {
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+  }
+
+  .herbal-trust-strip__track {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: max-content;
+    gap: clamp(1.5rem, 6vw, 2.5rem);
+    will-change: transform;
+    animation: herbal-trust-marquee 32s linear infinite;
+  }
+
+  .herbal-trust-strip--marquee .herbal-trust-strip__item {
+    flex: 0 0 auto;
+    width: min(72vw, 15.5rem);
+    max-width: 15.5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .herbal-trust-strip--marquee .herbal-trust-strip__item:hover .herbal-trust-strip__icon {
+    transform: none;
+  }
+
+  @keyframes herbal-trust-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) and (prefers-reduced-motion: reduce) {
+  .herbal-trust-strip__track {
+    animation: none;
+  }
+
+  .herbal-trust-strip__viewport {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
+.herbal-trust-strip__cta-wrap {
+  margin: clamp(2rem, 5vw, 3rem) auto 0;
+  padding: 0;
+  text-align: center;
+}
+
+.herbal-trust-strip__cta-wrap .theme-btn-one,
+.herbal-trust-strip__cta-wrap .theme-btn-three {
+  display: inline-block;
+}
+
+.herbal-trust-strip__cta-wrap .theme-btn-three span,
+.herbal-trust-strip__cta-wrap .theme-btn-three span::before {
+  color: #1a1a1a;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: #1a1a1a;
+}
+
+.herbal-trust-strip__cta-wrap .theme-btn-three:hover span,
+.herbal-trust-strip__cta-wrap .theme-btn-three:hover span::before {
+  color: #1a1a1a;
+  background: none !important;
+  -webkit-text-fill-color: #1a1a1a;
+}

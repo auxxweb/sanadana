@@ -2,16 +2,15 @@
 /* template-color */
 
 .handle-preloader{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
-.main-menu .navigation > li.current > a,
-.main-menu .navigation > li:hover > a{
+.main-menu .navigation > li.current > a {
   color: var(--theme-color);
 }
 
 .gradient-color{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .main-header .menu-right-content .support-box a:hover{
@@ -19,39 +18,40 @@
 }
 
 .theme-btn-one{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .theme-btn-one:before{
-	background: linear-gradient(#508456, #00bf63);
+	background: linear-gradient(rgb(0, 115, 115), rgb(0, 167, 167));
 }
 
-/* WhatsApp floating button - same theme as Order on WhatsApp */
+/* WhatsApp floating button - same theme as Order on WhatsApp (no outer glow layer) */
 .whatsapp-float {
-	background: linear-gradient(#00bf63, #508456) !important;
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115)) !important;
 	color: #FFF;
-	box-shadow: 2px 2px 12px rgba(0, 191, 99, 0.4);
+	box-shadow: none !important;
 }
 .whatsapp-float:hover {
-	background: linear-gradient(#508456, #00bf63) !important;
+	background: linear-gradient(rgb(0, 115, 115), rgb(0, 167, 167)) !important;
+	box-shadow: none !important;
 }
 
 .main-header .menu-right-content .link a{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .main-menu .navigation > li > ul,
 .main-menu .navigation > li > .megamenu,
 .main-menu .navigation > li > ul > li > ul{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .curved-circle .video-btn:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .service-block-one .inner-box:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .service-block-one .inner-box h3 a:hover{
@@ -63,24 +63,24 @@
 }
 
 .service-block-one .inner-box .info-list li:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .service-block-one .inner-box .info-list:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .service-block-one .inner-box .link a:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .dots-style-one .owl-dots .owl-dot.active,
 .dots-style-one .owl-dots .owl-dot:hover{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .dots-style-one .owl-dots .owl-dot:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .content_block_one .content-box .clients-info .rating-box .rating-list li{
@@ -92,7 +92,7 @@
 }
 
 .team-block-one .inner-box .lower-content .social-links li a:hover:before{
-  background: linear-gradient(#00bf63, #508456);
+  background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .sortable-masonry .filter-tabs li:hover,
@@ -106,7 +106,7 @@
 }
 
 .portfolio-block-two .inner-box .content-box .info-list li:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .portfolio-block-two .inner-box .content-box h3 a:hover{
@@ -119,23 +119,23 @@
 }
 
 .theme-btn-two span:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .pricing-block-one .pricing-table .feature-list li:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .theme-btn-three span{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .theme-btn-three span:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .theme-btn-three:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .accordion .acc-btn .icon-box{
@@ -147,11 +147,11 @@
 }
 
 .news-block-one .inner-box .image-box .link a{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .news-block-one .inner-box .lower-content .post-date:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .news-block-one .inner-box .lower-content .post-info li a:hover{
@@ -167,15 +167,15 @@
 }
 
 .instagram-block-one .inner-box .image-box{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .instagram-block-one .inner-box .link a{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .main-footer .logo-widget .social-links li a:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .light-header .header-lower .main-menu .navigation > li.current > a, 
@@ -184,7 +184,7 @@
 }
 
 .banner-style-two .curved-circle .curve-text span{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .portfolio-block-one .inner-box .info-inner .category-list li a:hover{
@@ -192,19 +192,19 @@
 }
 
 .feature-block-two .inner-box .count-text:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .feature-block-two .inner-box:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .feature-block-two .inner-box .btn-box a span:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .feature-block-two .inner-box .btn-box a:hover span{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .testimonial-style-two .image-box .image:after{
@@ -220,15 +220,15 @@
 }
 
 .banner-style-three .content-box .inner-box .image-list li:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .banner-style-three .content-box .inner-box .image-list li:last-child:after{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .banner-style-three .curved-circle .curve-text span{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .side-menu .navigation li.current > a{
@@ -240,7 +240,7 @@
 }
 
 .service-block-one .inner-box .image-box .link a{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .portfolio-block-three .inner-box .image-box .image:before {
@@ -248,7 +248,7 @@
 }
 
 .portfolio-block-three .inner-box .image-box .image-link a{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .portfolio-block-three .inner-box .lower-content h3 a:hover{
@@ -261,7 +261,7 @@
 
 .testimonial-style-three .dots-style-one .owl-dots .owl-dot.active,
 .testimonial-style-three .dots-style-one .owl-dots .owl-dot:hover{
-  background: linear-gradient(#00bf63, #508456);
+  background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .page-title .bread-crumb li a:hover{
@@ -305,11 +305,11 @@
 }
 
 .blog-details-content .tags-list li a:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .blog-details-content .comment-box .comment .reply-btn:before{
-	background: linear-gradient(#00bf63, #508456);
+	background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
 }
 
 .default-form .form-group input:focus,
@@ -323,6 +323,68 @@
 
 .contact-section .contact-sidebar .info-box .single-item h4 a:hover{
   color: var(--theme-color);
+}
+
+/* ========== Icons & vectors (teal rgb(0,167,167)) ========== */
+[class^="icon-"],
+[class*=" icon-"] {
+  color: rgb(0, 167, 167);
+}
+
+.icon-box.gradient-color [class^="icon-"],
+.icon-box.gradient-color [class*=" icon-"],
+.lightbox-image.gradient-color [class^="icon-"],
+.lightbox-image.gradient-color [class*=" icon-"],
+a.gradient-color [class^="icon-"],
+a.gradient-color [class*=" icon-"] {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+[class^="icon-"].gradient-color,
+[class*=" icon-"].gradient-color {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(rgb(0, 167, 167), rgb(0, 115, 115));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.main-menu .navigation li.dropdown .dropdown-btn,
+.mobile-menu .navigation li.dropdown .dropdown-btn {
+  color: rgb(0, 167, 167);
+}
+
+.boxed_wrapper .fab,
+.boxed_wrapper .fas {
+  color: rgb(0, 167, 167);
+}
+
+.mobile-menu .social-links li a .fab,
+.mobile-menu .social-links li a .fas {
+  color: inherit;
+}
+
+.main-footer .logo-widget .social-links li a .fab,
+.main-footer .logo-widget .social-links li a .fas {
+  color: inherit;
+}
+
+.whatsapp-float .fab,
+.whatsapp-float .fas {
+  color: #fff !important;
+}
+
+.theme-btn-one .fab,
+.theme-btn-one .fas {
+  color: #fff;
+}
+
+.menu-area .mobile-nav-toggler {
+  color: #fff;
 }
 
 

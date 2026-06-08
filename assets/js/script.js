@@ -18,7 +18,11 @@
 	//Hide Loading Box (Preloader) - reduced delay for faster perceived load
 	function handlePreloader() {
 		if($('.loader-wrap').length){
-			$('.loader-wrap').delay(200).fadeOut(400);
+			$('.loader-wrap').delay(200).fadeOut(400, function () {
+				$('body').removeClass('loading');
+			});
+		} else {
+			$('body').removeClass('loading');
 		}
 	}
 
@@ -552,7 +556,7 @@
 			var winDow = $(window);
 			// Needed variables
 			var $container=$('.sortable-masonry .items-container');
-			var $filter=$('.filter-btns');
+			var $filter=$('.sortable-masonry .filter-btns');
 	
 			$container.isotope({
 				filter:'*',
@@ -600,7 +604,7 @@
 			});
 	
 	
-			var filterItemA	= $('.filter-btns li');
+			var filterItemA	= $('.sortable-masonry .filter-btns li');
 	
 			filterItemA.on('click', function(){
 				var $this = $(this);
