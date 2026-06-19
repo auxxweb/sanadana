@@ -1,0 +1,47 @@
+.legal-document-viewer {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.legal-document-viewer__frame {
+    width: 100%;
+    min-height: 80vh;
+    height: 1100px;
+    border: 1px solid rgba(45, 106, 79, 0.12);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 12px 40px rgba(15, 45, 32, 0.08);
+}
+
+.legal-document-viewer__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.legal-document-viewer__download {
+    margin: 0;
+}
+
+.legal-document-viewer__download a {
+    color: #2d6a4f;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.legal-document-viewer__download a:hover {
+    color: #1b4332;
+}
+
+@media (max-width: 767px) {
+    .legal-document-viewer__frame {
+        height: 70vh;
+        min-height: 480px;
+        border-radius: 8px;
+    }
+}

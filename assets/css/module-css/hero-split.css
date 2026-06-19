@@ -2,18 +2,17 @@
  * Index hero — premium split layout, ambient layers, glass panels, step nav.
  *
  * Overrides legacy `.banner-section { padding-top: 150px }` so the hero paint
- * region matches ScrollTrigger pin metrics (avoids intermittent white band under
- * the absolute header + ambient layers).
+ * region aligns with the absolute header and ambient layers.
  */
 
-#hero-product-scroll.banner-section--split {
+#hero-carousel.banner-section--split {
   padding: 0 !important;
   margin-top: 0 !important;
 }
 
 /* Legacy theme adds 140px top padding to .banner-section on small screens */
 @media only screen and (max-width: 767px) {
-  #hero-product-scroll.banner-section--split {
+  #hero-carousel.banner-section--split {
     padding-top: 0 !important;
   }
 }
@@ -27,24 +26,10 @@ body.page-home .boxed_wrapper {
   padding-top: 0;
 }
 
-/*
- * Pin spacer reserves scroll room so sections below do not overlap the hero.
- * Match hero background so no white viewport band shows above/beside the pin.
- */
-body.page-home .pin-spacer:has(#hero-product-scroll) {
-  margin: 0 !important;
-  padding: 0 !important;
-  background: #fafcfb !important;
-}
-
-body.page-home #hero-product-scroll.banner-section--split {
-  top: 0 !important;
-  z-index: 30;
+body.page-home #hero-carousel.banner-section--split {
+  position: relative;
+  z-index: 2;
   background: #fafcfb;
-}
-
-body.page-home #hero-product-scroll.banner-section--split.pin-active {
-  z-index: 40;
 }
 
 /* Sections after hero sit below the pin track and do not paint over the hero */
@@ -69,19 +54,40 @@ body.page-home .instagram-section {
   overflow: clip;
   background: #fafcfb;
   isolation: isolate;
-  /* Reserve space before ScrollTrigger pins/measures — avoids blank hero on first paint */
   min-height: clamp(520px, 88vh, 920px);
 }
 
-/* First paint before GSAP: show slide 0 only (avoids blank / stacked flash) */
-.banner-section--split .hero-split__panel:not([data-hero-step="0"]),
-.banner-section--split .hero-split__viz-panel:not([data-hero-step="0"]) {
+/* Carousel slides — fade/slide between product panels */
+.banner-section--carousel .hero-split__panel,
+.banner-section--carousel .hero-split__viz-panel {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease,
+    visibility 0.55s ease;
 }
 
-.banner-section--split .hero-split__panel[data-hero-step="0"],
-.banner-section--split .hero-split__viz-panel[data-hero-step="0"] {
+.banner-section--carousel .hero-split__panel {
+  transform: translateX(-20px);
+}
+
+.banner-section--carousel .hero-split__viz-panel {
+  transform: translateX(20px) scale(0.98);
+}
+
+.banner-section--carousel .hero-split__panel.is-active,
+.banner-section--carousel .hero-split__viz-panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0) scale(1);
+  z-index: 2;
+}
+
+.banner-section--carousel:not(.hero-split--ready) .hero-split__panel.is-active,
+.banner-section--carousel:not(.hero-split--ready) .hero-split__viz-panel.is-active {
   opacity: 1;
   visibility: visible;
 }
@@ -473,16 +479,14 @@ body.page-home .instagram-section {
   position: absolute;
   left: 0;
   top: 50%;
-  width: 100%;
+  width: 20%;
   height: 7px;
   margin-top: -3.5px;
   border-radius: 999px;
-  transform: scaleX(var(--hero-progress, 0));
-  transform-origin: left center;
   background: linear-gradient(90deg, rgb(0, 167, 167), rgb(0, 115, 115));
   box-shadow: 0 4px 14px rgba(0, 167, 167, 0.28);
   pointer-events: none;
-  will-change: transform;
+  transition: width 0.45s ease;
 }
 
 .hero-split__progress-stops {
@@ -802,7 +806,62 @@ body.page-home .instagram-section {
     transition: none;
   }
 
-  .hero-split__step:hover {
-    transform: none;
+  .banner-section--carousel .hero-split__panel,
+  .banner-section--carousel .hero-split__viz-panel {
+    transition: none;
+  }
+}
+
+/* Hero carousel controls */
+.hero-carousel__nav {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.hero-carousel__nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  color: rgb(0, 100, 100);
+  box-shadow: 0 8px 24px rgba(0, 55, 55, 0.12);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.hero-carousel__nav-btn:hover {
+  transform: translateY(-50%) scale(1.05);
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 55, 55, 0.16);
+}
+
+.hero-carousel__nav-btn:focus-visible {
+  outline: 2px solid rgb(0, 167, 167);
+  outline-offset: 2px;
+}
+
+.hero-carousel__nav--prev {
+  left: clamp(0.25rem, 1.5vw, 0.75rem);
+}
+
+.hero-carousel__nav--next {
+  right: clamp(0.25rem, 1.5vw, 0.75rem);
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-carousel__nav-btn {
+    width: 2.35rem;
+    height: 2.35rem;
+    font-size: 0.85rem;
   }
 }
